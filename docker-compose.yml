@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0 # 또는 mariadb:latest
+    container_name: donlinee
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: some_strong_password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_password
+    volumes:
+      - db_data:/var/lib/mysql # DB 데이터 영구 보존을 위한 볼륨
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    container_name: wp-app
+    restart: always
+    ports:
+      - "8000:80" # 호스트의 8000포트를 컨테이너의 80포트와 연결
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_password
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - ./wp-content:/var/www/html/wp-content # 테마/플러그인/업로드는 로컬 폴더와 동기화
+
+volumes:
+  db_data:

@@ -1,0 +1,215 @@
+/*
+Theme Name: Donlinee
+Theme URI: https://webdot.co.kr
+Author: webdot
+Author URI: https://webdot.co.kr
+Description: A minimal blank WordPress theme by webdot
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: donlinee
+Tags: blank, minimal, custom
+*/
+
+/* Pretendard Font - CDN (가장 안정적인 방법) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* CSS Variables */
+:root {
+    --color-primary: #DC2626;
+    --color-primary-dark: #B91C1C;
+    --color-primary-light: #EF4444;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-size: 16px;
+    color: #0F172A;
+    padding-top: 80px; /* header 높이만큼 여백 추가 */
+}
+
+/* 모바일에서는 더 작은 여백 */
+@media (max-width: 768px) {
+    body {
+        margin-top: 60px;
+    }
+}
+
+/* Header 스타일 */
+#header {
+    height: 80px; /* 헤더 높이 고정 */
+}
+
+main section {
+    max-width: 880px;
+    margin: 0 auto;
+}
+main section.full {
+    max-width: 100%;
+}
+main section.full > div {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+main img {
+    border: 1px solid #eee;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #header {
+        height: 60px;
+    }
+}
+.button {
+    background: var(--color-primary);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 4px 20px;
+}
+
+.h1 {
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 81px */
+    letter-spacing: -1.35px;
+}
+.h2 {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 39px */
+    letter-spacing: -0.78px;
+}
+.subTitle {
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 39px */
+    letter-spacing: -0.78px;
+    padding: 16px 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #000;
+}
+.full .subTitle {
+    border-color: #fff;
+}
+.h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.4px;
+}
+.point {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.4px;
+    border-left: 3px solid var(--color-primary);
+    padding-left: 12px;
+}
+
+.p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 36px */
+    letter-spacing: -0.18px;
+}
+
+p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 36px */
+    letter-spacing: -0.18px;
+}
+.full p {
+    opacity: 0.9;
+}
+/* YouTube Video Grid */
+.youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .youtube-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.youtube-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.youtube-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Testimonial Swiper Styles */
+.testimonial-swiper {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.testimonial-swiper .swiper-slide {
+    width: auto !important;
+    height: auto;
+}
+
+.testimonial-swiper .swiper-slide img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .testimonial-swiper .swiper-slide img {
+        width: 250px;
+    }
+}
+
+/* Gmarket Sans Font for Hero Title */
+.hero-title {
+    font-family: 'GmarketSans', 'Pretendard Variable', Pretendard, sans-serif;
+}
