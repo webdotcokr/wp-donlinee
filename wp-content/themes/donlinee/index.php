@@ -31,11 +31,11 @@ get_header(); ?>
         </div>
         <div class="flex flex-col gap-[30px]">
             <h2 class="subTitle">1개월 세금 인증</h2>
-            <img src="/wp-content/uploads/2025/12/main-1.webp">
+            <img src="/wp-content/uploads/2025/12/main-2.webp">
             <h3 class="button p text-center">1개월 현금 매출(크몽, 카드, 세금계산서 미발행 매출 미포함)</h3>
         </div>
         <div class="flex flex-col gap-[30px]">
-            <img src="/wp-content/uploads/2025/12/main-1.webp">
+            <img src="/wp-content/uploads/2025/12/main-3-1.webp">
             <h3 class="button p text-center">1개월 사업 비용</h3>
         </div>
         <p><b>제가 현재 운영 중인 디자인 회사의 매출과 세금 자료입니다. </b>
@@ -117,119 +117,287 @@ get_header(); ?>
             <p><b>돈마고치는 시중에 존재하는 일반적인 교육이 아닙니다. </b><br/>
             상업적 온라인 강의는 보통 완강률과 실행률이 5%가 채 되지 않습니다. 아마 여러분도 경험으로 잘 알고 계실겁니다.<br/><br/>
 
-            반대로 돈마고치는 사업에 필요한 지식부터 실제 실행까지 강제합니다.<br/> 
+            반대로 돈마고치는 사업에 필요한 지식부터 실제 실행까지 강제합니다.<br/>
             과정을 정상적으로 참여한다면 누구나 월 1000만원 이상의 사업체를 가질 수 있도록 설계하였습니다.<br/><br/>
 
             가장 먼저 <b>4주 간 주말(토,일) 3시간 씩 오프라인을 통해 사업에 대한 모든 지식을 가르칩니다.</b><br/>
-            이 과정에서 내용을 완벽히 숙지하였는지 과제를 통해 점검 및 피드백을 진행합니다. 
+            이 과정에서 내용을 완벽히 숙지하였는지 과제를 통해 점검 및 피드백을 진행합니다.
             </p>
         </div>
 
-        <!-- 강의 미리보기 섹션 -->
+        <!-- 강의 커리큘럼 섹션 -->
         <?php
-        // 미리보기 강의 데이터
+        // 전체 커리큘럼 데이터 (17개 챕터)
         $previewLectures = array(
             array(
                 'chapter' => 'CHAPTER 1',
                 'title' => '사업의 기본',
                 'lessons' => array(
-                    array('title' => '사업으로 인생을 바꾸는데 걸리는 시간', 'videoUrl' => 'https://player.vimeo.com/video/1074857904', 'isPreview' => true, 'duration' => '22:36'),
-                    array('title' => '노력으로 성공이 가능할까?', 'videoUrl' => 'https://player.vimeo.com/video/1074858609', 'isPreview' => true, 'duration' => '07:03'),
-                    array('title' => '사업이 꼭 정답은 아닌 이유', 'videoUrl' => '', 'isPreview' => false, 'duration' => '07:05'),
-                    array('title' => '사업이란 대체 무엇일까', 'videoUrl' => '', 'isPreview' => false, 'duration' => '12:41'),
-                    array('title' => '당신이 사업을 어렵게 느끼는 이유', 'videoUrl' => '', 'isPreview' => false, 'duration' => '21:24'),
-                    array('title' => '사업을 잘하는 사람들의 특징과 그들이 되는 방법', 'videoUrl' => '', 'isPreview' => false, 'duration' => '09:49'),
-                    array('title' => '사업을 운이라고 치부하는 사람들에게 반박', 'videoUrl' => '', 'isPreview' => false, 'duration' => '02:39'),
-                    array('title' => '사업은 전략 싸움이다', 'videoUrl' => '', 'isPreview' => false, 'duration' => '20:36'),
-                    array('title' => '당신이 책 강의를 봐도 인생이 바뀌지 않는 이유', 'videoUrl' => '', 'isPreview' => false, 'duration' => '09:37'),
+                    array('title' => '사업으로 인생을 바꾸는데 걸리는 시간', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '노력으로 성공이 가능할까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업이 꼭 정답은 아닌 이유', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업이란 대체 무엇일까', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '당신이 사업을 어렵게 느끼는 이유', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업을 잘하는 사람들의 특징과 그들이 되는 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업을 운이라고 치부하는 사람들에게 반박', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업은 전략 싸움이다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '당신이 책, 강의를 봐도 인생이 바뀌지 않는 이유', 'videoUrl' => '', 'isPreview' => false),
                 ),
             ),
             array(
                 'chapter' => 'CHAPTER 2',
                 'title' => '사업 아이템을 정하는 6가지 원칙',
                 'lessons' => array(
-                    array('title' => '무자본 창업 6가지 방법', 'videoUrl' => 'https://player.vimeo.com/video/1074862903', 'isPreview' => true, 'duration' => '09:37'),
-                    array('title' => '1 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '10:10'),
-                    array('title' => '2 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '10:29'),
-                    array('title' => '3 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '13:59'),
-                    array('title' => '4 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '10:52'),
-                    array('title' => '5 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '12:21'),
-                    array('title' => '6 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '08:34'),
-                    array('title' => '좋아하는 일 과연 좋을까? & 잘하는 일 과연 좋을까?', 'videoUrl' => '', 'isPreview' => false, 'duration' => '11:52'),
-                    array('title' => '사업 아이템 수백개를 확인하는 벤치마크 사이트', 'videoUrl' => '', 'isPreview' => false, 'duration' => '13:35'),
+                    array('title' => '무자본 창업 6가지 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '1 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '2 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '3 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '4 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '5 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '6 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '좋아하는 일, 과연 좋을까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '잘하는 일, 과연 좋을까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업 아이템 수백개를 확인하는 벤치마크 사이트', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 3',
+                'title' => '내 상품을 필요하게 만드는 논리적 글쓰기',
+                'lessons' => array(
+                    array('title' => '고객은 필요할 때만 구매한다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '고객의 필요를 만드는 주,근,사 법칙', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '글의 구조를 기획하는 3단계', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '문장을 완성하는 3원칙', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 4',
+                'title' => '고객의 감성을 설득하는 스토리',
+                'lessons' => array(
+                    array('title' => '고객은 이성적일까? 감성적일까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '고객이 진짜 원하는건 당신의 상품이 아니다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '스토리를 기획하는 7단계 공식', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '스토리를 언제, 어디서, 어떻게 보여줘야 할까?', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 5',
+                'title' => '마케팅의 본질',
+                'lessons' => array(
+                    array('title' => '사람들이 마케팅을 무서워하는 이유', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '고객은 필요할 때만 구매한다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '고객이 내 상품을 필요하게 만드는 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '마케팅을 기획하는 4단계 공식', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '4단계를 6단계로 발전 시키기', 'videoUrl' => 'https://player.vimeo.com/video/1144257255', 'isPreview' => true),
+                    array('title' => '객단가는 중요하지 않다. 잠재 수익이 핵심이다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '마케팅은 퍼널이 전부다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '마케팅 최종 승자의 조건', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 6',
+                'title' => '네이버 검색 광고',
+                'lessons' => array(
+                    array('title' => '네이버 검색 광고 알고리즘 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '광고 효율을 높이는 3가지 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '비용 낭비를 막는 2가지 잔기술', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '효율적인 광고 키워드를 찾는 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '실제 세팅(실습)', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '매출 3배 올리는 보고서 분석', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 7',
+                'title' => '구글 검색 광고',
+                'lessons' => array(
+                    array('title' => '구글 검색 광고 알고리즘 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '구글 광고가 네이버보다 효과적인 이유', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '광고비 5배 뽑는 5가지 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '구글이 꼼수 부리며 우리 돈을 뺏어가는 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '실제 세팅(실습)', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 8',
+                'title' => '구글 디스플레이 광고',
+                'lessons' => array(
+                    array('title' => '구글 디스플레이 광고 알고리즘 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '구글 디스플레이 광고는 최소 10배 효율이 보장된다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '리타겟팅 광고는 안하면 바보다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '디스플레이 지면을 공략하는 광고 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '검색어를 공략하는 광고 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '실제 세팅(실습)', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 9',
+                'title' => '페이스북/인스타그램 광고',
+                'lessons' => array(
+                    array('title' => 'META 알고리즘 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '논란의 중심인 이유', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => 'META 광고가 모든 사람에게 효과적인 것은 아니다', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '운이 90% 작용하는 광고 알고리즘', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '운을 극복하는 2가지 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '실제 세팅(실습)', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 10',
+                'title' => '블로그 마케팅',
+                'lessons' => array(
+                    array('title' => '브랜드 블로그와 체험단의 차이', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '네이버 블로그 알고리즘 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '어떤 키워드가 가장 효과적일까? 키워드 추출 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '마케팅 대행사 vs 실행사의 차이', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '대행사와 실행사를 찾는 나만의 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '블로그 광고는 정말 효과적일까? 성과를 측정하는 방법', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 11',
+                'title' => '유튜브',
+                'lessons' => array(
+                    array('title' => '유튜브 알고리즘 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '유튜브의 파급력은 어느정도일까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '노출 클릭률 vs 시청 지속 시간', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '유튜브 마케팅의 독특한 깔대기 구조', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사람들을 구매하게 만드는 동기 이론', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 12',
+                'title' => '매출에 따른 적정 마케팅 예산과 전략',
+                'lessons' => array(
+                    array('title' => '매출이 먼저인가? 마케팅이 먼저인가?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '월 매출 300만 원을 달성하는 초현실적인 마케팅 예산과 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '월 매출 500만 원을 달성하는 초현실적인 마케팅 예산과 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '월 매출 1000만 원을 달성하는 초현실적인 마케팅 예산과 전략', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '월 매출 3000만 원을 달성하는 초현실적인 마케팅 예산과 전략', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 13',
+                'title' => '결국 구매는 웹사이트에서 일어난다',
+                'lessons' => array(
+                    array('title' => '웹사이트를 기획할 때 가장 중요한 수치 1가지', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '기획 3단계', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '1단계', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '2단계', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '3단계', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '저는 차별점이 없는데요? 있어 보이는 방법', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 14',
+                'title' => '가격을 얼마로 해야 할까?',
+                'lessons' => array(
+                    array('title' => '가격이 오르면 수요가 줄어들까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '적정 가격을 정하는 방법', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '가격은 어떻게 올려야 할까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '당신도 당하고 있는 가격 전략 3가지', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 15',
+                'title' => '회사 이름을 짓는 방법',
+                'lessons' => array(
+                    array('title' => '3가지 TIP', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '온라인 노출도를 고려해야 한다', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 16',
+                'title' => '현실적인 질문들',
+                'lessons' => array(
+                    array('title' => '동업은 안좋은가요?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '사업에서 인맥은 중요한가요?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '순수익은 몇 %가 적당한가요?', 'videoUrl' => '', 'isPreview' => false),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 17',
+                'title' => '3년 연속 크몽 수익 1위가 알려주는 크몽 정복기',
+                'lessons' => array(
+                    array('title' => '크몽 알고리즘에 대한 이해', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '크몽 수수료는 비싼걸까?', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '크몽 마케팅 4원칙', 'videoUrl' => '', 'isPreview' => false),
+                    array('title' => '크몽 계정의 유통기한', 'videoUrl' => '', 'isPreview' => false),
                 ),
             ),
         );
         ?>
 
         <div id="preview" class="">
-            <p class="text-center p mb-8 opacity-90">실제 강의 일부를 미리 경험해보세요</p>
+            <h4 class="h2 text-center mb-4">강의 커리큘럼</h4>
 
-            <div class="space-y-8">
+            <div class="space-y-4">
                 <?php foreach ($previewLectures as $chapterIndex => $chapterData): ?>
-                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200">
-                    <div class="mb-4">
-                        <span class="text-sm font-bold text-[#DC2626]"><?php echo $chapterData['chapter']; ?></span>
-                        <h5 class="h3 mt-1"><?php echo $chapterData['title']; ?></h5>
-                    </div>
+                <?php
+                    // Chapter 5 (인덱스 4)를 기본적으로 펼친 상태로 설정
+                    $isChapter5 = ($chapterIndex === 4);
+                ?>
+                <div class="chapter-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+                    <!-- 챕터 헤더 (클릭 시 펼치기/접기) -->
+                    <button
+                        class="chapter-header w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
+                        onclick="toggleChapter(this)"
+                    >
+                        <div class="flex flex-col items-start">
+                            <span class="text-sm font-bold text-[#DC2626]"><?php echo $chapterData['chapter']; ?></span>
+                            <h5 class="h3 mt-1 text-left"><?php echo $chapterData['title']; ?></h5>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm text-gray-500"><?php echo count($chapterData['lessons']); ?>개 레슨</span>
+                            <svg class="w-5 h-5 text-gray-400 chapter-arrow transition-transform <?php echo $isChapter5 ? 'rotate' : ''; ?>" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
 
-                    <div class="space-y-2">
-                        <?php foreach ($chapterData['lessons'] as $lessonIndex => $lesson): ?>
-                        <div class="preview-accordion-item border border-gray-200 rounded-lg overflow-hidden">
-                            <button
-                                class="w-full px-4 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors <?php echo $lesson['isPreview'] ? 'cursor-pointer' : 'cursor-not-allowed opacity-75'; ?>"
-                                onclick="toggleAccordion(this, <?php echo $lesson['isPreview'] ? 'true' : 'false'; ?>, '<?php echo addslashes($lesson['videoUrl']); ?>')"
-                            >
-                                <div class="flex items-center gap-3">
+                    <!-- 챕터 내용 (레슨 목록) -->
+                    <div class="chapter-content <?php echo $isChapter5 ? 'show' : 'hidden'; ?>" <?php echo $isChapter5 ? 'style="display: block;"' : ''; ?>>
+                        <div class="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                            <div class="space-y-3">
+                                <?php foreach ($chapterData['lessons'] as $lessonIndex => $lesson): ?>
+                                <div class="lesson-item flex items-start gap-3 p-3 <?php echo $lesson['isPreview'] ? 'bg-white rounded-lg' : ''; ?>">
                                     <?php if ($lesson['isPreview']): ?>
+                                        <svg class="w-5 h-5 text-[#DC2626] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+                                        </svg>
                                     <?php else: ?>
-                                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
                                         </svg>
                                     <?php endif; ?>
-                                    <span class="text-left font-medium"><?php echo $lesson['title']; ?></span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <?php if ($lesson['isPreview']): ?>
-                                        <span class="text-xs bg-[#DC2626] text-white px-2 py-1 rounded font-medium">미리보기</span>
-                                    <?php endif; ?>
-                                    <span class="text-sm text-gray-500"><?php echo $lesson['duration']; ?></span>
-                                    <svg class="w-5 h-5 text-gray-400 accordion-arrow transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                            </button>
-
-                            <div class="accordion-content hidden">
-                                <?php if ($lesson['isPreview']): ?>
-                                    <div class="p-4 bg-gray-50">
-                                        <div class="video-container relative w-full" style="height: 400px; max-height: 50vh;">
-                                            <iframe
-                                                src="<?php echo $lesson['videoUrl']; ?>?badge=0&autopause=0&player_id=0&app_id=58479"
-                                                class="absolute inset-0 w-full h-full"
-                                                frameborder="0"
-                                                allow="autoplay; fullscreen; picture-in-picture"
-                                                allowfullscreen
-                                            ></iframe>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-gray-700 font-medium"><?php echo ($lessonIndex + 1) . '. ' . $lesson['title']; ?></span>
+                                            <?php if ($lesson['isPreview']): ?>
+                                                <span class="text-xs bg-[#DC2626] text-white px-2 py-1 rounded font-medium">미리보기</span>
+                                            <?php endif; ?>
                                         </div>
+
+                                        <?php if ($lesson['isPreview'] && $lesson['videoUrl']): ?>
+                                        <div class="mt-3">
+                                            <div class="video-container relative w-full" style="height: 400px; max-height: 50vh;">
+                                                <iframe
+                                                    src="<?php echo $lesson['videoUrl']; ?>?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                    class="absolute inset-0 w-full h-full"
+                                                    frameborder="0"
+                                                    allow="autoplay; fullscreen; picture-in-picture"
+                                                    allowfullscreen
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
                                     </div>
-                                <?php else: ?>
-                                    <div class="p-4 bg-gray-50 text-center">
-                                        <p class="text-gray-600">🔒 수강 신청 후 모든 강의를 시청하실 수 있습니다.</p>
-                                    </div>
-                                <?php endif; ?>
+                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
-                        <?php endforeach; ?>
                     </div>
                 </div>
                 <?php endforeach; ?>
-            </div>
-
-            <div class="mt-8 text-center">
-                <p class="p font-medium">
-                    <b class="underline">* 강의 목록 중 일부만 공개되었습니다.</b>
-                </p>
             </div>
         </div>
 
@@ -293,7 +461,7 @@ get_header(); ?>
         </div>
         <div class="flex flex-col gap-[30px]">
             <h3 class="point">6~16주 차</h3>
-            <p>노하우 전달 및 무한 피드백 </p>
+            <p>노하우 전달 및 무한 피드백 </p>
         </div>
         <p><b>​더 자세한 내용은 아래를 확인해 주세요.</b></p>
     </section>
@@ -307,27 +475,44 @@ get_header(); ?>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">진행 위치</h3>
-                <h4 class="p">서울 강남역 인근 강의실</h4>
+                <h4 class="p">서울 / 역삼역 인근 (추후 공지)</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">신청 방법</h3>
-                <h4 class="p">홈페이지 내 지원서 작성</h4>
+                <h4 class="p">아래 버튼으로 신청 → 대기리스트 등록 → 추첨 및 개별 안내</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
-                <h3 class="point">비용</h3>
-                <h4 class="p">198만원</h4>
+                <h3 class="point">가격</h3>
+                <h4 class="p">299만원 (부가세 포함)</h4>
+            </div>
+        </div>
+    </section>
+    <!-- 강제 성공보장 정책 -->
+    <section class="full py-[100px] flex flex-col gap-[60px] text-black bg-[#111] text-white">
+        <div class="flex flex-col gap-[40px]">
+            <h2 class="subTitle">강제 성공보장 정책</h2>
+            <div class="flex flex-col gap-[20px]">
+                <h3 class="point">100% 환불 정책</h3>
+                <h4 class="p opacity-90">16주 커리큘럼을 완료 후, 매출이 발생하지 않을 시 100% 환불</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
-                <h3 class="point">합격자 발표</h3>
-                <h4 class="p">2025.12.29 월요일</h4>
+                <h3 class="point">무제한 피드백</h3>
+                <h4 class="p opacity-90">강의 종료 후에도 사업이 성공할 때까지 무제한 피드백 제공</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
-                <h3 class="point">참고</h3>
-                <h4 class="p">1. 합격자는 20명입니다. (50명 이상 지원 시 선착순 조기 마감됩니다.) 
-                    <br/>2. 유튜브 촬영은 진행되지 않습니다.
-                </h4>
+                <h3 class="point">실명 인증 후기</h3>
+                <h4 class="p opacity-90">모든 후기는 실명 인증된 수강생의 실제 후기입니다</h4>
             </div>
-            <h2 class="px-24 max-md:px-6 py-3 h2 button cursor-pointer">강의 대기 신청하기</h2>
+        </div>
+    </section>
+    <!-- CTA -->
+    <section class="py-[100px] flex flex-col items-center gap-[40px]">
+        <h2 class="h2 text-center">지금 바로 신청하세요!</h2>
+        <p class="text-center p">한정 인원 20명 | 선착순 마감</p>
+        <div class="text-center">
+            <a href="/contact" class="inline-block bg-[#DC2626] text-white px-12 py-6 rounded-lg hover:bg-[#B91C1C] transition-colors font-bold text-xl shadow-lg">
+                수강 대기 신청하기
+            </a>
         </div>
     </section>
 </main>

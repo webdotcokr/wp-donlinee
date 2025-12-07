@@ -1,5 +1,5 @@
 <footer>
-<div class="py-8 text-[#8a8a8a] text-[13px]">
+<div class="border-t border-gray-300 py-8 text-[#8a8a8a] text-[13px]">
     <div class="container max-w-6xl mx-auto px-6">
         <div class="flex flex-col gap-y-3">
 
@@ -162,59 +162,30 @@
         });
     });
 
-    // 강의 미리보기 아코디언 기능
-    function toggleAccordion(button, isPreview, videoUrl) {
-        // 미리보기가 불가능한 레슨인 경우 - 아무 반응 없음
-        if (isPreview === false) {
-            return;
-        }
+    // 챕터 레벨 아코디언 기능
+    function toggleChapter(button) {
+        // 챕터 아이템 요소 찾기
+        const chapterItem = button.closest('.chapter-item');
+        const chapterContent = chapterItem.querySelector('.chapter-content');
+        const arrow = button.querySelector('.chapter-arrow');
 
-        // 아코디언 아이템 요소 찾기
-        const accordionItem = button.closest('.preview-accordion-item');
-        const accordionContent = accordionItem.querySelector('.accordion-content');
-        const arrow = button.querySelector('.accordion-arrow');
-
-        // 다른 열린 아코디언 닫기
-        const allAccordions = document.querySelectorAll('.preview-accordion-item');
-        allAccordions.forEach(item => {
-            if (item !== accordionItem) {
-                const content = item.querySelector('.accordion-content');
-                const itemArrow = item.querySelector('.accordion-arrow');
-                if (content.classList.contains('show')) {
-                    content.classList.remove('show');
-                    content.style.display = 'none';
-                    itemArrow.classList.remove('rotate');
-
-                    // 비디오 정지
-                    const iframe = content.querySelector('iframe');
-                    if (iframe) {
-                        const src = iframe.src;
-                        iframe.src = '';
-                        iframe.src = src;
-                    }
-                }
-            }
-        });
-
-        // 현재 아코디언 토글
-        if (accordionContent.classList.contains('show')) {
-            accordionContent.classList.remove('show');
-            setTimeout(() => {
-                accordionContent.style.display = 'none';
-            }, 300);
+        // 현재 챕터 토글
+        if (chapterContent.classList.contains('show')) {
+            chapterContent.classList.remove('show');
+            chapterContent.style.display = 'none';
             arrow.classList.remove('rotate');
 
             // 비디오 정지
-            const iframe = accordionContent.querySelector('iframe');
-            if (iframe) {
+            const iframes = chapterContent.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
                 const src = iframe.src;
                 iframe.src = '';
                 iframe.src = src;
-            }
+            });
         } else {
-            accordionContent.style.display = 'block';
+            chapterContent.style.display = 'block';
             setTimeout(() => {
-                accordionContent.classList.add('show');
+                chapterContent.classList.add('show');
             }, 10);
             arrow.classList.add('rotate');
         }

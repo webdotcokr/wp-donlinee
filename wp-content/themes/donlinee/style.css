@@ -255,33 +255,43 @@ p {
     font-family: 'GmarketSans', 'Pretendard Variable', Pretendard, sans-serif;
 }
 
-/* Preview Accordion Styles */
-.preview-accordion-item {
+/* Chapter Accordion Styles */
+.chapter-item {
     background-color: #ffffff;
     transition: all 0.3s ease;
 }
 
-.preview-accordion-item:hover {
+.chapter-item:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.accordion-content {
+.chapter-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    display: none;
 }
 
-.accordion-content.show {
-    max-height: 1000px;
+.chapter-content.show {
+    max-height: none;
     transition: max-height 0.5s ease-in;
 }
 
-.accordion-arrow {
+.chapter-arrow {
     transition: transform 0.3s ease;
 }
 
-.accordion-arrow.rotate {
+.chapter-arrow.rotate {
     transform: rotate(180deg);
+}
+
+/* Lesson item styles */
+.lesson-item {
+    transition: background-color 0.2s ease;
+}
+
+.lesson-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 /* Video Container responsive styles */

@@ -9,6 +9,7 @@ wp-content/uploads/
 wp-content/upgrade/
 wp-content/cache/
 wp-content/backup*/
+wp-content/ai1wm-backups/
 
 # Logs
 *.log
