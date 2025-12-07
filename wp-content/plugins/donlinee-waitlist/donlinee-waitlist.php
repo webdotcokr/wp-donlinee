@@ -141,7 +141,7 @@ class Donlinee_Waitlist {
                     <div class="success-content">
                         <p>안녕하세요 <span id="success-name"></span>님</p>
                         <p>돈마고치 1기 수강 대기 신청이 완료되었습니다.</p>
-                        <p>기수별로 오프라인 20명으로 한정되며, 서류 검토 기간상 50명 이상 지원 시 선착순 자동 마감됩니다.</p>
+                        <p>기수별로 오프라인 20명으로 한정되며, <br/>서류 검토 기간상 50명 이상 지원 시 선착순 자동 마감됩니다.</p>
                         <p><span id="success-phone"></span>로 오픈 알림 메시지가 발송되오니 확인해주세요.</p>
                     </div>
                     <button type="button" class="donlinee-confirm-btn">확인했습니다</button>
