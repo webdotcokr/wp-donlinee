@@ -43,7 +43,7 @@
                 <!-- 타이머 섹션 -->
                 <div class="flex flex-col items-center lg:items-start">
                     <div class="text-xs text-gray-300 mb-1">모집 시작까지</div>
-                    <div id="countdown-timer" class="text-2xl font-bold font-mono tracking-wider">
+                    <div id="countdown-timer" class="text-2xl font-bold tracking-wider" style="font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
                         <span id="days">00</span>일
                         <span id="hours">00</span>:
                         <span id="minutes">00</span>:
