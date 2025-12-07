@@ -1,39 +1,60 @@
 <footer>
-<div class="pt-[40px] pb-[64px] bg-black text-white">
-    <div class="container">
-        <img src="/wp-content/uploads/2025/09/ft-logo.webp" class="max-md:w-[100px]">
-        <div class="flex flex-rows max-md:flex-col justify-between mt-[30px] mb-[50px]">
-            <div>
-                <div class="flex flex-col gap-y-[16px]">
-                    <div><span class="inline-block text-gray-400 font-semibold w-[100px]">상호명</span><span class="font-medium">이온랩마케팅</span></div>
-                    <div><span class="inline-block text-gray-400 font-semibold w-[100px]">대표자</span><span class="font-medium">곽경환</span></div>
-                    <div><span class="inline-block text-gray-400 font-semibold w-[100px]">사업자번호</span><span class="font-medium">470-30-01812</span></div>
-                    <div><span class="inline-block text-gray-400 font-semibold w-[100px]">주소</span><span class="font-medium">경기도 화성시 동탄공원로 21-40</span></div>
+<div class="py-8 text-[#8a8a8a] text-[13px]">
+    <div class="container max-w-6xl mx-auto px-6">
+        <div class="flex flex-col gap-y-3">
+
+            <!-- 사업자 정보 -->
+            <div class="flex flex-col gap-y-1 text-[#8a8a8a]">
+                <div class="flex items-center">
+                    <span class="w-[140px]">등록번호 :</span>
+                    <span>565-33-01595</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="w-[140px]">상호 :</span>
+                    <span>돈린이</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="w-[140px]">대표 :</span>
+                    <span>곽경환</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="w-[140px]">사업장소재지 :</span>
+                    <span>서울 강남구 역삼로3길 19</span>
                 </div>
             </div>
-            <div class="flex flex-col gap-y-[8px] text-right max-md:text-left max-md:mt-[40px]">
-                <p class="text-2xl font-bold mb-[8px]">월 천만원 레츠고</p>
-            
-                <div><span class="inline-block text-[#22C55E] font-semibold mr-[12px]">Email</span><span class="font-medium">donlinee1@gmail.com</span></div>
-                <div class="mt-4">
-                        <span><a class="text-xl font-medium text-gray-200" href="https://blog.naver.com/eonlab" target="_blank">공식 블로그</a></span>
-                        <span class="ml-2 text-xl font-medium text-gray-800">|</span>
-                        <span><a class="ml-2 text-xl font-medium text-gray-200" href="http://www.youtube.com/@%EC%9D%B4%EC%98%A8%EB%9E%A9%EB%A7%88%EC%BC%80%ED%8C%85" target="_blank">유튜브</a></span>
-                    </div>
+
+            <!-- 링크 줄 -->
+            <div class="flex flex-wrap items-center gap-x-8 pt-4 border-t border-gray-300 text-gray-600">
+                <a href="/privacy" class="hover:text-gray-800">개인정보 처리방침</a>
+                <a href="/terms" class="hover:text-gray-800">이용약관</a>
             </div>
-        </div>
-        <hr class="border-gray-50 opacity-30">
-        <div class="mt-[32px] text-[14px]">
-            <span class="text-gray-500 mr-[32px]">2025 DONLINEE. ALL RIGHTS RESERVED.</span>
-            <span class="text-gray-300"><a href="/privacy-policy">개인정보처리방침</a></span>
-            <span class="text-gray-700 mx-[8px]">|</span>
-            <span class="text-gray-300"><a href="/terms-of-use">이용약관</a></span>
         </div>
     </div>
 <div>
 
 </div>
 </footer>
+
+<!-- 하단 고정 배너 -->
+<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[60vw] px-4 lg:px-0" style="bottom: 80px; display: none;">
+    <div class="bg-[#3a3a3a] text-white rounded-lg shadow-lg">
+        <div class="px-4 sm:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- 배너 내용 -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
+                    <span class="text-sm sm:text-base font-medium">
+                        비즈니스 PT 수익화 트레이닝, 지금 신청하세요!
+                        <span class="text-xs sm:text-sm opacity-90">(선착 후 불만족 시 100% 환불)</span>
+                    </span>
+                    <a href="/대기신청" class="inline-block bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-2 rounded text-sm font-medium transition-colors duration-200">
+                        대기신청
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
   <?php wp_footer(); ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
@@ -50,6 +71,16 @@
       },
       freeMode: true,
       freeModeMomentum: false,
+    });
+
+    // 하단 고정 배너 스크립트
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('fixed-banner');
+
+        // 배너 항상 표시
+        if (banner) {
+            banner.style.display = 'block';
+        }
     });
   </script>
 </body>

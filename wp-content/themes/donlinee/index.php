@@ -10,16 +10,20 @@ get_header(); ?>
 
 <main id="main" class="site-main">
     <!-- HERO -->
-    <section class="full py-[160px] bg-black text-white">
+    <section class="full py-[160px] max-md:py-[50px] bg-[#111] text-white">
         <div>
-        <h1 class="h1 hero-title">돈마고치,<br/>
-        4주 안에<br/>
-        월 천만원 벌기</h1>
+        <h1 class="h1 hero-title">돈마고치<br/>
+        4주 안에 월 천만원 벌기</h1>
+        <h2 class="mt-[60px] max-md:mt-[30px] h3">
+            돈마고치는 국내 최초 강제 실행형 사업 강의입니다. (오프라인 20명 한정)
+        </h2>
         </div>
     </section>
     <!-- 강사 인증부터 시작하겠습니다. -->
-    <section class="py-[40px] flex flex-col gap-[100px]">
-        <h2 class="h2 text-center">강사 인증부터 시작하겠습니다.</h2>
+    <section class="py-[40px] pt-[80px] flex flex-col gap-[100px] max-md:gap-[50px]">
+        <h2 class="h2 text-center flex items-center justify-center gap-4 md:gap-6">
+            <span>강사 인증</span>
+        </h2>
         <div class="flex flex-col gap-[30px]">
             <h2 class="subTitle">크몽 매출 공식 1위</h2>
             <img src="/wp-content/uploads/2025/12/main-1.webp">
@@ -99,6 +103,11 @@ get_header(); ?>
                 </div>
             </div>
             <p class="mt-12 h3 underline text-center"><b>지원 전, 아래 글을 먼저 읽어주세요.</b></p>
+            <div class="text-center">
+                <a href="/instructor" class="inline-block bg-[#DC2626] text-white px-8 py-4 rounded-lg hover:bg-[#B91C1C] transition-colors font-semibold text-lg">
+                    강사소개 보러가기
+                </a>
+            </div>
         </div>
     </section>
     <!-- 돈마고치 안내 -->
@@ -180,16 +189,16 @@ get_header(); ?>
         <p><b>​더 자세한 내용은 아래를 확인해 주세요.</b></p>
     </section>
     <!-- 모집 안내 -->
-    <section class="full py-[100px] flex flex-col gap-[60px] text-white bg-[#111]">
+    <section class="full py-[100px] flex flex-col gap-[60px] text-black bg-[#f1f1f1]">
         <div class="flex flex-col gap-[40px]">
-            <h2 class="subTitle">모집 안내</h2>
+            <h2 class="subTitle !border-black">모집 안내</h2>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">모집 일자</h3>
-                <h4 class="p">서울 강남역 인근 강의실</h4>
+                <h4 class="p">2025.12.13 ~ 2025.12.28</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">진행 위치</h3>
-                <h4 class="p">2025.12.13 ~ 2025.12.28</h4>
+                <h4 class="p">서울 강남역 인근 강의실</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">신청 방법</h3>
@@ -209,7 +218,7 @@ get_header(); ?>
                     <br/>2. 유튜브 촬영은 진행되지 않습니다.
                 </h4>
             </div>
-            <h2 class="px-24 py-3 h2 button">강의 오픈 알림 신청하기 D-2</h2>
+            <h2 class="px-24 max-md:px-6  py-3 h2 button">강의 대기 신청하기</h2>
         </div>
     </section>
 </main>

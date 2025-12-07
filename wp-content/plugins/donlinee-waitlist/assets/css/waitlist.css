@@ -1,0 +1,295 @@
+/* 팝업 오버레이 */
+.donlinee-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 팝업 컨테이너 */
+.donlinee-popup-container {
+    background: white;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 팝업 헤더 */
+.donlinee-popup-header {
+    padding: 24px 24px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donlinee-popup-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.donlinee-popup-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.donlinee-popup-close:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+/* 폼 스타일 */
+.donlinee-popup-form {
+    padding: 24px;
+}
+
+.donlinee-form-group {
+    margin-bottom: 20px;
+}
+
+.donlinee-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+}
+
+.donlinee-form-group .required {
+    color: #dc2626;
+}
+
+.donlinee-form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s;
+    background: white;
+    color: #111827;
+}
+
+.donlinee-form-group input:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.donlinee-form-group input.error {
+    border-color: #ef4444;
+}
+
+.error-message {
+    display: none;
+    color: #ef4444;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* 폼 정보 */
+.donlinee-form-info {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.donlinee-form-info p {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.donlinee-form-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* 폼 액션 */
+.donlinee-form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.donlinee-submit-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.donlinee-submit-btn:hover:not(:disabled) {
+    background: #b91c1c;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.donlinee-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 성공 메시지 */
+#donlinee-success-message {
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 48px;
+    color: white;
+}
+
+#donlinee-success-message h3 {
+    margin: 0 0 24px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.success-content {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.success-content p {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.success-content p:last-child {
+    margin-bottom: 0;
+}
+
+.success-content span {
+    font-weight: 600;
+    color: #111827;
+}
+
+.donlinee-confirm-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.donlinee-confirm-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* 로딩 상태 */
+.donlinee-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+    .donlinee-popup-container {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .donlinee-popup-header h2 {
+        font-size: 20px;
+    }
+
+    .donlinee-popup-form {
+        padding: 20px;
+    }
+
+    #donlinee-success-message {
+        padding: 30px 20px;
+    }
+
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
+    }
+}

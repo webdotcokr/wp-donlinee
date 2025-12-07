@@ -30,22 +30,22 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <!-- <header id="header" class="w-full z-30 fixed bg-white flex items-center">
-    <div class="flex justify-between container items-center">
-      <a href="/"><img src="/wp-content/uploads/2025/12/logo.png" class="w-[90px] max-md:w-[50px]"></a>
+  <header id="header" class="w-full z-30 fixed bg-white flex items-center border-b border-gray-200 shadow-sm">
+    <div class="flex justify-between w-full max-w-6xl mx-auto items-center px-6">
+      <a href="/"><img src="/wp-content/uploads/2025/12/logo.png" class="w-[90px] max-md:w-[60px]"></a>
       <nav class="max-lg:hidden">
-        <ol class="flex items-center gap-16 h5 font-semibold">
-          <li><a href="/instructor">강사소개</a></li>
-          <li><a href="/service">돈마고치 안내</a></li>
-          <li><a href="/contact"><button class="btn primary">수강 대기신청</button></a></li>
+        <ol class="flex items-center gap-12 font-medium text-black">
+          <li><a href="/instructor" class="hover:text-gray-600 transition-colors">강사소개</a></li>
+          <li><a href="/service" class="hover:text-gray-600 transition-colors">돈마고치 안내</a></li>
+          <li><a href="/contact"><button class="bg-[#DC2626] text-white px-6 py-2 rounded hover:bg-[#B91C1C] transition-colors font-semibold">수강 대기 신청</button></a></li>
         </ol>
       </nav>
       <div class="flex lg:hidden">
-        <img src="/wp-content/uploads/2025/09/hamburger.svg" id="hamburger">
-        <img src="/wp-content/uploads/2025/09/close.svg" id="close" class="hidden">
+        <img src="/wp-content/uploads/2025/09/hamburger.svg" id="hamburger" class="w-6 h-6 cursor-pointer">
+        <img src="/wp-content/uploads/2025/09/close.svg" id="close" class="hidden w-6 h-6 cursor-pointer">
       </div>
     </div>
-  </header> -->
+  </header>
 
   <!-- mobile GNB Overlay -->
    <div id="gnb" class=" container flex flex-col justify-center items-center w-screen h-screen bg-black/95 z-20 fixed text-white list-none

@@ -35,6 +35,10 @@ body {
     padding-top: 80px; /* header 높이만큼 여백 추가 */
 }
 
+section {
+    padding: 0 16px;
+}
+
 /* 모바일에서는 더 작은 여백 */
 @media (max-width: 768px) {
     body {
@@ -45,6 +49,21 @@ body {
 /* Header 스타일 */
 #header {
     height: 80px; /* 헤더 높이 고정 */
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#header a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#header nav a:hover {
+    color: #4B5563;
 }
 
 main section {
@@ -68,6 +87,9 @@ main img {
 @media (max-width: 768px) {
     #header {
         height: 60px;
+    }
+    body {
+        padding-top: 60px;
     }
 }
 .button {
@@ -147,14 +169,33 @@ p {
 .youtube-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 60px 30px;
     margin-top: 40px;
 }
 
 @media (max-width: 768px) {
+    .h1 {
+        font-size: 30px;
+    }
+    .h2 {
+        font-size: 22px;
+    }
+    .h3 {
+        font-size: 17px;
+    }
+    .subTitle {
+        font-size: 22px;
+        letter-spacing: -0.58px;
+        padding: 12px 0;
+    }
+    p ,.p {
+        font-size: 17px;
+    }
+
+
     .youtube-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 40px;
     }
 }
 
