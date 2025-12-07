@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <!-- Fixed Navigation Menu -->
-<nav class="fixed top-[80px] max-md:top-[60px] left-0 right-0 z-20 bg-[#2c2c2c] border-b border-gray-700">
+<nav class="fixed top-[80px] max-md:top-[60px] left-0 right-0 z-20 bg-[#2c2c2c] border-b border-gray-700 max-md:text-sm">
     <div class="max-w-6xl mx-auto">
         <ul class="flex justify-center items-center text-white">
             <li class="flex-1">
@@ -256,13 +256,11 @@ get_header(); ?>
             </p>
             <h3 class="point">돈마고치 커리큘럼</h3>
             <div class="grid grid-cols-3">
-                <img src="">
-                <img src="">
-                <img src="">
+                <img src="/wp-content/uploads/2025/12/teach-10.webp">
+                <img src="/wp-content/uploads/2025/12/teach-11.webp">
+                <img src="/wp-content/uploads/2025/12/teach-12.webp">
             </div>
             <p>이후 12주 동안 사업을 12단계로 나누어 매주 한 단계 씩 강제로 진전되게 만든다. 이 과정에서 기존 다마고치에서 성과가 난 수강생이 밀착 피드백을 진행한다. 제대로 따라오지 못하거나, 뒤처지는 사람은 더 가까이 붙어서 관리한다. 이렇게 <b>수업 3주, 강제 실행 12주가 지나면 목표인 월 매출 1000만원, 아무리 못해도 500만원은 나오는 사업체를 가질 수 있도록 설계</b>했다.</p>
-            <h3 class="point">강제 시작 12주 일정표</h3>
-            <img src="">
             <p>
                 <b>만약 수강료 이상의 매출이 발생하지 않으면 100% 환불까지 해준다.</b> 그만큼 자신 있다.<br/><br/>
 ​
@@ -332,7 +330,7 @@ get_header(); ?>
                 ​
                 이제는 ‘배우는’ 강의가 아니라, ‘시작하게 만드는’ 강의가 필요하다. 돈마고치는 그걸 가능하게 할 유일한 프로그램이 될 것이다. 끝.
             </p>
-            <h2 class="px-24 py-3 max-md:px-8 max-md:py-2 h2 button">수강 신청하기</h2>
+            <button class="donlinee-waitlist-trigger px-24 py-3 max-md:px-8 max-md:py-2 h2 button cursor-pointer">수강 대기신청</button>
     </section>
 </main>
 

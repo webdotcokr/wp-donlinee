@@ -124,7 +124,116 @@ get_header(); ?>
             이 과정에서 내용을 완벽히 숙지하였는지 과제를 통해 점검 및 피드백을 진행합니다. 
             </p>
         </div>
-        <p><b>* 강의 목록 중 일부만 공개되었습니다.</b><br/><br/>
+
+        <!-- 강의 미리보기 섹션 -->
+        <?php
+        // 미리보기 강의 데이터
+        $previewLectures = array(
+            array(
+                'chapter' => 'CHAPTER 1',
+                'title' => '사업의 기본',
+                'lessons' => array(
+                    array('title' => '사업으로 인생을 바꾸는데 걸리는 시간', 'videoUrl' => 'https://player.vimeo.com/video/1074857904', 'isPreview' => true, 'duration' => '22:36'),
+                    array('title' => '노력으로 성공이 가능할까?', 'videoUrl' => 'https://player.vimeo.com/video/1074858609', 'isPreview' => true, 'duration' => '07:03'),
+                    array('title' => '사업이 꼭 정답은 아닌 이유', 'videoUrl' => '', 'isPreview' => false, 'duration' => '07:05'),
+                    array('title' => '사업이란 대체 무엇일까', 'videoUrl' => '', 'isPreview' => false, 'duration' => '12:41'),
+                    array('title' => '당신이 사업을 어렵게 느끼는 이유', 'videoUrl' => '', 'isPreview' => false, 'duration' => '21:24'),
+                    array('title' => '사업을 잘하는 사람들의 특징과 그들이 되는 방법', 'videoUrl' => '', 'isPreview' => false, 'duration' => '09:49'),
+                    array('title' => '사업을 운이라고 치부하는 사람들에게 반박', 'videoUrl' => '', 'isPreview' => false, 'duration' => '02:39'),
+                    array('title' => '사업은 전략 싸움이다', 'videoUrl' => '', 'isPreview' => false, 'duration' => '20:36'),
+                    array('title' => '당신이 책 강의를 봐도 인생이 바뀌지 않는 이유', 'videoUrl' => '', 'isPreview' => false, 'duration' => '09:37'),
+                ),
+            ),
+            array(
+                'chapter' => 'CHAPTER 2',
+                'title' => '사업 아이템을 정하는 6가지 원칙',
+                'lessons' => array(
+                    array('title' => '무자본 창업 6가지 방법', 'videoUrl' => 'https://player.vimeo.com/video/1074862903', 'isPreview' => true, 'duration' => '09:37'),
+                    array('title' => '1 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '10:10'),
+                    array('title' => '2 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '10:29'),
+                    array('title' => '3 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '13:59'),
+                    array('title' => '4 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '10:52'),
+                    array('title' => '5 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '12:21'),
+                    array('title' => '6 원칙(비밀)', 'videoUrl' => '', 'isPreview' => false, 'duration' => '08:34'),
+                    array('title' => '좋아하는 일 과연 좋을까? & 잘하는 일 과연 좋을까?', 'videoUrl' => '', 'isPreview' => false, 'duration' => '11:52'),
+                    array('title' => '사업 아이템 수백개를 확인하는 벤치마크 사이트', 'videoUrl' => '', 'isPreview' => false, 'duration' => '13:35'),
+                ),
+            ),
+        );
+        ?>
+
+        <div id="preview" class="">
+            <p class="text-center p mb-8 opacity-90">실제 강의 일부를 미리 경험해보세요</p>
+
+            <div class="space-y-8">
+                <?php foreach ($previewLectures as $chapterIndex => $chapterData): ?>
+                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+                    <div class="mb-4">
+                        <span class="text-sm font-bold text-[#DC2626]"><?php echo $chapterData['chapter']; ?></span>
+                        <h5 class="h3 mt-1"><?php echo $chapterData['title']; ?></h5>
+                    </div>
+
+                    <div class="space-y-2">
+                        <?php foreach ($chapterData['lessons'] as $lessonIndex => $lesson): ?>
+                        <div class="preview-accordion-item border border-gray-200 rounded-lg overflow-hidden">
+                            <button
+                                class="w-full px-4 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors <?php echo $lesson['isPreview'] ? 'cursor-pointer' : 'cursor-not-allowed opacity-75'; ?>"
+                                onclick="toggleAccordion(this, <?php echo $lesson['isPreview'] ? 'true' : 'false'; ?>, '<?php echo addslashes($lesson['videoUrl']); ?>')"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <?php if ($lesson['isPreview']): ?>
+                                    <?php else: ?>
+                                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    <?php endif; ?>
+                                    <span class="text-left font-medium"><?php echo $lesson['title']; ?></span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <?php if ($lesson['isPreview']): ?>
+                                        <span class="text-xs bg-[#DC2626] text-white px-2 py-1 rounded font-medium">미리보기</span>
+                                    <?php endif; ?>
+                                    <span class="text-sm text-gray-500"><?php echo $lesson['duration']; ?></span>
+                                    <svg class="w-5 h-5 text-gray-400 accordion-arrow transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+
+                            <div class="accordion-content hidden">
+                                <?php if ($lesson['isPreview']): ?>
+                                    <div class="p-4 bg-gray-50">
+                                        <div class="video-container relative w-full" style="height: 400px; max-height: 50vh;">
+                                            <iframe
+                                                src="<?php echo $lesson['videoUrl']; ?>?badge=0&autopause=0&player_id=0&app_id=58479"
+                                                class="absolute inset-0 w-full h-full"
+                                                frameborder="0"
+                                                allow="autoplay; fullscreen; picture-in-picture"
+                                                allowfullscreen
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="p-4 bg-gray-50 text-center">
+                                        <p class="text-gray-600">🔒 수강 신청 후 모든 강의를 시청하실 수 있습니다.</p>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="p font-medium">
+                    <b class="underline">* 강의 목록 중 일부만 공개되었습니다.</b>
+                </p>
+            </div>
+        </div>
+
+        <p>
             이후 강의가 종료되면 수강생이 사업을 시작하도록 매달 온라인을 통해 수강생이 모두 참석하는 세미나를 운영합니다. 사업을 시작하고 매출을 성장시키는 과정까지 1:1로 밀착 관리합니다. <b>그럼에도 매출이 발생하지 않는다면 100% 환불해 드리겠습니다.</b> 그만큼 자신있습니다.<br/><br/>
             제 이전 강의(다마고치, 돈파르타)를 듣고 사업을 시작한 후 매출이 발생하지 않은 경우는 없습니다. 그 어떤 강의보다 성과를 내는 비율이 높다고 자부합니다. 또한 제 강의는 제 구독자가 아님에도 친구의 소개로 지원하는 경우가 많습니다. 먼저 수강한 친구가 추천해주는 방식으로 계속 이어지고 있습니다.
         </p>
@@ -218,7 +327,7 @@ get_header(); ?>
                     <br/>2. 유튜브 촬영은 진행되지 않습니다.
                 </h4>
             </div>
-            <h2 class="px-24 max-md:px-6  py-3 h2 button">강의 대기 신청하기</h2>
+            <h2 class="px-24 max-md:px-6 py-3 h2 button cursor-pointer">강의 대기 신청하기</h2>
         </div>
     </section>
 </main>

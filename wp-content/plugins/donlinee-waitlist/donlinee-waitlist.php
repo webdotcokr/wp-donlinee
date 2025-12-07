@@ -125,7 +125,7 @@ class Donlinee_Waitlist {
                     </div>
 
                     <div class="donlinee-form-info">
-                        <p>* 입력하신 연락처로 오픈 알림톡이 발송됩니다.</p>
+                        <p>* 입력하신 연락처로 모집 시작일에 알림톡(카카오톡)이 발송됩니다.</p>
                         <p>* 기수별 오프라인 20명 한정, 50명 이상 지원 시 선착순 자동 마감</p>
                     </div>
 

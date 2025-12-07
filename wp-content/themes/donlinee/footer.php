@@ -36,38 +36,41 @@
 </footer>
 
 <!-- 하단 고정 배너 -->
-<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[70vw] px-4 lg:px-0" style="bottom: 80px; display: none;">
-    <div class="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] text-white rounded-lg shadow-2xl border border-gray-700">
+<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[50vw] px-4 lg:px-0 bottom-[30px] max-md:bottom-0 max-md:px-0" style="display: none;">
+    <div class="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] text-white rounded-lg max-md:rounded-none shadow-2xl border border-gray-700">
         <div class="px-4 sm:px-6 py-4">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
-                <!-- 타이머 섹션 -->
-                <div class="flex flex-col items-center lg:items-start">
-                    <div class="text-xs text-gray-300 mb-1">모집 시작까지</div>
-                    <div id="countdown-timer" class="text-2xl font-bold tracking-wider" style="font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
-                        <span id="days">00</span>일
-                        <span id="hours">00</span>:
-                        <span id="minutes">00</span>:
-                        <span id="seconds">00</span>
-                    </div>
-                </div>
 
                 <!-- 모집 일정 및 카피라이팅 -->
                 <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <div class="text-xs text-gray-400 mb-1">모집일정: 2025.12.13(토) ~ 12.28(일)</div>
+                    <div class="text-xs text-gray-400 mb-1 max-md:hidden">모집일정: 2025.12.13(토) ~ 12.28(일)</div>
                     <div class="text-sm sm:text-base font-medium">
-                        돈 버는 PT의 시작, <span class="text-[#ef4444]">돈마고치 1기</span>
-                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">선착순 20명 | 100% 환불보장</span>
+                        강제 실행형 사업 강의, <span class="text-[#ef4444] font-semibold">돈마고치 1기</span>
+                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정 | 100% 환불보장</span>
                     </div>
                 </div>
 
-                <!-- 신청 버튼 -->
-                <div class="flex items-center">
-                    <a href="#" class="donlinee-waitlist-trigger inline-flex items-center bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-3 rounded-md text-sm font-bold transition-all duration-200 transform hover:scale-105 shadow-lg">
-                        <span>수강 대기신청</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+                <div class="flex max-md:items-center max-md:space-between gap-8">
+                    <!-- 타이머 섹션 -->
+                    <div class="flex flex-col items-center lg:items-start">
+                        <div class="text-xs text-gray-300 mb-1">모집 시작까지</div>
+                        <div id="countdown-timer" class="text-2xl font-bold tracking-wider max-md:text-base" style="font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+                            <span id="days">00</span>일
+                            <span id="hours">00</span>:
+                            <span id="minutes">00</span>:
+                            <span id="seconds">00</span>
+                        </div>
+                    </div>
+
+                    <!-- 신청 버튼 -->
+                    <div class="flex items-center">
+                        <a href="#" class="donlinee-waitlist-trigger inline-flex items-center bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-3 max-md:px-6 max-md:py-2 rounded-md text-sm font-bold transition-all duration-200 transform hover:scale-105 shadow-lg">
+                            <span>수강 대기신청</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,6 +161,64 @@
             });
         });
     });
+
+    // 강의 미리보기 아코디언 기능
+    function toggleAccordion(button, isPreview, videoUrl) {
+        // 미리보기가 불가능한 레슨인 경우 - 아무 반응 없음
+        if (isPreview === false) {
+            return;
+        }
+
+        // 아코디언 아이템 요소 찾기
+        const accordionItem = button.closest('.preview-accordion-item');
+        const accordionContent = accordionItem.querySelector('.accordion-content');
+        const arrow = button.querySelector('.accordion-arrow');
+
+        // 다른 열린 아코디언 닫기
+        const allAccordions = document.querySelectorAll('.preview-accordion-item');
+        allAccordions.forEach(item => {
+            if (item !== accordionItem) {
+                const content = item.querySelector('.accordion-content');
+                const itemArrow = item.querySelector('.accordion-arrow');
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                    content.style.display = 'none';
+                    itemArrow.classList.remove('rotate');
+
+                    // 비디오 정지
+                    const iframe = content.querySelector('iframe');
+                    if (iframe) {
+                        const src = iframe.src;
+                        iframe.src = '';
+                        iframe.src = src;
+                    }
+                }
+            }
+        });
+
+        // 현재 아코디언 토글
+        if (accordionContent.classList.contains('show')) {
+            accordionContent.classList.remove('show');
+            setTimeout(() => {
+                accordionContent.style.display = 'none';
+            }, 300);
+            arrow.classList.remove('rotate');
+
+            // 비디오 정지
+            const iframe = accordionContent.querySelector('iframe');
+            if (iframe) {
+                const src = iframe.src;
+                iframe.src = '';
+                iframe.src = src;
+            }
+        } else {
+            accordionContent.style.display = 'block';
+            setTimeout(() => {
+                accordionContent.classList.add('show');
+            }, 10);
+            arrow.classList.add('rotate');
+        }
+    }
   </script>
 </body>
 
