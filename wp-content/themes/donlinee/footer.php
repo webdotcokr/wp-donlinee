@@ -36,18 +36,37 @@
 </footer>
 
 <!-- 하단 고정 배너 -->
-<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[60vw] px-4 lg:px-0" style="bottom: 80px; display: none;">
-    <div class="bg-[#3a3a3a] text-white rounded-lg shadow-lg">
+<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[70vw] px-4 lg:px-0" style="bottom: 80px; display: none;">
+    <div class="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] text-white rounded-lg shadow-2xl border border-gray-700">
         <div class="px-4 sm:px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- 배너 내용 -->
-                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
-                    <span class="text-sm sm:text-base font-medium">
-                        비즈니스 PT 수익화 트레이닝, 지금 신청하세요!
-                        <span class="text-xs sm:text-sm opacity-90">(선착 후 불만족 시 100% 환불)</span>
-                    </span>
-                    <a href="/대기신청" class="inline-block bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-2 rounded text-sm font-medium transition-colors duration-200">
-                        대기신청
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                <!-- 타이머 섹션 -->
+                <div class="flex flex-col items-center lg:items-start">
+                    <div class="text-xs text-gray-300 mb-1">모집 시작까지</div>
+                    <div id="countdown-timer" class="text-2xl font-bold font-mono tracking-wider">
+                        <span id="days">00</span>일
+                        <span id="hours">00</span>:
+                        <span id="minutes">00</span>:
+                        <span id="seconds">00</span>
+                    </div>
+                </div>
+
+                <!-- 모집 일정 및 카피라이팅 -->
+                <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <div class="text-xs text-gray-400 mb-1">모집일정: 2025.12.13(토) ~ 12.28(일)</div>
+                    <div class="text-sm sm:text-base font-medium">
+                        돈 버는 PT의 시작, <span class="text-[#ef4444]">돈마고치 1기</span>
+                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">선착순 20명 | 100% 환불보장</span>
+                    </div>
+                </div>
+
+                <!-- 신청 버튼 -->
+                <div class="flex items-center">
+                    <a href="#" class="donlinee-waitlist-trigger inline-flex items-center bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-3 rounded-md text-sm font-bold transition-all duration-200 transform hover:scale-105 shadow-lg">
+                        <span>수강 대기신청</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -81,6 +100,63 @@
         if (banner) {
             banner.style.display = 'block';
         }
+
+        // 카운트다운 타이머
+        function updateCountdown() {
+            // 목표 날짜: 2025년 12월 13일 오전 11시
+            const targetDate = new Date('2025-12-13T11:00:00+09:00').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // 시간 계산
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // DOM 업데이트
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+
+            // 타이머 종료 처리
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                const timerEl = document.getElementById('countdown-timer');
+                if (timerEl) {
+                    timerEl.innerHTML = '<span class="text-[#ef4444]">모집 중!</span>';
+                }
+                // 모집 시작까지 텍스트 변경
+                const labelEl = timerEl?.previousElementSibling;
+                if (labelEl) {
+                    labelEl.textContent = '현재 모집 중';
+                }
+            }
+        }
+
+        // 초기 실행
+        updateCountdown();
+
+        // 1초마다 업데이트
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // 대기신청 버튼 클릭 이벤트 (팝업 트리거)
+        document.querySelectorAll('.donlinee-waitlist-trigger').forEach(function(trigger) {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                // jQuery 이벤트로 팝업 열기
+                if (typeof jQuery !== 'undefined') {
+                    jQuery('#donlinee-waitlist-popup').fadeIn(300);
+                    jQuery('body').css('overflow', 'hidden');
+                }
+            });
+        });
     });
   </script>
 </body>
