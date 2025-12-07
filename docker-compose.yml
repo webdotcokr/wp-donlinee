@@ -5,11 +5,12 @@ services:
     image: mysql:8.0 # 또는 mariadb:latest
     container_name: donlinee
     restart: always
+    env_file: .env
     environment:
-      MYSQL_ROOT_PASSWORD: some_strong_password
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wp_user
-      MYSQL_PASSWORD: wp_password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql # DB 데이터 영구 보존을 위한 볼륨
 
@@ -21,13 +22,19 @@ services:
     restart: always
     ports:
       - "8000:80" # 호스트의 8000포트를 컨테이너의 80포트와 연결
+    env_file: .env
     environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wp_user
-      WORDPRESS_DB_PASSWORD: wp_password
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      # NHN Cloud API Keys
+      NHN_APP_KEY: ${NHN_APP_KEY}
+      NHN_SECRET_KEY: ${NHN_SECRET_KEY}
+      NHN_SENDER_KEY: ${NHN_SENDER_KEY}
     volumes:
       - ./wp-content:/var/www/html/wp-content # 테마/플러그인/업로드는 로컬 폴더와 동기화
+      - ./wp-config-custom.php:/var/www/html/wp-config-custom.php
 
 volumes:
   db_data:
