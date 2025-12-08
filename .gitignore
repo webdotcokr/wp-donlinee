@@ -5,11 +5,12 @@
 
 # WordPress
 wp-config.php
-wp-content/uploads/
 wp-content/upgrade/
 wp-content/cache/
 wp-content/backup*/
 wp-content/ai1wm-backups/
+wp-content/plugins/all-in-one-wp-migration/
+wp-content/languages/plugins/all-in-one-wp-migration*
 
 # Logs
 *.log
