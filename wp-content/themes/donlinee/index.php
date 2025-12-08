@@ -475,46 +475,29 @@ get_header(); ?>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">진행 위치</h3>
-                <h4 class="p">서울 / 역삼역 인근 (추후 공지)</h4>
+                <h4 class="p">서울 강남역 인근 강의실</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">신청 방법</h3>
-                <h4 class="p">아래 버튼으로 신청 → 대기리스트 등록 → 추첨 및 개별 안내</h4>
+                <h4 class="p">홈페이지 내 지원서 작성</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">가격</h3>
-                <h4 class="p">299만원 (부가세 포함)</h4>
-            </div>
-        </div>
-    </section>
-    <!-- 강제 성공보장 정책 -->
-    <section class="full py-[100px] flex flex-col gap-[60px] text-black bg-[#111] text-white">
-        <div class="flex flex-col gap-[40px]">
-            <h2 class="subTitle">강제 성공보장 정책</h2>
-            <div class="flex flex-col gap-[20px]">
-                <h3 class="point">100% 환불 정책</h3>
-                <h4 class="p opacity-90">16주 커리큘럼을 완료 후, 매출이 발생하지 않을 시 100% 환불</h4>
+                <h4 class="p">198만원</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
-                <h3 class="point">무제한 피드백</h3>
-                <h4 class="p opacity-90">강의 종료 후에도 사업이 성공할 때까지 무제한 피드백 제공</h4>
+                <h3 class="point">합격자 발표</h3>
+                <h4 class="p">2025.12.29 월요일</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
-                <h3 class="point">실명 인증 후기</h3>
-                <h4 class="p opacity-90">모든 후기는 실명 인증된 수강생의 실제 후기입니다</h4>
+                <h3 class="point">참고</h3>
+                <h4 class="p">1. <span class="underline font-bold">합격자는 20명</span>입니다. (50명 이상 지원 시 선착순 조기 마감됩니다.)
+                    <br/>2. 유튜브 촬영은 진행되지 않습니다.</h4>
             </div>
-        </div>
-    </section>
-    <!-- CTA -->
-    <section class="py-[100px] flex flex-col items-center gap-[40px]">
-        <h2 class="h2 text-center">지금 바로 신청하세요!</h2>
-        <p class="text-center p">한정 인원 20명 | 선착순 마감</p>
-        <div class="text-center">
-            <a href="/contact" class="inline-block bg-[#DC2626] text-white px-12 py-6 rounded-lg hover:bg-[#B91C1C] transition-colors font-bold text-xl shadow-lg">
-                수강 대기 신청하기
+            <a href="/contact" class="text-center bg-[#DC2626] text-white px-12 py-6 rounded-lg hover:bg-[#B91C1C] transition-colors font-bold text-xl shadow-lg">
+                수강 대기 신청하기 →
             </a>
         </div>
-    </section>
 </main>
 
 <?php get_footer(); ?>
