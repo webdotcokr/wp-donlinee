@@ -36,7 +36,7 @@
 </footer>
 
 <!-- 하단 고정 배너 -->
-<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[50vw] px-4 lg:px-0 bottom-[30px] max-md:bottom-0 max-md:px-0" style="display: none;">
+<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[50vw] px-4 lg:px-0 bottom-[30px] max-md:bottom-0 max-md:px-0" style="display: none; transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;">
     <div class="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] text-white rounded-lg max-md:rounded-none shadow-2xl border border-gray-700">
         <div class="px-4 sm:px-6 py-4">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -46,7 +46,8 @@
                     <div class="text-xs text-gray-400 mb-1 max-md:hidden">모집일정: 2025.12.13(토) ~ 12.28(일)</div>
                     <div class="text-sm sm:text-base font-medium">
                         강제 실행형 사업 강의, <span class="text-[#ef4444] font-semibold">돈마고치 1기</span>
-                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정 | 100% 환불보장</span>
+                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정</span>
+                        <!-- <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정 | 100% 환불보장</span> -->
                     </div>
                 </div>
 
@@ -99,10 +100,50 @@
     document.addEventListener('DOMContentLoaded', function() {
         const banner = document.getElementById('fixed-banner');
 
-        // 배너 항상 표시
+        // 배너 초기 표시
         if (banner) {
             banner.style.display = 'block';
+            banner.style.opacity = '1';
+            banner.style.visibility = 'visible';
         }
+
+        // 스크롤 이벤트로 배너 페이드 인/아웃 처리
+        let isScrolling = false;
+
+        function handleBannerVisibility() {
+            if (!isScrolling) {
+                window.requestAnimationFrame(function() {
+                    const scrollPosition = window.scrollY + window.innerHeight;
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
+
+                    // 페이지 하단(푸터 영역)에 도달했는지 확인
+                    // 푸터 높이 + 여유 공간(150px) 만큼 위에서부터 페이드아웃 시작
+                    const fadeOutThreshold = documentHeight - footerHeight - 150;
+
+                    if (banner) {
+                        if (scrollPosition > fadeOutThreshold) {
+                            // 푸터 근처에 도달하면 배너를 천천히 사라지게 함
+                            banner.style.opacity = '0';
+                            banner.style.visibility = 'hidden';
+                        } else {
+                            // 푸터에서 멀어지면 배너를 다시 표시
+                            banner.style.opacity = '1';
+                            banner.style.visibility = 'visible';
+                        }
+                    }
+
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        }
+
+        // 스크롤 이벤트 리스너 추가
+        window.addEventListener('scroll', handleBannerVisibility);
+
+        // 초기 실행 (페이지 로드 시 현재 스크롤 위치 확인)
+        handleBannerVisibility();
 
         // 카운트다운 타이머
         function updateCountdown() {

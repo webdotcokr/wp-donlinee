@@ -24,13 +24,14 @@ get_header(); ?>
                 <p class="mb-4">회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며,
                 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
                 <ol class="list-decimal pl-6 space-y-2">
-                    <li>홈페이지 회원가입 및 회원관리</li>
-                    <li>'돈파르타', '돈마고치' 등 교육 서비스 제공</li>
-                    <li>수강료 결제, 환불 등의 거래</li>
-                    <li>문의에 대한 대응, 불만 처리, 이용자 서비스 개선</li>
-                    <li>서비스 운영을 위한 공지사항 전달</li>
-                    <li>이벤트 등의 프로모션 알림</li>
-                    <li>서비스 이용기록 분석을 통한 서비스 개선</li>
+                    <li>프로그램 신청 및 회원관리</li>
+                    <li>'돈마고치' 등 오프라인 마케팅 교육 프로그램 제공</li>
+                    <li>교육비 결제, 환불 등의 거래 처리</li>
+                    <li>오프라인 강의 출결 관리 및 과제 제출 확인</li>
+                    <li>교재 배송 및 프로그램 관련 안내</li>
+                    <li>문의에 대한 대응, 불만 처리, 프로그램 개선</li>
+                    <li>프로그램 일정 변경 등 중요 공지사항 전달</li>
+                    <li>마케팅 실습(광고 계정) 관련 기술 지원</li>
                 </ol>
             </section>
 
@@ -48,24 +49,28 @@ get_header(); ?>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border border-gray-300 px-4 py-2">회원가입</td>
-                                <td class="border border-gray-300 px-4 py-2">이름, 휴대폰 번호, 이메일 주소, 비밀번호</td>
+                                <td class="border border-gray-300 px-4 py-2">프로그램 신청</td>
+                                <td class="border border-gray-300 px-4 py-2">이름, 휴대폰 번호, 이메일 주소, 교육 희망 일정</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 px-4 py-2">서비스 이용</td>
-                                <td class="border border-gray-300 px-4 py-2">서비스 이용기록, 접속 IP, 쿠키, 접속 로그</td>
+                                <td class="border border-gray-300 px-4 py-2">교육비 결제</td>
+                                <td class="border border-gray-300 px-4 py-2">결제정보(카드사명, 카드번호 일부), 은행명, 입금자명</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">교재 배송</td>
+                                <td class="border border-gray-300 px-4 py-2">수령인명, 배송 주소, 연락처</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">프로그램 진행</td>
+                                <td class="border border-gray-300 px-4 py-2">출석 기록, 과제 제출 내역, 광고 계정 정보(실습용)</td>
                             </tr>
                             <tr>
                                 <td class="border border-gray-300 px-4 py-2">고객상담</td>
                                 <td class="border border-gray-300 px-4 py-2">성명, 휴대폰 번호, 이메일, 상담내역</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 px-4 py-2">상품결제</td>
-                                <td class="border border-gray-300 px-4 py-2">결제정보(카드사명, 카드번호 일부), 은행명, 입금자명</td>
-                            </tr>
-                            <tr>
                                 <td class="border border-gray-300 px-4 py-2">환불처리</td>
-                                <td class="border border-gray-300 px-4 py-2">은행명, 예금주명, 계좌번호</td>
+                                <td class="border border-gray-300 px-4 py-2">은행명, 예금주명, 계좌번호, 환불 사유</td>
                             </tr>
                         </tbody>
                     </table>
@@ -73,9 +78,10 @@ get_header(); ?>
 
                 <p class="mb-2"><strong>개인정보 수집방법:</strong></p>
                 <ol class="list-decimal pl-6 space-y-2">
-                    <li>홈페이지 회원가입 및 서비스 이용 과정에서 이용자가 직접 입력</li>
-                    <li>고객센터를 통한 상담 과정에서 웹페이지, 이메일, 전화 등을 통해 수집</li>
-                    <li>생성정보 수집 툴을 통한 자동 수집</li>
+                    <li>프로그램 신청서 작성 시 이용자가 직접 입력</li>
+                    <li>오프라인 강의 참석 시 출석부 작성</li>
+                    <li>고객센터를 통한 상담 과정에서 이메일, 전화 등을 통해 수집</li>
+                    <li>교육비 결제 과정에서 결제 대행사를 통해 수집</li>
                 </ol>
             </section>
 
@@ -87,8 +93,9 @@ get_header(); ?>
                 <p class="mb-4">② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</p>
 
                 <ol class="list-decimal pl-6 space-y-2">
-                    <li><strong>홈페이지 회원 가입 및 관리:</strong> 홈페이지 탈퇴 시까지</li>
-                    <li><strong>재화 또는 서비스 제공:</strong> 재화·서비스 공급완료 및 요금결제·정산 완료 시까지</li>
+                    <li><strong>프로그램 참여자 정보:</strong> 프로그램 종료 후 5년 (교육 증빙 및 환불 처리를 위함)</li>
+                    <li><strong>교육비 결제 정보:</strong> 거래 종료 후 5년 (전자상거래법에 따름)</li>
+                    <li><strong>고객 상담 기록:</strong> 상담 종료 후 3년</li>
                 </ol>
 
                 <p class="mt-4 mb-2">다만, 다음의 사유에 해당하는 경우에는 해당 기간 종료 시까지 보관합니다.</p>
@@ -174,25 +181,15 @@ get_header(); ?>
                 <h2 class="text-2xl font-bold mb-4 text-gray-800">제7조 (개인정보의 안전성 확보조치)</h2>
                 <p class="mb-4">회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 하고 있습니다.</p>
                 <ol class="list-decimal pl-6 space-y-2">
-                    <li>관리적 조치: 내부관리계획 수립 및 시행, 정기적 직원 교육 등</li>
-                    <li>기술적 조치: 개인정보처리시스템 등의 접근 권한 관리, 접근통제시스템 설치, 고유 식별정보 등의 암호화, 보안프로그램 설치</li>
-                    <li>물리적 조치: 전산실, 자료보관실 등의 접근통제</li>
+                    <li><strong>관리적 조치:</strong> 내부관리계획 수립 및 시행, 정기적 직원 교육, 접근 권한 최소화</li>
+                    <li><strong>기술적 조치:</strong> 개인정보 암호화, 접근기록 보관, 백신 프로그램 설치 및 주기적 업데이트</li>
+                    <li><strong>물리적 조치:</strong> 개인정보 보관 장소에 대한 접근통제, 문서 보안 관리</li>
+                    <li><strong>교육 관련 특별 조치:</strong> 출석부 및 과제 제출 기록은 별도 관리, 광고 실습 계정 정보는 교육 종료 후 즉시 파기</li>
                 </ol>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제8조 (개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</h2>
-                <p class="mb-4">① 회사는 이용자에게 개별적인 맞춤 서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.</p>
-                <p class="mb-4">② 쿠키는 웹사이트를 운영하는데 이용되는 서버가 이용자의 컴퓨터 브라우저에 보내는 소량의 정보이며 이용자들의 컴퓨터 내의 하드디스크에 저장되기도 합니다.</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><strong>쿠키의 사용 목적:</strong> 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 보안접속 여부 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용됩니다.</li>
-                    <li><strong>쿠키의 설치·운영 및 거부:</strong> 웹브라우저 상단의 도구 > 인터넷 옵션 > 개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부할 수 있습니다.</li>
-                    <li><strong>쿠키 저장을 거부할 경우</strong> 맞춤형 서비스 이용에 어려움이 발생할 수 있습니다.</li>
-                </ul>
-            </section>
-
-            <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제9조 (개인정보 보호책임자)</h2>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제8조 (개인정보 보호책임자)</h2>
                 <p class="mb-4">① 회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만 처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
 
                 <div class="bg-gray-50 p-6 rounded-lg">
@@ -200,7 +197,7 @@ get_header(); ?>
                     <ul class="space-y-2">
                         <li>성명: 곽경환</li>
                         <li>직책: 대표</li>
-                        <li>이메일: help@donlinee.com</li>
+                        <li>이메일: donlinee1.work@gmail.com</li>
                     </ul>
                 </div>
 
@@ -208,7 +205,7 @@ get_header(); ?>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제10조 (개인정보 열람청구)</h2>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제9조 (개인정보 열람청구)</h2>
                 <p>정보주체는 개인정보 보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다.
                 회사는 정보주체의 개인정보 열람 청구가 신속하게 처리되도록 노력하겠습니다.</p>
 
@@ -217,13 +214,13 @@ get_header(); ?>
                     <ul class="space-y-2">
                         <li>부서명: 고객지원팀</li>
                         <li>담당자: 고객지원 담당자</li>
-                        <li>이메일: help@donlinee.com</li>
+                        <li>이메일: donlinee1.work@gmail.com</li>
                     </ul>
                 </div>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제11조 (권익침해 구제 방법)</h2>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제10조 (권익침해 구제 방법)</h2>
                 <p class="mb-4">정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다.</p>
 
                 <div class="space-y-4">
@@ -264,7 +261,7 @@ get_header(); ?>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제12조 (개인정보 처리방침 시행 및 변경)</h2>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제11조 (개인정보 처리방침 시행 및 변경)</h2>
                 <p>이 개인정보 처리방침은 2024년 12월 1일부터 적용됩니다.</p>
             </section>
         </div>

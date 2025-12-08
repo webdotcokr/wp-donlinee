@@ -16,7 +16,7 @@ get_header(); ?>
         <div class="prose prose-lg max-w-none">
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800">제1조 [목적]</h2>
-                <p>본 약관은 돈린이(이하 "회사")가 제공하는 돈파르타, 돈마고치 등 온라인 교육 서비스(이하 "서비스")의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+                <p>본 약관은 돈린이(이하 "회사")가 제공하는 돈마고치 등 오프라인 마케팅 교육 프로그램 및 관련 서비스(이하 "서비스")의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
             </section>
 
             <section class="mb-12">
@@ -31,19 +31,20 @@ get_header(); ?>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제3조 [유료서비스의 내용 등]</h2>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제3조 [프로그램의 내용 등]</h2>
                 <ol class="list-none space-y-4">
                     <li>
-                        ① 회사는 다음 사항을 해당 서비스 이용 초기화면이나 FAQ 등에 회원이 알기 쉽게 표시합니다.
+                        ① 회사는 다음 사항을 해당 프로그램 안내 페이지나 FAQ 등에 회원이 알기 쉽게 표시합니다.
                         <ol class="list-decimal pl-6 mt-2 space-y-1">
-                            <li>서비스의 명칭</li>
-                            <li>서비스의 내용, 이용방법, 이용요금, 이용기간</li>
-                            <li>기타 이용조건</li>
+                            <li>프로그램의 명칭 및 교육 내용</li>
+                            <li>오프라인 강의 일정, 장소, 교육비</li>
+                            <li>과제 및 실습 내용 (네이버 파워링크, 구글 키워드 광고 등)</li>
+                            <li>환불 조건 및 기타 이용조건</li>
                         </ol>
                     </li>
-                    <li>② 회사의 서비스의 이용에 필요한 최소한의 기술사양은 권장사양정보에 따릅니다.</li>
-                    <li>③ 회사는 서비스를 제공함에 있어 유료 서비스의 교환·반품·보증과 그 이용요금 환불의 조건 및 절차에 관한 사항을 제공합니다.</li>
-                    <li>④ 회원은 유료서비스 이용을 위해 운영정책에서 정하는 내용을 준수하여야 합니다.</li>
+                    <li>② 회사는 오프라인 교육 장소 및 일정을 사전에 공지하며, 부득이한 사정으로 변경이 필요한 경우 최소 3일 전에 회원에게 통지합니다.</li>
+                    <li>③ 회사는 프로그램을 제공함에 있어 환불의 조건 및 절차에 관한 사항을 명확히 제공합니다.</li>
+                    <li>④ 회원은 프로그램 참여를 위해 정해진 오프라인 강의 일정 및 과제 제출 일정을 준수하여야 합니다.</li>
                 </ol>
             </section>
 
@@ -85,7 +86,7 @@ get_header(); ?>
 
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800">제6조 [환불규정]</h2>
-                <p class="mb-4">① 회사는 서비스에 대해 원칙적으로 다음과 같은 환불 규정을 적용합니다.</p>
+                <p class="mb-4">① 회사는 프로그램에 대해 원칙적으로 다음과 같은 환불 규정을 적용합니다.</p>
 
                 <div class="overflow-x-auto mb-6">
                     <table class="min-w-full border-collapse border border-gray-300 text-sm">
@@ -98,77 +99,53 @@ get_header(); ?>
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="1" class="border border-gray-300 px-4 py-2 align-top">
-                                    (i) 회사의 사정으로 인하여 서비스를 제공할 수 없게 된 경우, 또는<br>
-                                    (ii) 회사가 교육을 할 수 없게 된 경우
+                                <td class="border border-gray-300 px-4 py-2 align-top">
+                                    회사의 사정으로 인하여 프로그램을 제공할 수 없게 된 경우
                                 </td>
-                                <td class="border border-gray-300 px-4 py-2">수업을 할 수 없거나, 서비스를 제공할 수 없게 된 날</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 낸 수강료를 일 단위로 계산한 금액</td>
+                                <td class="border border-gray-300 px-4 py-2">프로그램을 제공할 수 없게 된 날</td>
+                                <td class="border border-gray-300 px-4 py-2">이미 납부한 교육비 전액</td>
                             </tr>
                             <tr>
-                                <td rowspan="8" class="border border-gray-300 px-4 py-2 align-top">학습자가 본인의 의사로 학습을 포기한 경우</td>
-                                <td colspan="2" class="border border-gray-300 px-4 py-2 bg-gray-50 font-semibold">
-                                    가. 수강료 징수기간이 1개월 이내인 경우
-                                </td>
+                                <td rowspan="3" class="border border-gray-300 px-4 py-2 align-top">회원이 본인의 의사로 프로그램 참여를 포기한 경우</td>
+                                <td class="border border-gray-300 px-4 py-2">프로그램 시작 전</td>
+                                <td class="border border-gray-300 px-4 py-2">이미 납부한 교육비 전액</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 px-4 py-2">1) 수업시작 전</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 낸 수강료 전액</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2">2) 총수업시간의 1/3이 지나기 이전</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 낸 수강료의 2/3에 해당하는 금액</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2">3) 총수업시간의 1/3이 지난 후부터 1/2이 지나기 이전까지</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 낸 수강료의 1/2에 해당하는 금액</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2">4) 총수업시간의 1/2이 지난 후</td>
+                                <td class="border border-gray-300 px-4 py-2">프로그램 시작 이후</td>
                                 <td class="border border-gray-300 px-4 py-2">반환하지 아니함</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="border border-gray-300 px-4 py-2 bg-gray-50 font-semibold">
-                                    나. 수강료 징수기간이 1개월을 초과하는 경우
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2">1) 수업시작 전</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 낸 수강료 전액</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2">2) 수업시작 이후</td>
-                                <td class="border border-gray-300 px-4 py-2">반환사유가 발생한 그 달의 반환 대상 수강료(가목에 따라 산출된 반환 대상 수강료를 말한다)와 나머지 달의 수강료 전액을 합산한 금액</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                <div class="bg-gray-50 p-4 rounded-lg mb-6">
                     <p class="text-sm space-y-1">
                         <strong>※ 주의사항</strong><br>
-                        • 수강료는 교재비(별도 판매)를 제외한 서비스 이용요금을 말합니다.<br>
-                        • 수강료 반환 기준 : 평생교육법 시행령 제23조에 근거하여 수강료 반환<br>
-                        • 환불 규정 적용 범위는 과정마다 다를 수 있습니다.<br>
-                        • 환불시, 카드수수료는 회원 본인이 부담합니다.
+                        • 특별 환불 보장 프로그램은 아래 조건을 모두 충족해야 합니다.
                     </p>
                 </div>
 
                 <ol class="list-none space-y-4">
-                    <li>② 회원이 환불을 요청하고자 하는 경우 회사 홈페이지 또는 고객센터에 전화 등을 통하여 회사에 그 의사를 표시하여야 하며, 회사는 환불요청을 접수하고 회원의 요청과 환불규정을 확인한 후, 5영업일 이내에 환불금을 지급합니다. 단, 회사의 책임영역외의 금융사의 전산마비 등 외부적 사정 의하여 다소 지연될 수 있으며, 이와 같은 지연의 경우 회사는 책임지지 않습니다.</li>
-                    <li>③ 회원이 서비스 이용과 관련하여 지급받은 재화(교재 등)가 있는 경우에는 환불 신청시 해당 재화를 회원의 비용으로 반납(또는 재화 상당액을 지급)하여야 하며, 반납(또는 지급)이 완료된 날로부터 5영업일 이내에 환불금이 지급됩니다.</li>
-                    <li>④ 기간제 정액상품, 이벤트성 강좌, 비정규 강좌, 특별기획 강좌 등의 상품은 별도의 수강 취소, 변경 및 환불규정이 적용될 수 있으며, 자세한 내용은 회사 홈페이지 내에서 확인할 수 있습니다.</li>
+                    <li>② 회원이 환불을 요청하고자 하는 경우 회사 고객센터 또는 이메일을 통하여 회사에 그 의사를 표시하여야 하며, 회사는 환불요청을 접수하고 회원의 요청과 환불규정을 확인한 후, 5영업일 이내에 환불금을 지급합니다.</li>
+                    <li>③ 회원이 프로그램 참여와 관련하여 지급받은 교재가 있는 경우에는 환불 신청시 해당 교재를 회원의 비용으로 반납하여야 하며, 반납이 완료된 날로부터 5영업일 이내에 환불금이 지급됩니다.</li>
+                    <li>④ 특별 프로그램의 경우 별도의 환불규정이 적용될 수 있으며, 자세한 내용은 프로그램 신청 시 안내됩니다.</li>
                 </ol>
 
-                <div class="bg-blue-50 p-6 rounded-lg mt-6">
-                    <h3 class="text-lg font-bold mb-3">📢 돈마고치 특별 환불 정책</h3>
-                    <p class="font-semibold text-blue-800 mb-2">100% 환불 보장 조건:</p>
+                <div class="bg-gray-50 p-6 rounded-lg mt-6">
+                    <h3 class="text-lg font-bold mb-3">환불 보장 규정</h3>
+                    <p class="font-semibold mb-2">다음 조건을 모두 충족 시 프로그램 종료 후 환불 절차 진행:</p>
                     <ul class="list-disc pl-6 space-y-2 text-sm">
-                        <li>전체 커리큘럼을 성실히 이수한 경우</li>
-                        <li>과제 및 실습을 모두 완료한 경우</li>
-                        <li>출석률 90% 이상 달성한 경우</li>
-                        <li>위 조건을 모두 충족했음에도 만족하지 못한 경우 수료 후 7일 이내 환불 신청 가능</li>
+                        <li><strong>모든 오프라인 강의 참석</strong> (불참 없이 전 회차 참석)</li>
+                        <li><strong>오프라인 강의 지각 3회 미만</strong> (정시 참석 기준)</li>
+                        <li><strong>평일 과제 사항 100% 이행</strong> (제출 기한 내 모든 과제 완료)</li>
+                        <li><strong>광고 실습 완료</strong>: 네이버 파워링크, 구글 키워드 광고 2가지 모두 진행하여 총 광고비 30만원 이상 지출
+                            <br><span class="text-xs text-gray-600 ml-4">* 광고비는 회원이 직접 광고 플랫폼에 지출하는 비용으로 환불 대상에서 제외</span>
+                        </li>
                     </ul>
+                    <p class="text-sm mt-4 text-gray-700">
+                        ※ 위 조건을 모두 충족했음에도 프로그램에 만족하지 못한 경우, 매출 미발생 시 프로그램 종료 후 7일 이내 환불 신청 가능<br>
+                        ※ 환불 심사는 출석부, 과제 제출 기록, 광고 계정 증빙 자료를 통해 진행됩니다.
+                    </p>
                 </div>
             </section>
 
@@ -189,22 +166,24 @@ get_header(); ?>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제9조 [서비스의 이용시간]</h2>
-                <p>① 서비스의 이용은 회사의 업무상 또는 기술상 특별한 지장이 없는 한 연중무휴 1일 24시간을 원칙으로 합니다. 다만, 정기 점검 등의 필요로 회사가 정한 날이나 시간은 제외됩니다.</p>
-                <p>② 회사는 서비스를 일정범위로 분할하여 각 범위별로 이용가능시간을 별도로 지정할 수 있습니다.</p>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제9조 [프로그램 운영시간 및 고객센터]</h2>
+                <p>① 오프라인 강의는 사전에 공지된 일정에 따라 진행되며, 강의 시간은 프로그램별로 상이할 수 있습니다.</p>
+                <p>② 고객센터 운영시간은 평일 오전 10시부터 오후 6시까지이며, 주말 및 공휴일은 휴무입니다.</p>
+                <p>③ 긴급한 문의사항은 이메일(donlinee1.work@gmail.com)로 접수 가능하며, 영업일 기준 24시간 이내에 답변드립니다.</p>
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">제10조 [서비스의 변경 및 중지]</h2>
-                <p>① 회사는 변경될 서비스의 내용 및 제공일자를 제7조에서 정한 방법으로 회원에게 통지하고 서비스를 변경하여 제공할 수 있습니다.</p>
-                <p>② 회사는 다음 각 호에 해당하는 경우 서비스의 전부 또는 일부를 제한하거나 중지할 수 있습니다.</p>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">제10조 [프로그램의 변경 및 중지]</h2>
+                <p>① 회사는 변경될 프로그램의 내용 및 일정을 최소 3일 전에 회원에게 통지하고 프로그램을 변경하여 제공할 수 있습니다.</p>
+                <p>② 회사는 다음 각 호에 해당하는 경우 프로그램의 전부 또는 일부를 제한하거나 중지할 수 있습니다.</p>
                 <ol class="list-decimal pl-6 mt-2 space-y-1">
-                    <li>서비스용 설비의 보수 등 공사로 인한 부득이한 경우</li>
-                    <li>회원이 회사의 영업활동을 방해하는 경우</li>
-                    <li>정전, 제반 설비의 장애 또는 이용량의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 경우</li>
-                    <li>서비스 제공업자와의 계약 종료 등과 같은 회사의 제반 사정으로 서비스를 유지할 수 없는 경우</li>
+                    <li>교육 장소의 사정으로 인한 부득이한 경우</li>
+                    <li>강사의 긴급한 사정으로 강의가 불가능한 경우</li>
+                    <li>회원이 다른 회원의 학습을 방해하거나 프로그램 진행을 방해하는 경우</li>
+                    <li>최소 수강 인원 미달로 프로그램 진행이 어려운 경우</li>
                     <li>기타 천재지변, 국가비상사태 등 불가항력적 사유가 있는 경우</li>
                 </ol>
+                <p class="mt-4">③ 제2항의 사유로 프로그램이 중지되는 경우, 회사는 대체 일정을 제공하거나 환불 처리를 진행합니다.</p>
             </section>
 
             <section class="mb-12">
@@ -253,11 +232,11 @@ get_header(); ?>
                 <p>본 약관은 2024년 12월 1일부터 적용됩니다.</p>
             </div>
 
-            <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
                 <h3 class="text-lg font-bold mb-4">문의사항</h3>
                 <p>이용약관에 대한 문의사항이 있으시면 아래로 연락해 주시기 바랍니다.</p>
                 <ul class="mt-2 space-y-1">
-                    <li>• 이메일: help@donlinee.com</li>
+                    <li>• 이메일: donlinee1.work@gmail.com</li>
                     <li>• 사업자명: 돈린이</li>
                     <li>• 대표자: 곽경환</li>
                     <li>• 사업장 소재지: 서울 강남구 역삼로3길 19</li>
