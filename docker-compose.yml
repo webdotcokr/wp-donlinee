@@ -32,6 +32,8 @@ services:
       NHN_APP_KEY: ${NHN_APP_KEY}
       NHN_SECRET_KEY: ${NHN_SECRET_KEY}
       NHN_SENDER_KEY: ${NHN_SENDER_KEY}
+      # Slack
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL}
     volumes:
       - ./wp-content:/var/www/html/wp-content # 테마/플러그인/업로드는 로컬 폴더와 동기화
       - ./wp-config-custom.php:/var/www/html/wp-config-custom.php
