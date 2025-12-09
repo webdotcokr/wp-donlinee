@@ -18,6 +18,7 @@ class Donlinee_Waitlist_Ajax {
         add_action('wp_ajax_donlinee_waitlist_update_status', array($this, 'handle_status_update'));
         add_action('wp_ajax_donlinee_waitlist_delete', array($this, 'handle_delete'));
         add_action('wp_ajax_donlinee_waitlist_export', array($this, 'handle_export'));
+        add_action('wp_ajax_test_slack_waitlist_notification', array($this, 'handle_test_slack_notification'));
     }
 
     /**
@@ -57,6 +58,9 @@ class Donlinee_Waitlist_Ajax {
             // 관리자 이메일 알림 (옵션)
             $this->send_admin_notification($name, $phone);
 
+            // Slack 알림 발송
+            $this->send_slack_notification($name, $phone);
+
             // 성공 응답
             wp_send_json_success(array(
                 'message' => '신청이 완료되었습니다.',
@@ -65,6 +69,114 @@ class Donlinee_Waitlist_Ajax {
         } else {
             wp_send_json_error(array('message' => $result['message']));
         }
+    }
+
+    /**
+     * Slack 알림 전송
+     */
+    private function send_slack_notification($name, $phone) {
+        // Debug: Log function call
+        error_log('[SLACK DEBUG] send_slack_notification called with name: ' . $name . ', phone: ' . $phone);
+
+        // Check if Slack notifications are enabled
+        if (!defined('SLACK_NOTIFICATIONS_ENABLED') || !SLACK_NOTIFICATIONS_ENABLED) {
+            error_log('[SLACK DEBUG] Notifications disabled - SLACK_NOTIFICATIONS_ENABLED: ' . (defined('SLACK_NOTIFICATIONS_ENABLED') ? SLACK_NOTIFICATIONS_ENABLED : 'not defined'));
+            return false;
+        }
+
+        // Get Slack webhook URL
+        $webhook_url = defined('SLACK_WEBHOOK_URL') ? SLACK_WEBHOOK_URL : get_option('slack_webhook_url');
+
+        if (empty($webhook_url)) {
+            error_log('[SLACK DEBUG] Webhook URL not configured');
+            return false;
+        }
+
+        error_log('[SLACK DEBUG] Webhook URL found: ' . substr($webhook_url, 0, 50) . '...');
+
+        // Format the message
+        $message = [
+            // channel을 지정하지 않으면 Webhook의 기본 채널로 전송됨
+            // 'channel' => defined('SLACK_CHANNEL') ? SLACK_CHANNEL : null,
+            'username' => '돈린이 수강대기 알림',
+            'icon_emoji' => ':hourglass_flowing_sand:',
+            'attachments' => [
+                [
+                    'color' => '#FFA500', // Orange color for waitlist
+                    'pretext' => '📋 새로운 수강 대기 신청이 접수되었습니다!',
+                    'title' => '수강 대기 신청 정보',
+                    'title_link' => admin_url('admin.php?page=donlinee-waitlist'),
+                    'fields' => [
+                        [
+                            'title' => '이름',
+                            'value' => $name,
+                            'short' => true
+                        ],
+                        [
+                            'title' => '전화번호',
+                            'value' => $phone,
+                            'short' => true
+                        ],
+                        [
+                            'title' => '신청 구분',
+                            'value' => '🔔 수강 대기',
+                            'short' => true
+                        ],
+                        [
+                            'title' => '접수 시간',
+                            'value' => current_time('Y-m-d H:i:s'),
+                            'short' => true
+                        ]
+                    ],
+                    'footer' => '돈린이 수강대기 시스템',
+                    'footer_icon' => 'https://platform.slack-edge.com/img/default_application_icon.png',
+                    'ts' => time()
+                ]
+            ]
+        ];
+
+        // Channel은 이미 주석 처리되었으므로 제거할 필요 없음
+        // Remove channel if not set
+        // if (empty($message['channel'])) {
+        //     unset($message['channel']);
+        // }
+
+        // Debug: Log message being sent
+        error_log('[SLACK DEBUG] Sending message: ' . json_encode($message, JSON_PRETTY_PRINT));
+
+        // Send the webhook request
+        $response = wp_remote_post($webhook_url, [
+            'headers' => [
+                'Content-Type' => 'application/json',
+            ],
+            'body' => json_encode($message),
+            'timeout' => 30
+        ]);
+
+        if (is_wp_error($response)) {
+            error_log('[SLACK DEBUG] WP Error: ' . $response->get_error_message());
+            error_log('[SLACK DEBUG] Error code: ' . $response->get_error_code());
+            return false;
+        }
+
+        $response_code = wp_remote_retrieve_response_code($response);
+        $response_body = wp_remote_retrieve_body($response);
+
+        error_log('[SLACK DEBUG] Response code: ' . $response_code);
+        error_log('[SLACK DEBUG] Response body: ' . $response_body);
+
+        // Slack returns 'ok' for success
+        if ($response_code === 200 && trim($response_body) === 'ok') {
+            error_log('[SLACK DEBUG] Success! Notification sent.');
+            return true;
+        }
+
+        // Log detailed error for debugging
+        error_log('[SLACK DEBUG] Failed - unexpected response');
+        error_log('[SLACK DEBUG] Expected: 200 status and "ok" body');
+        error_log('[SLACK DEBUG] Got: ' . $response_code . ' status and "' . $response_body . '" body');
+
+        return false;
     }
 
     /**
@@ -187,5 +299,46 @@ class Donlinee_Waitlist_Ajax {
         fclose($output);
 
         exit;
+    }
+
+    /**
+     * 테스트 Slack 알림 발송 (관리자)
+     */
+    public function handle_test_slack_notification() {
+        // 권한 확인
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => '권한이 없습니다.'));
+        }
+
+        // nonce 검증
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'donlinee-waitlist-admin-nonce')) {
+            wp_send_json_error(array('message' => '보안 검증에 실패했습니다.'));
+        }
+
+        // Webhook URL 확인
+        $webhook_url = defined('SLACK_WEBHOOK_URL') ? SLACK_WEBHOOK_URL : get_option('slack_webhook_url');
+        if (empty($webhook_url)) {
+            wp_send_json_error(array('message' => 'Slack Webhook URL이 설정되지 않았습니다.'));
+            return;
+        }
+
+        // 테스트 데이터로 Slack 알림 발송
+        $result = $this->send_slack_notification('테스트', '010-1234-5678');
+
+        if ($result) {
+            wp_send_json_success(array('message' => '테스트 알림이 성공적으로 발송되었습니다!'));
+        } else {
+            // 더 자세한 에러 메시지 제공
+            $error_msg = 'Slack 알림 발송 실패';
+
+            // 디버그 모드일 때 더 자세한 정보 제공
+            if (defined('SLACK_DEBUG_MODE') && SLACK_DEBUG_MODE) {
+                $error_msg .= ' - WordPress 로그를 확인하세요 (/wp-content/debug.log)';
+            } else {
+                $error_msg .= ' - Webhook URL을 확인하거나 디버그 모드를 활성화하세요';
+            }
+
+            wp_send_json_error(array('message' => $error_msg));
+        }
     }
 }

@@ -105,6 +105,38 @@
             }
         });
 
+        // Slack 테스트 알림
+        $('#test-slack-waitlist').on('click', function() {
+            if(!confirm('테스트 알림을 Slack에 발송하시겠습니까?')) {
+                return;
+            }
+
+            var $btn = $(this);
+            $btn.prop('disabled', true).text('발송 중...');
+
+            $.ajax({
+                url: donlinee_waitlist_admin.ajax_url,
+                type: 'POST',
+                data: {
+                    action: 'test_slack_waitlist_notification',
+                    nonce: donlinee_waitlist_admin.nonce
+                },
+                success: function(response) {
+                    if(response.success) {
+                        alert('✅ Slack 테스트 알림이 성공적으로 발송되었습니다!');
+                    } else {
+                        alert('❌ Slack 알림 발송 실패: ' + (response.data.message || '알 수 없는 오류'));
+                    }
+                },
+                error: function() {
+                    alert('❌ 요청 중 오류가 발생했습니다.');
+                },
+                complete: function() {
+                    $btn.prop('disabled', false).text('Slack 테스트 알림 보내기');
+                }
+            });
+        });
+
         // 알림 표시 함수
         function showNotice(message, type) {
             const noticeClass = type === 'success' ? 'notice-success' : 'notice-error';

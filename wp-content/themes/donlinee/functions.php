@@ -97,6 +97,26 @@ function applications_admin_page() {
     <div class="wrap">
         <h1>강의 접수자 관리 (총 <?php echo count($applicants); ?>명)</h1>
 
+        <!-- Slack 설정 상태 표시 -->
+        <div style="margin: 20px 0; padding: 15px; background: #f0f0f1; border-left: 4px solid <?php echo (defined('SLACK_WEBHOOK_URL') && SLACK_WEBHOOK_URL) ? '#00ba37' : '#d63638'; ?>;">
+            <h3 style="margin-top: 0;">📢 Slack 알림 설정 상태</h3>
+            <?php if (defined('SLACK_WEBHOOK_URL') && SLACK_WEBHOOK_URL): ?>
+                <p style="color: #00ba37;">✅ Slack 알림이 <strong>활성화</strong> 되어 있습니다.</p>
+                <p>채널: <code><?php echo defined('SLACK_CHANNEL') ? SLACK_CHANNEL : '기본 채널'; ?></code></p>
+                <button id="test-slack" class="button button-secondary">
+                    Slack 테스트 알림 보내기
+                </button>
+            <?php else: ?>
+                <p style="color: #d63638;">❌ Slack Webhook URL이 설정되지 않았습니다.</p>
+                <p><strong>설정 방법:</strong></p>
+                <ol>
+                    <li>Slack 워크스페이스에서 Incoming Webhook 앱 추가</li>
+                    <li>Webhook URL 생성</li>
+                    <li><code>wp-config-custom.php</code> 파일의 25번째 줄에 URL 입력</li>
+                </ol>
+            <?php endif; ?>
+        </div>
+
         <!-- 배치 발송 버튼 -->
         <div style="margin: 20px 0;">
             <button id="batch-send" class="button button-primary button-large">
@@ -164,6 +184,31 @@ function applications_admin_page() {
     jQuery(document).ready(function($) {
         $('#select-all').click(function() {
             $('.batch-select').prop('checked', this.checked);
+        });
+
+        // Slack 테스트 알림 버튼
+        $('#test-slack').click(function() {
+            if(!confirm('테스트 알림을 Slack에 발송하시겠습니까?')) {
+                return;
+            }
+
+            var $btn = $(this);
+            $btn.prop('disabled', true).text('발송 중...');
+
+            $.post(ajaxurl, {
+                action: 'test_slack_notification',
+                nonce: '<?php echo wp_create_nonce('test_slack'); ?>'
+            }, function(res) {
+                if(res.success) {
+                    alert('✅ Slack 테스트 알림이 성공적으로 발송되었습니다!');
+                } else {
+                    alert('❌ Slack 알림 발송 실패: ' + (res.data.message || '알 수 없는 오류'));
+                }
+            }).fail(function() {
+                alert('❌ 요청 중 오류가 발생했습니다.');
+            }).always(function() {
+                $btn.prop('disabled', false).text('Slack 테스트 알림 보내기');
+            });
         });
 
         $('#batch-send').click(function() {
@@ -319,6 +364,21 @@ function handle_application_submission($request) {
         'course_name' => $course
     ]);
 
+    // Send Slack notification for new application
+    $slack_data = [
+        'name' => $name,
+        'age' => $age,
+        'phone' => $phone,
+        'course' => $course
+    ];
+
+    $slack_result = send_slack_notification($slack_data);
+
+    // Log if Slack notification failed (but don't fail the application)
+    if (!$slack_result) {
+        error_log('Slack notification failed for application: ' . $name . ' (' . $phone . ')');
+    }
+
     return [
         'success' => true,
         'message' => '접수가 완료되었습니다. 카카오톡으로 안내 메시지가 발송됩니다.',
@@ -327,6 +387,114 @@ function handle_application_submission($request) {
             'phone' => $phone
         ]
     ];
+}
+
+/**
+ * Send Slack notification for new applications
+ */
+function send_slack_notification($application_data) {
+    // Check if Slack notifications are enabled
+    if (!defined('SLACK_NOTIFICATIONS_ENABLED') || !SLACK_NOTIFICATIONS_ENABLED) {
+        return false;
+    }
+
+    // Get Slack webhook URL
+    $webhook_url = defined('SLACK_WEBHOOK_URL') ? SLACK_WEBHOOK_URL : get_option('slack_webhook_url');
+
+    if (empty($webhook_url)) {
+        error_log('Slack Webhook URL not configured');
+        return false;
+    }
+
+    // Format the message
+    $message = [
+        // channel을 지정하지 않으면 Webhook의 기본 채널로 전송됨
+        // 'channel' => defined('SLACK_CHANNEL') ? SLACK_CHANNEL : null,
+        'username' => '돈린이 수강신청 알림',
+        'icon_emoji' => ':bell:',
+        'attachments' => [
+            [
+                'color' => '#36a64f', // Green color for success
+                'pretext' => '🎉 새로운 수강 신청이 접수되었습니다!',
+                'title' => '수강 신청 정보',
+                'title_link' => admin_url('admin.php?page=applications'),
+                'fields' => [
+                    [
+                        'title' => '이름',
+                        'value' => $application_data['name'],
+                        'short' => true
+                    ],
+                    [
+                        'title' => '나이',
+                        'value' => $application_data['age'] . '세',
+                        'short' => true
+                    ],
+                    [
+                        'title' => '전화번호',
+                        'value' => $application_data['phone'],
+                        'short' => true
+                    ],
+                    [
+                        'title' => '강의',
+                        'value' => $application_data['course'] ?: '돈마고치',
+                        'short' => true
+                    ],
+                    [
+                        'title' => '접수 시간',
+                        'value' => current_time('Y-m-d H:i:s'),
+                        'short' => false
+                    ]
+                ],
+                'footer' => '돈린이 관리 시스템',
+                'footer_icon' => 'https://platform.slack-edge.com/img/default_application_icon.png',
+                'ts' => time()
+            ]
+        ]
+    ];
+
+    // Channel은 이미 주석 처리되었으므로 제거할 필요 없음
+    // Remove channel if not set (will use webhook's default channel)
+    // if (empty($message['channel'])) {
+    //     unset($message['channel']);
+    // }
+
+    // Send the webhook request
+    $response = wp_remote_post($webhook_url, [
+        'headers' => [
+            'Content-Type' => 'application/json',
+        ],
+        'body' => json_encode($message),
+        'timeout' => 30
+    ]);
+
+    if (is_wp_error($response)) {
+        error_log('Slack notification error: ' . $response->get_error_message());
+        return false;
+    }
+
+    $response_body = wp_remote_retrieve_body($response);
+    $response_code = wp_remote_retrieve_response_code($response);
+
+    if ($response_code !== 200) {
+        error_log('Slack notification failed with code ' . $response_code . ': ' . $response_body);
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Send test Slack notification (for admin testing)
+ */
+function send_test_slack_notification() {
+    $test_data = [
+        'name' => '테스트',
+        'age' => 30,
+        'phone' => '010-1234-5678',
+        'course' => '돈마고치 (테스트)'
+    ];
+
+    return send_slack_notification($test_data);
 }
 
 /**
@@ -382,6 +550,33 @@ function send_alimtalk($phone, $templateCode, $variables = []) {
     } else {
         error_log('AlimTalk API failed: ' . $body);
         return false;
+    }
+}
+
+/**
+ * AJAX handler for test Slack notification
+ */
+add_action('wp_ajax_test_slack_notification', 'handle_test_slack_notification');
+function handle_test_slack_notification() {
+    // Verify nonce
+    if(!wp_verify_nonce($_POST['nonce'], 'test_slack')) {
+        wp_send_json_error(['message' => '보안 검증 실패']);
+        return;
+    }
+
+    // Check permissions
+    if(!current_user_can('manage_options')) {
+        wp_send_json_error(['message' => '권한이 없습니다.']);
+        return;
+    }
+
+    // Send test notification
+    $result = send_test_slack_notification();
+
+    if($result) {
+        wp_send_json_success(['message' => '테스트 알림 발송 완료']);
+    } else {
+        wp_send_json_error(['message' => 'Slack 알림 발송 실패 - Webhook URL을 확인하세요']);
     }
 }
 

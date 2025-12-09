@@ -232,7 +232,7 @@ get_header(); ?>
                 <p>본 약관은 2024년 12월 1일부터 적용됩니다.</p>
             </div>
 
-            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+            <div class="mt-8 p-6 bg-blue-50 rounded-lg">
                 <h3 class="text-lg font-bold mb-4">문의사항</h3>
                 <p>이용약관에 대한 문의사항이 있으시면 아래로 연락해 주시기 바랍니다.</p>
                 <ul class="mt-2 space-y-1">

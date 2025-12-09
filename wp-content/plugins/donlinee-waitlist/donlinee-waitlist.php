@@ -19,6 +19,15 @@ define('DONLINEE_WAITLIST_VERSION', '1.0.0');
 define('DONLINEE_WAITLIST_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('DONLINEE_WAITLIST_PLUGIN_URL', plugin_dir_url(__FILE__));
 
+// wp-config-custom.php 파일 로드 (있는 경우)
+$custom_config_file = ABSPATH . '../wp-config-custom.php';
+if (file_exists($custom_config_file)) {
+    require_once $custom_config_file;
+}
+
+// 플러그인 설정 파일 로드
+require_once DONLINEE_WAITLIST_PLUGIN_DIR . 'config.php';
+
 // 필요한 클래스 파일 로드
 require_once DONLINEE_WAITLIST_PLUGIN_DIR . 'includes/class-database.php';
 require_once DONLINEE_WAITLIST_PLUGIN_DIR . 'includes/class-ajax-handler.php';

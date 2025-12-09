@@ -119,6 +119,44 @@ class Donlinee_Waitlist_Admin {
 
             <hr class="wp-header-end">
 
+            <!-- Slack 설정 상태 표시 -->
+            <div style="margin: 20px 0; padding: 15px; background: #f0f0f1; border-left: 4px solid <?php echo (defined('SLACK_WEBHOOK_URL') && SLACK_WEBHOOK_URL) ? '#00ba37' : '#d63638'; ?>;">
+                <h3 style="margin-top: 0;">📢 Slack 알림 설정 상태</h3>
+                <?php if (defined('SLACK_WEBHOOK_URL') && SLACK_WEBHOOK_URL): ?>
+                    <p style="color: #00ba37;">✅ Slack 알림이 <strong>활성화</strong> 되어 있습니다.</p>
+                    <p>채널: <code><?php echo defined('SLACK_CHANNEL') ? SLACK_CHANNEL : '기본 채널'; ?></code></p>
+                    <p style="color: #666;">수강 대기 신청이 접수되면 Slack으로 알림이 발송됩니다.</p>
+
+                    <?php if (defined('SLACK_DEBUG_MODE') && SLACK_DEBUG_MODE): ?>
+                    <details style="margin-top: 10px;">
+                        <summary style="cursor: pointer; color: #666;">🔧 디버그 정보 (클릭하여 펼치기)</summary>
+                        <div style="margin-top: 10px; padding: 10px; background: #fff; border: 1px solid #ddd; font-family: monospace; font-size: 12px;">
+                            <p>Webhook URL: <?php echo substr(SLACK_WEBHOOK_URL, 0, 50) . '...'; ?></p>
+                            <p>설정 파일 로드: ✅ config.php</p>
+                            <p>알림 활성화: <?php echo SLACK_NOTIFICATIONS_ENABLED ? '✅ Yes' : '❌ No'; ?></p>
+                        </div>
+                    </details>
+                    <?php endif; ?>
+
+                    <button id="test-slack-waitlist" class="button button-secondary" style="margin-top: 10px;">
+                        Slack 테스트 알림 보내기
+                    </button>
+                <?php else: ?>
+                    <p style="color: #d63638;">❌ Slack Webhook URL이 설정되지 않았습니다.</p>
+                    <p><strong>설정 방법:</strong></p>
+                    <ol>
+                        <li>Slack 워크스페이스에서 Incoming Webhook 앱 추가</li>
+                        <li>Webhook URL 생성</li>
+                        <li>다음 중 하나의 파일에 URL 입력:
+                            <ul style="margin-top: 5px;">
+                                <li><code>/wp-content/plugins/donlinee-waitlist/config.php</code> (권장)</li>
+                                <li><code>wp-config-custom.php</code></li>
+                            </ul>
+                        </li>
+                    </ol>
+                <?php endif; ?>
+            </div>
+
             <!-- 통계 카드 -->
             <div class="donlinee-stats-cards">
                 <div class="stats-card">

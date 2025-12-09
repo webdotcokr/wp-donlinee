@@ -5,6 +5,8 @@
 
 # WordPress
 wp-config.php
+wp-config-custom.php
+wp-content/plugins/donlinee-waitlist/config.php
 wp-content/upgrade/
 wp-content/cache/
 wp-content/backup*/
