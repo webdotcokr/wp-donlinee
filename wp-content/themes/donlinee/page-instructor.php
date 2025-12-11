@@ -215,15 +215,15 @@ get_header(); ?>
                 4주간 수업을 듣고 곧바로 사업을 시작했다. 그리고 결과는 역시나 성공적이었다. 내 공식은 또 다시 입증되었다.
             </p>
             <div class="grid grid-cols-3 max-md:grid-cols-2 gap-4">
-                <a class="flex flex-col gap-2 font-semibold">
+                <a href="https://blog.naver.com/donlinee1/223143319182" target="_blank" class="flex flex-col gap-2 font-semibold">
                     <img class="max-md:w-full" src="/wp-content/uploads/2025/12/teach-7.webp">
                     <h3>4주 만에 월 1000 돌파한 수강생들(매출 인증)</h3>
                 </a>
-                <a class="flex flex-col gap-2 font-semibold">
+                <a href="https://blog.naver.com/ysn92/223117932089" target="_blank" class="flex flex-col gap-2 font-semibold">
                     <img class="max-md:w-full" src="/wp-content/uploads/2025/12/teach-8.webp">
                     <h3>100만 원 벌던 알바생이 딱 한 달 만에 1,200만 원을 벌게 된 이야기 (feat. 돈린이 다마고치)</h3>
                 </a>
-                <a class="flex flex-col gap-2 font-semibold">
+                <a href="https://blog.naver.com/PostView.naver?blogId=imtrillionaire&Redirect=View&logNo=223210761155&categoryNo=19&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=24862" target="_blank" class="flex flex-col gap-2 font-semibold">
                     <img class="max-md:w-full" src="/wp-content/uploads/2025/12/teach-9.webp">
                     <h3>사업 시작 이틀만에 순수익 200만원을 벌게 해 준 돈린이 다마고치 후기</h3>
                 </a>
@@ -261,7 +261,7 @@ get_header(); ?>
                 <img src="/wp-content/uploads/2025/12/teach-11.webp">
                 <img src="/wp-content/uploads/2025/12/teach-12.webp">
             </div> -->
-            <p><b>이후 5주차부터는 강제 사업 실행이 시작된다.</b> 실전이라고 해서 겁먹을 필요 없다. 돈마고치 4주 과정을 성실히 이행했다면 완전히 다른 사람이 되어 있을 것이다. 물론 직접 사업을 실행하며 현실적인 어려움은 존재할 수 있다. 그래서 수 년 간 성과를 내고 있는 기존 다마고치 우수 수강생들과 함께 문제 해결을 돕고 실무 노하우를 전수한다. 이렇게 12주가 지나면 목표인 월 매출 1000만원, 아무리 못해도 500만원은 나오는 사업체를 가질 수 밖에 없다.</p>
+            <p><b>이후 12주 동안 강제 사업 실행이 시작된다.</b> 실전이라고 해서 겁먹을 필요 없다. 돈마고치 4주 과정을 성실히 이행했다면 완전히 다른 사람이 되어 있을 것이다. 물론 직접 사업을 실행하며 현실적인 어려움은 존재할 수 있다. 그래서 수 년 간 성과를 내고 있는 기존 다마고치 우수 수강생들과 함께 문제 해결을 돕고 실무 노하우를 전수한다. 이렇게 12주가 지나면 목표인 월 매출 1000만원, 아무리 못해도 500만원은 나오는 사업체를 가질 수 밖에 없다.</p>
             <p>
                 <b>만약 수강료 이상의 매출이 발생하지 않으면 100% 환불까지 해준다.</b> 그만큼 자신 있다.<br/><br/>
 ​
@@ -328,7 +328,7 @@ get_header(); ?>
                 하지만 정보를 제공하면서 동시에 강제 실행까지 시킬 수 있는 프로그램이 있다면 어떨까? 기존 강의들의 가장 큰 문제는 수강생 알아서 실행해야 한다는 점이었다. 하지만 대부분은 시작조차 못한다.<br/><br/>
                 ​
                 그래서 나는 이번에 다마고치를 폐기하기로 결심했다. 그리고 완전히 새로운 사업 실행 프로그램인 돈파르타를 만들었다. 4주간의 강제 학습, 이후 매출 강제 발생 커리큘럼.<br/><br/>
-                 <!-- 그리고 16주가 끝날 때, 매출이 발생하지 않았다면 무조건 환불해주는 프로그램이다.​ -->
+                 그리고 16주가 끝날 때, 매출이 발생하지 않았다면 무조건 환불해주는 프로그램이다.​
                 이제는 ‘배우는’ 강의가 아니라, ‘시작하게 만드는’ 강의가 필요하다. 돈마고치는 그걸 가능하게 할 유일한 프로그램이 될 것이다. 끝.
             </p>
             <button class="donlinee-waitlist-trigger px-24 py-3 max-md:px-8 max-md:py-2 h2 button cursor-pointer">수강 대기신청</button>

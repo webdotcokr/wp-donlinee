@@ -43,11 +43,10 @@
 
                 <!-- 모집 일정 및 카피라이팅 -->
                 <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <div class="text-xs text-gray-400 mb-1 max-md:hidden">모집일정: 2025.12.13(토) ~ 12.28(일)</div>
+                    <div class="text-xs text-gray-400 mb-1 max-md:hidden">모집일정: 2025.12.13(토) 오전 11시 ~ 12.28(일)</div>
                     <div class="text-sm sm:text-base font-medium">
                         강제 실행형 사업 강의, <span class="text-[#ef4444] font-semibold">돈마고치 1기</span>
-                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정</span>
-                        <!-- <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정 | 100% 환불보장</span> -->
+                        <span class="block lg:inline text-xs sm:text-sm opacity-90 mt-1 lg:mt-0 lg:ml-2">20명 한정 | 100% 환불보장</span>
                     </div>
                 </div>
 

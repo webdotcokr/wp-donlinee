@@ -402,7 +402,7 @@ get_header(); ?>
         </div>
 
         <p>
-            이후 강의가 종료되면 수강생이 사업을 시작하도록 매달 온라인을 통해 수강생이 모두 참석하는 세미나를 운영합니다. 사업을 시작하고 매출을 성장시키는 과정까지 1:1로 밀착 관리합니다. 그만큼 자신있습니다.<br/><br/>
+            이후 강의가 종료되면 수강생이 사업을 시작하도록 매달 온라인을 통해 수강생이 모두 참석하는 세미나를 운영합니다. 사업을 시작하고 매출을 성장시키는 과정까지 1:1로 밀착 관리합니다. <b>그럼에도 매출이 발생하지 않는다면 100% 환불해 드리겠습니다.</b> 그만큼 자신있습니다.<br/><br/>
             <b>제 이전 강의(다마고치, 돈파르타)를 듣고 사업을 시작한 후 매출이 발생하지 않은 경우는 없습니다.</b> 그 어떤 강의보다 성과를 내는 비율이 높다고 자부합니다. 또한 제 강의는 제 구독자가 아님에도 친구의 소개로 지원하는 경우가 많습니다. 먼저 수강한 친구가 추천해주는 방식으로 계속 이어지고 있습니다.
         </p>
     </section>
@@ -460,18 +460,93 @@ get_header(); ?>
             <p>강제 사업 시작</p>
         </div>
         <div class="flex flex-col gap-[30px]">
-            <h3 class="point">6주 ~</h3>
-            <p>노하우 전달 및 피드백 커뮤니케이션</p>
+            <h3 class="point">6주 ~ 16주 차</h3>
+            <p>노하우 전달 및 무한 피드백</p>
         </div>
         <p><b>​더 자세한 내용은 아래를 확인해 주세요.</b></p>
     </section>
+
+    <!-- FAQ 섹션 -->
+    <section class="full py-[100px] flex flex-col gap-[80px] text-black bg-black">
+        <div><h2 class="text-white subTitle !border-white text-center">자주 묻는 질문</h2></div
+
+        <!-- FAQ 아이템들 -->
+        <div class="max-w-4xl mx-auto w-full px-4 flex flex-col gap-[50px]">
+
+            <!-- Q1: 사업에 정말 공식이 있나요? -->
+            <div class="faq-item">
+                <div class="bg-[#f8f8f8] rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-center">사업에 정말 공식이 있나요?</h3>
+                    <div class="h-px bg-gray-300 mb-6"></div>
+                    <div class="leading-relaxed space-y-4">
+                        <p><b>네, 사업에는 분명 공식이 존재합니다.</b> 실제로 저 또한 공식을 깨닫고 난 후 디자인 에이전시, 스터디카페, 유튜브, 마케팅 에이전시 등 다양한 사업을 시작하였고 단 한번도 실패한 적이 없습니다. 사업 아이템을 정하는 6가지 기준부터 마케팅 4단계 퍼널까지 분명 정답은 정해져 있습니다.</p>
+                        <p>물론 일반 대중 분들은 이 사실을 믿기 어려울 수 있습니다. 제 말에 신뢰도를 높일 수 있도록 <b>30대에 시가총액 8조 기업을 만들어낸 APR 김병훈 대표님의 말씀을 인용</b>하겠습니다.</p>
+                        <div class="my-6 text-center">
+                            <img src="/wp-content/uploads/2025/12/ref-1.webp" alt="APR 김병훈 대표 인용" class="inline-block max-w-full h-auto rounded-lg shadow-md">
+                            <img src="/wp-content/uploads/2025/12/ref-2.webp" alt="APR 김병훈 대표 인용" class="inline-block max-w-full h-auto rounded-lg shadow-md">
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            <a href="https://youtu.be/q_NgaXK0l6c?si=fzCCDgFq_JeDV-zJ&t=148" target="_blank" class="underline">출처: https://www.youtube.com/watch?v=q_NgaXK0l6c</a> <br/>
+                            * 영상은 2분 35초부터 시청하시면 됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2: 정말 매출이 발생하지 않으면 환불해 주나요? -->
+            <div class="faq-item">
+                <div class="bg-[#f8f8f8] rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-center">정말 매출이 발생하지 않으면 환불해 주나요?</h3>
+                    <div class="h-px bg-gray-300 mb-6"></div>
+                    <div class="leading-relaxed">
+                        <p>네, 돈마고치는 정규 과정을 모두 이행하였음에도 <br/><b>수강료 이상의 매출이 발생하지 않는 경우 100% 환불</b>해 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3: 제가 할 줄 아는게 없습니다. 어떤 사업 아이템 선정을 도와주나요? -->
+            <div class="faq-item">
+                <div class="bg-[#f8f8f8] rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-center">제가 할 줄 아는게 없습니다. 어떤 사업 아이템 선정을 도와주나요?</h3>
+                    <div class="h-px bg-gray-300 mb-6"></div>
+                    <div class="leading-relaxed">
+                        <p>네, 돈마고치에서는 사업 아이템을 정하는 방법에 대해 자세히 다루고 있습니다. 또한 정하신 사업 아이템에 대한 피드백도 진행합니다. 강의를 도와주시는 코치 분들 또한 이미 좋은 성과를 낸 제 수강생 출신이며, 다양한 아이템의 사업을 운영하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q4: 제가 직장을 다니고 있습니다. 병행할 수 있나요? -->
+            <div class="faq-item">
+                <div class="bg-[#f8f8f8] rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-center">제가 직장을 다니고 있습니다. 병행할 수 있나요?</h3>
+                    <div class="h-px bg-gray-300 mb-6"></div>
+                    <div class="leading-relaxed">
+                        <p>지금까지 제가 진행한 강의의 수강생 중 70% 이상이 대학생 혹은 직장인으로 본업이 있으신 분들이었습니다. 저 또한 본업을 바로 그만두는 것을 권장하지 않습니다. 사업을 함께 병행하며 성과가 난 후 본격적으로 시작해 보는 것을 추천합니다. 다만, 하루의 2~3시간 정도의 시간은 필연적으로 필요합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q5: 이전에 진행한 다마고치, 돈파르타 강의와 무엇이 다른가요? -->
+            <div class="faq-item">
+                <div class="bg-[#f8f8f8] rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-center">이전에 진행한 다마고치, 돈파르타 강의와 무엇이 다른가요?</h3>
+                    <div class="h-px bg-gray-300 mb-6"></div>
+                    <div class="leading-relaxed">
+                        <p>제가 처음 진행한 다마고치에서 단점을 보완하여 업그레이드한 강의가 돈파르타였습니다. 이 강의들의 총 수강생 합은 1,000명 이상입니다. 이들의 피드백을 받아 추가로 업그레이드 한 강의가 이번 "돈마고치"입니다. 사업에 대한 기본적인 지식부터 강제 실행, 개별 피드백이 모두 포함되어 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- 모집 안내 -->
     <section class="full py-[100px] flex flex-col gap-[60px] text-black bg-[#f1f1f1]">
         <div class="flex flex-col gap-[40px]">
             <h2 class="subTitle !border-black">모집 안내</h2>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">모집 일자</h3>
-                <h4 class="p">2025.12.13 ~ 2025.12.28</h4>
+                <h4 class="p">2025.12.13 오전 11시 ~ 2025.12.28</h4>
             </div>
             <div class="flex flex-col gap-[20px]">
                 <h3 class="point">진행 위치</h3>
