@@ -37,7 +37,7 @@
         <ol class="flex items-center gap-12 max-md:gap-3 font-medium text-black">
           <li><a href="/instructor" class="hover:text-gray-600 transition-colors max-md:text-xs">강사소개</a></li>
           <li><a href="/service" class="hover:text-gray-600 transition-colors max-md:text-xs">돈마고치 안내</a></li>
-          <li><a href="/contact"><button class="bg-[#DC2626] text-white px-6 py-2 max-md:px-3 max-md:py-1 rounded hover:bg-[#B91C1C] transition-colors font-semibold max-md:text-xs">수강 대기신청</button></a></li>
+          <li><a href="#" class="donlinee-waitlist-trigger"><button class="bg-[#DC2626] text-white px-6 py-2 max-md:px-3 max-md:py-1 rounded hover:bg-[#B91C1C] transition-colors font-semibold max-md:text-xs"><span>수강 대기신청</span></button></a></li>
         </ol>
       </nav>
     </div>

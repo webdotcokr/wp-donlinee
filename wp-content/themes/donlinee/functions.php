@@ -64,20 +64,21 @@ function create_applications_table() {
 add_action('after_switch_theme', 'create_applications_table');
 
 /**
- * Admin menu for applications
+ * Admin menu for applications - DISABLED
+ * 수강 대기 신청 플러그인과 수강 신청 관리 플러그인으로 대체됨
  */
-function applications_admin_menu() {
-    add_menu_page(
-        '강의 접수자 관리',
-        '접수자 관리',
-        'manage_options',
-        'applications',
-        'applications_admin_page',
-        'dashicons-groups',
-        30
-    );
-}
-add_action('admin_menu', 'applications_admin_menu');
+// function applications_admin_menu() {
+//     add_menu_page(
+//         '강의 접수자 관리',
+//         '접수자 관리',
+//         'manage_options',
+//         'applications',
+//         'applications_admin_page',
+//         'dashicons-groups',
+//         30
+//     );
+// }
+// add_action('admin_menu', 'applications_admin_menu');
 
 /**
  * Admin page display

@@ -53,7 +53,7 @@
                 <div class="flex max-md:items-center max-md:space-between gap-8">
                     <!-- 타이머 섹션 -->
                     <div class="flex flex-col items-center lg:items-start">
-                        <div class="text-xs text-gray-300 mb-1">모집 시작까지</div>
+                        <div id="countdown-label" class="text-xs text-gray-300 mb-1">모집 시작까지</div>
                         <div id="countdown-timer" class="text-2xl font-bold tracking-wider max-md:text-base" style="font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
                             <span id="days">00</span>일
                             <span id="hours">00</span>:
@@ -201,8 +201,30 @@
 
         // 카운트다운 타이머
         function updateCountdown() {
-            // 목표 날짜: 2025년 12월 13일 오전 11시
-            const targetDate = new Date('2025-12-13T11:00:00+09:00').getTime();
+            // PHP에서 플러그인 설정값 가져오기
+            <?php
+            if (class_exists('Donlinee_Enrollment_Settings')) {
+                $enrollment_settings = Donlinee_Enrollment_Settings::get_current_settings();
+                $current_mode = $enrollment_settings['mode'];
+                $start_date = $enrollment_settings['start_date'];
+                $end_date = $enrollment_settings['end_date'];
+            } else {
+                // 플러그인이 없으면 기본값
+                $current_mode = 'waitlist';
+                $start_date = '2025-12-13 11:00:00';
+                $end_date = '2025-12-28 23:59:59';
+            }
+            ?>
+
+            const currentMode = '<?php echo $current_mode; ?>';
+            const startDate = '<?php echo str_replace(' ', 'T', $start_date); ?>+09:00';
+            const endDate = '<?php echo str_replace(' ', 'T', $end_date); ?>+09:00';
+
+            // 모드에 따라 타겟 날짜 결정
+            const targetDate = currentMode === 'waitlist' ?
+                new Date(startDate).getTime() :  // 대기 모드: 모집 시작일까지
+                new Date(endDate).getTime();     // 수강 모드: 모집 종료일까지
+
             const now = new Date().getTime();
             const distance = targetDate - now;
 
@@ -244,17 +266,8 @@
         // 1초마다 업데이트
         const countdownInterval = setInterval(updateCountdown, 1000);
 
-        // 대기신청 버튼 클릭 이벤트 (팝업 트리거)
-        document.querySelectorAll('.donlinee-waitlist-trigger').forEach(function(trigger) {
-            trigger.addEventListener('click', function(e) {
-                e.preventDefault();
-                // jQuery 이벤트로 팝업 열기
-                if (typeof jQuery !== 'undefined') {
-                    jQuery('#donlinee-waitlist-popup').fadeIn(300);
-                    jQuery('body').css('overflow', 'hidden');
-                }
-            });
-        });
+        // 대기신청 버튼 이벤트 제거 - 각 플러그인의 JS에서 처리
+        // 이벤트 중복 방지를 위해 footer.php에서는 제거
     });
 
     // 챕터 레벨 아코디언 기능

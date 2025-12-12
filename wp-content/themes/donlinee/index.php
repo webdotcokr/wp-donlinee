@@ -569,8 +569,8 @@ get_header(); ?>
                 <h4 class="p">1. <span class="underline font-bold">합격자는 20명</span>입니다. (50명 이상 지원 시 선착순 조기 마감됩니다.)
                     <br/>2. 유튜브 촬영은 진행되지 않습니다.</h4>
             </div>
-            <a href="/contact" class="text-center bg-[#DC2626] text-white px-12 py-6 rounded-lg hover:bg-[#B91C1C] transition-colors font-bold text-xl shadow-lg">
-                수강 대기 신청하기 →
+            <a href="#" class="donlinee-waitlist-trigger text-center bg-[#DC2626] text-white px-12 py-6 rounded-lg hover:bg-[#B91C1C] transition-colors font-bold text-xl shadow-lg">
+                <span>수강 대기 신청하기</span> →
             </a>
         </div>
 </main>

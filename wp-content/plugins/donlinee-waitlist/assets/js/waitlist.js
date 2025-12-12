@@ -13,6 +13,9 @@
         // 모든 대기 신청 링크에 이벤트 바인딩
         $(document).on('click', 'a[href="/contact"], a[href="/대기신청"], h2:contains("강의 대기 신청하기")', openWaitlistPopup);
 
+        // donlinee-waitlist-trigger 클래스를 가진 요소에 이벤트 바인딩
+        $(document).on('click', '.donlinee-waitlist-trigger', openWaitlistPopup);
+
         // h2 버튼 스타일의 경우 클릭 이벤트
         $(document).on('click', '.h2.button:contains("강의 대기 신청하기")', openWaitlistPopup);
 

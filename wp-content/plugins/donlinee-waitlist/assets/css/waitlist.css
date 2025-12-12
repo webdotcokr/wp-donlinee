@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999999;
     display: flex;
     align-items: center;
@@ -116,6 +116,10 @@
     color: #111827;
 }
 
+.donlinee-form-group input::placeholder {
+    color: #9ca3af;
+}
+
 .donlinee-form-group input:focus {
     outline: none;
     border-color: #dc2626;
@@ -179,6 +183,11 @@
     background: #b91c1c;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.donlinee-submit-btn:active:not(:disabled) {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .donlinee-submit-btn:disabled {
@@ -272,25 +281,29 @@
 /* 반응형 */
 @media (max-width: 640px) {
     .donlinee-popup-container {
-        max-width: 100%;
+        max-width: calc(100% - 20px);
         margin: 10px;
     }
 
+    .donlinee-popup-header {
+        padding: 16px 20px;
+    }
+
     .donlinee-popup-header h2 {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .donlinee-popup-form {
-        padding: 20px;
+        padding: 0 20px 20px;
     }
 
     #donlinee-success-message {
-        padding: 30px 20px;
+        padding: 24px 20px;
     }
 
     .success-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 36px;
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
     }
 }
