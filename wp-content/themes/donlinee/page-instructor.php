@@ -331,7 +331,7 @@ get_header(); ?>
                  그리고 16주가 끝날 때, 매출이 발생하지 않았다면 무조건 환불해주는 프로그램이다.​
                 이제는 ‘배우는’ 강의가 아니라, ‘시작하게 만드는’ 강의가 필요하다. 돈마고치는 그걸 가능하게 할 유일한 프로그램이 될 것이다. 끝.
             </p>
-            <button class="donlinee-waitlist-trigger px-24 py-3 max-md:px-8 max-md:py-2 h2 button cursor-pointer">수강 대기신청</button>
+            <a class="m-auto" href="/#program"><button class="px-24 py-3 max-md:px-8 max-md:py-2 h2 button cursor-pointer">돈마고치 프로그램 안내</button></a>
     </section>
 </main>
 

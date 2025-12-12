@@ -77,6 +77,61 @@
     </div>
 </div>
 
+<!-- 카카오톡 플로팅 버튼 -->
+<div id="kakao-floating-button" class="fixed z-[49]"
+     style="bottom: 40px; right: 30px;">
+    <a href="http://pf.kakao.com/_cnxlPn" target="_blank" rel="noopener noreferrer"
+       class="block w-[60px] h-[60px] lg:w-[70px] lg:h-[70px] rounded-full shadow-lg"
+       aria-label="카카오톡 채널 상담">
+        <img src="/wp-content/uploads/2025/12/kakaotalk.webp"
+             alt="카카오톡 상담"
+             class="w-full h-full object-contain"
+             loading="lazy">
+    </a>
+</div>
+
+<style>
+/* 카카오톡 플로팅 버튼 스타일 */
+#kakao-floating-button {
+    /* 모바일에서 위치 조정 */
+    @media (max-width: 768px) {
+        bottom: 150px !important;
+        right: 10px !important;
+    }
+}
+
+#kakao-floating-button a {
+    display: block;
+    position: relative;
+}
+
+/* 펄스 애니메이션 (선택사항) */
+#kakao-floating-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 235, 0, 0.3);
+    animation: pulse 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0;
+    }
+}
+</style>
+
   <?php wp_footer(); ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 

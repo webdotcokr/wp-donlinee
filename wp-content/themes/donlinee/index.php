@@ -111,7 +111,7 @@ get_header(); ?>
         </div>
     </section>
     <!-- 돈마고치 안내 -->
-    <section class="py-[80px] flex flex-col gap-[80px]">
+    <section id="program" class="py-[80px] flex flex-col gap-[80px]">
         <div class="flex flex-col gap-[30px]">
             <h2 class="subTitle">돈마고치 안내</h2>
             <p><b>돈마고치는 시중에 존재하는 일반적인 교육이 아닙니다. </b><br/>
