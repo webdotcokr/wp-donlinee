@@ -37,7 +37,7 @@
 
 <!-- 하단 고정 배너 (iOS 최적화) -->
 <div id="fixed-banner" class="fixed z-50 w-full lg:w-[50vw] px-4 lg:px-0 bottom-[30px] max-md:bottom-0 max-md:px-0"
-     style="display: none; left: 0; right: 0; margin: 0 auto;">
+     style="display: none; left: 0; right: 0; margin: 0 auto; transform: none;">
     <div class="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] text-white rounded-lg max-md:rounded-none shadow-2xl border border-gray-700">
         <div class="px-4 sm:px-6 py-4">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -135,10 +135,12 @@
             loop: true,
             autoplay: isIOS ? {
                 delay: 5000, // iOS: 5초 간격
-                disableOnInteraction: true
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             } : {
-                delay: 0, // 기타: 연속
-                disableOnInteraction: false
+                delay: 3000, // 기타: 3초 간격 (0은 너무 과도함)
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
             },
             freeMode: !isIOS,
             freeModeMomentum: false,

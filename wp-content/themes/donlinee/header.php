@@ -22,9 +22,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Wanted+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- iOS 최적화 CSS (파일이 있는 경우) -->
+  <?php if (file_exists(get_template_directory() . '/css/ios-optimization.css')): ?>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ios-optimization.css">
+  <?php endif; ?>
+
+  <!-- iOS 조기 감지 및 최적화 -->
+  <script>
+    // iOS 즉시 감지하여 클래스 추가
+    (function() {
+      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      if (isIOS) {
+        document.documentElement.classList.add('ios-device');
+        // iOS 버전도 감지
+        var version = (navigator.userAgent.match(/OS (\d+)_/) || [])[1];
+        if (version) {
+          document.documentElement.classList.add('ios-' + version);
+        }
+        console.log('iOS detected, optimizations enabled');
+      }
+    })();
+  </script>
 
   <style>
     /* 공지사항 롤링 배너 스타일 */
@@ -40,6 +61,39 @@
     .animate-scroll {
       display: flex;
       animation: scroll-left 25s linear infinite;
+    }
+
+    /* iOS 최적화 - 무한 애니메이션 비활성화 */
+    @supports (-webkit-touch-callout: none) {
+      /* iOS Safari 전용 */
+      .animate-scroll {
+        animation: none !important;
+        /* 대체: 정적 텍스트 표시 */
+        justify-content: center;
+      }
+
+      /* iOS에서 will-change 제거 (오히려 느려짐) */
+      * {
+        will-change: auto !important;
+      }
+    }
+
+    /* iOS 클래스 기반 최적화 */
+    .ios-device .animate-scroll {
+      animation: none !important;
+      display: block;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* iOS에서 하드웨어 가속 최적화 */
+    .ios-device * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      perspective: 1000;
     }
 
     .notice-banner {
@@ -74,7 +128,48 @@
       }
     }
   </style>
-  
+
+  <!-- iOS Performance Monitoring -->
+  <script>
+    if (window.performance && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      window.addEventListener('load', function() {
+        var timing = performance.timing;
+        var loadTime = timing.loadEventEnd - timing.navigationStart;
+        console.log('iOS Page Load Time:', loadTime + 'ms');
+
+        // 성능 문제 감지
+        if (loadTime > 5000) {
+          console.warn('iOS Performance Warning: Slow page load detected');
+        }
+
+        // FPS 모니터링 (디버그용)
+        var lastTime = performance.now();
+        var frames = 0;
+        var fpsInterval;
+
+        function checkFPS() {
+          frames++;
+          var now = performance.now();
+          if (now >= lastTime + 1000) {
+            var fps = Math.round(frames * 1000 / (now - lastTime));
+            if (fps < 30) {
+              console.warn('iOS Low FPS detected:', fps);
+            }
+            frames = 0;
+            lastTime = now;
+          }
+          requestAnimationFrame(checkFPS);
+        }
+
+        // FPS 체크는 처음 5초만
+        checkFPS();
+        setTimeout(function() {
+          cancelAnimationFrame(checkFPS);
+        }, 5000);
+      });
+    }
+  </script>
+
   <?php wp_head(); ?>
 </head>
 
