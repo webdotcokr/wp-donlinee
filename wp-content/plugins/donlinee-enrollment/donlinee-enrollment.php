@@ -19,12 +19,23 @@ define('DONLINEE_ENROLLMENT_VERSION', '1.0.0');
 define('DONLINEE_ENROLLMENT_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('DONLINEE_ENROLLMENT_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-// 필요한 클래스 파일 로드
-require_once DONLINEE_ENROLLMENT_PLUGIN_DIR . 'includes/class-database.php';
-require_once DONLINEE_ENROLLMENT_PLUGIN_DIR . 'includes/class-settings.php';
-require_once DONLINEE_ENROLLMENT_PLUGIN_DIR . 'includes/class-ajax-handler.php';
-require_once DONLINEE_ENROLLMENT_PLUGIN_DIR . 'includes/class-admin.php';
-require_once DONLINEE_ENROLLMENT_PLUGIN_DIR . 'includes/class-forms.php';
+// 클래스 자동 로드 설정 (필요할 때만 로드)
+spl_autoload_register(function ($class) {
+    $classes = array(
+        'Donlinee_Enrollment_Database' => 'includes/class-database.php',
+        'Donlinee_Enrollment_Settings' => 'includes/class-settings.php',
+        'Donlinee_Enrollment_Ajax' => 'includes/class-ajax-handler.php',
+        'Donlinee_Enrollment_Admin' => 'includes/class-admin.php',
+        'Donlinee_Enrollment_Forms' => 'includes/class-forms.php'
+    );
+
+    if (isset($classes[$class])) {
+        $file = DONLINEE_ENROLLMENT_PLUGIN_DIR . $classes[$class];
+        if (file_exists($file)) {
+            require_once $file;
+        }
+    }
+});
 
 // 플러그인 메인 클래스
 class Donlinee_Enrollment {
@@ -50,31 +61,23 @@ class Donlinee_Enrollment {
         // 초기화
         add_action('init', array($this, 'init'));
 
-        // 스크립트 및 스타일 로드
-        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+        // 조건부 훅 등록 (페이지 체크 후 필요한 경우에만)
+        add_action('wp', array($this, 'conditional_hooks'));
 
-        // 팝업 HTML 추가
-        add_action('wp_footer', array($this, 'add_enrollment_popup'));
+        // AJAX 핸들러 초기화 (AJAX 요청시에만)
+        if (defined('DOING_AJAX') && DOING_AJAX) {
+            new Donlinee_Enrollment_Ajax();
+        }
 
-        // AJAX 핸들러 초기화
-        new Donlinee_Enrollment_Ajax();
-
-        // 관리자 페이지 초기화
-        if (is_admin()) {
+        // 관리자 페이지 초기화 (관리자 페이지에서만, AJAX 제외)
+        if (is_admin() && (!defined('DOING_AJAX') || !DOING_AJAX)) {
             new Donlinee_Enrollment_Admin();
         }
 
-        // 자동 모드 전환 크론 설정
-        add_action('donlinee_check_mode_switch', array($this, 'check_and_switch_mode'));
-
-        // 크론 스케줄 등록
-        if (!wp_next_scheduled('donlinee_check_mode_switch')) {
-            wp_schedule_event(time(), 'every_minute', 'donlinee_check_mode_switch');
+        // 자동 모드 전환 크론 설정 (크론 실행시에만 등록)
+        if (defined('DOING_CRON') && DOING_CRON) {
+            add_action('donlinee_check_mode_switch', array($this, 'check_and_switch_mode'));
         }
-
-        // 버튼 텍스트 필터
-        add_filter('donlinee_cta_button_text', array($this, 'get_button_text'));
-        add_filter('donlinee_cta_button_class', array($this, 'get_button_class'));
     }
 
     public function activate() {
@@ -86,7 +89,7 @@ class Donlinee_Enrollment {
 
         // 크론 이벤트 등록
         if (!wp_next_scheduled('donlinee_check_mode_switch')) {
-            wp_schedule_event(time(), 'every_minute', 'donlinee_check_mode_switch');
+            wp_schedule_event(time(), 'ten_minutes', 'donlinee_check_mode_switch');
         }
     }
 
@@ -96,17 +99,32 @@ class Donlinee_Enrollment {
     }
 
     public function init() {
-        // 매분 실행 스케줄 추가
+        // 10분 실행 스케줄 추가
         add_filter('cron_schedules', function($schedules) {
-            $schedules['every_minute'] = array(
-                'interval' => 60,
-                'display' => __('Every Minute')
+            $schedules['ten_minutes'] = array(
+                'interval' => 600, // 10분 = 600초
+                'display' => __('Every 10 Minutes')
             );
             return $schedules;
         });
     }
 
+    public function conditional_hooks() {
+        // 특정 페이지에서만 스크립트와 팝업 훅 등록
+        if (is_front_page() || is_home() || is_page(array('application', 'apply', '신청'))) {
+            add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+            add_action('wp_footer', array($this, 'add_enrollment_popup'));
+        }
+
+        // 필터는 필요한 페이지에서만 적용
+        if (is_front_page() || is_home()) {
+            add_filter('donlinee_cta_button_text', array($this, 'get_button_text'));
+            add_filter('donlinee_cta_button_class', array($this, 'get_button_class'));
+        }
+    }
+
     public function enqueue_scripts() {
+        // conditional_hooks에서 이미 체크했으므로 바로 실행
         $settings = Donlinee_Enrollment_Settings::get_current_settings();
 
         // 공통 CSS 파일 로드 (waitlist.css에서 모든 팝업 스타일 관리)
@@ -143,6 +161,7 @@ class Donlinee_Enrollment {
     }
 
     public function add_enrollment_popup() {
+        // conditional_hooks에서 이미 체크했으므로 바로 실행
         $settings = Donlinee_Enrollment_Settings::get_current_settings();
 
         // 수강신청 모드일 때만 팝업 추가
@@ -214,5 +233,7 @@ class Donlinee_Enrollment {
     }
 }
 
-// 플러그인 초기화
-Donlinee_Enrollment::get_instance();
+// 플러그인 초기화 지연 (plugins_loaded 훅에서 실행)
+add_action('plugins_loaded', function() {
+    Donlinee_Enrollment::get_instance();
+}, 10);

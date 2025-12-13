@@ -14,7 +14,7 @@ class Donlinee_Enrollment_Settings {
 
     // 캐시 키 상수
     const CACHE_KEY = 'donlinee_enrollment_settings_cache';
-    const CACHE_EXPIRY = 300; // 5분 캐싱
+    const CACHE_EXPIRY = 3600; // 1시간 캐싱 (기존 5분에서 변경)
 
     /**
      * 기본 설정 생성
@@ -239,7 +239,7 @@ class Donlinee_Enrollment_Settings {
 
         if ($current_count === false) {
             $current_count = Donlinee_Enrollment_Database::get_total_count('', $batch_number);
-            set_transient($count_cache_key, $current_count, 60); // 1분 캐싱
+            set_transient($count_cache_key, $current_count, 600); // 10분 캐싱 (기존 1분에서 변경)
         }
 
         // 20명 넘어도 계속 접수 받기 (자동 마감 안 함)

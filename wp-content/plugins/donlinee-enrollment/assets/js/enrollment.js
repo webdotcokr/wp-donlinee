@@ -47,17 +47,14 @@ jQuery(document).ready(function($) {
     // 초기화
     updateTriggerButtons();
 
-    // MutationObserver로 동적으로 추가되는 버튼도 감지
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.addedNodes.length) {
-                setTimeout(updateTriggerButtons, 100);
-            }
-        });
-    });
+    // MutationObserver 대신 이벤트 위임과 주기적 업데이트 사용
+    // DOM이 변경될 수 있는 시점에만 업데이트
+    $(document).on('ajaxComplete', updateTriggerButtons);
 
-    // body 전체 감시
-    observer.observe(document.body, { childList: true, subtree: true });
+    // 페이지 로드 완료 후 한 번 더 업데이트
+    $(window).on('load', function() {
+        setTimeout(updateTriggerButtons, 500);
+    });
 
     // 단계 이동 함수
     function goToStep(step) {
