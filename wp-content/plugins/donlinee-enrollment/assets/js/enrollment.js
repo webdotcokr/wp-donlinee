@@ -268,11 +268,17 @@ jQuery(document).ready(function($) {
             loadEnrollmentPopup().then(function() {
                 $('#enrollment-loading').remove();
                 // enrollment 팝업 열기
-                $('#donlinee-enrollment-popup').fadeIn(300);
+                $('#donlinee-enrollment-popup').css({
+                    'display': 'flex',
+                    'opacity': 0
+                }).animate({ opacity: 1 }, 300);
             });
         } else {
             // 이미 로드되었으면 바로 열기
-            $('#donlinee-enrollment-popup').fadeIn(300);
+            $('#donlinee-enrollment-popup').css({
+                'display': 'flex',
+                'opacity': 0
+            }).animate({ opacity: 1 }, 300);
         }
         $('body').css('overflow', 'hidden');
 
