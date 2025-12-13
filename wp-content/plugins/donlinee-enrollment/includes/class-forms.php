@@ -159,7 +159,7 @@ class Donlinee_Enrollment_Forms {
                                 <p class="form-description underline mb-4">결제 후 지원 신청이 완료됩니다.</p>
                                 <label>참가 비용 환불 계좌 <span class="required">*</span></label>
                                 <p class="form-description underline">불합격 시 12월 29일 월요일 환불됩니다.</p>
-                                <p class="form-description">(ex. 홍길동/국민은행/613801-01-651493)</p>
+                                <p class="form-description">(예시, 박래완/하나은행/562-910513-14907)</p>
                                 <input type="text" id="enrollment-refund" name="refund_account" required
                                        placeholder="예금주명/은행명/계좌번호">
                                 <span class="error-message" id="refund-error"></span>
