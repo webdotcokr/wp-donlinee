@@ -252,8 +252,12 @@ jQuery(document).ready(function($) {
         goToStep(prevStep);
     });
 
-    // 수강 신청 버튼 클릭 이벤트
-    $(document).on('click', '.donlinee-enrollment-trigger', function(e) {
+    // 수강 신청 버튼 클릭 이벤트 (iOS 터치 대응)
+    $(document).on('touchstart click', '.donlinee-enrollment-trigger', function(e) {
+        // 이미 처리된 이벤트라면 무시 (중복 실행 방지)
+        if (e.handled === true) return;
+        e.handled = true;
+
         e.preventDefault();
         e.stopPropagation(); // 이벤트 버블링 방지
 

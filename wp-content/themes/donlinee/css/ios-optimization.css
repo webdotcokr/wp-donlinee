@@ -10,12 +10,12 @@
     -webkit-touch-callout: none;
 }
 
-/* iOS에서 하드웨어 가속 사용 */
-.ios-device * {
+/* iOS에서 하드웨어 가속 사용 (전역 적용 제거 - position: fixed 문제 원인) */
+/* .ios-device * {
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
-}
+} */
 
 /* iOS에서 무한 애니메이션 비활성화/최적화 */
 @supports (-webkit-touch-callout: none) {

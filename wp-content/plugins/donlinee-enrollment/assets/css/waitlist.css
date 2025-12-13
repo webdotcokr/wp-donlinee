@@ -816,3 +816,11 @@
     background: #b91c1c;
     transform: translateY(-1px);
 }
+
+/* iOS Interaction Fixes */
+.donlinee-waitlist-trigger,
+.donlinee-enrollment-trigger {
+    cursor: pointer !important;
+    touch-action: manipulation; /* Removes 300ms delay on touch devices */
+    -webkit-tap-highlight-color: transparent; /* Removes default grey highlight */
+}
