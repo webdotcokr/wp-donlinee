@@ -122,7 +122,7 @@ class Donlinee_Enrollment {
     }
 
     public function enqueue_scripts() {
-        if (!is_front_page() && !is_home() && !is_page(array('application', 'apply', '신청'))) return;
+        // if (!is_front_page() && !is_home() && !is_page(array('application', 'apply', '신청'))) return;
 
         $settings = Donlinee_Enrollment_Settings::get_current_settings();
         
@@ -144,7 +144,7 @@ class Donlinee_Enrollment {
     }
 
     public function add_enrollment_popup() {
-        if (!is_front_page() && !is_home() && !is_page(array('application', 'apply', '신청'))) return;
+        // if (!is_front_page() && !is_home() && !is_page(array('application', 'apply', '신청'))) return;
         $settings = Donlinee_Enrollment_Settings::get_current_settings();
         if ($settings['mode'] === 'enrollment' && $settings['is_active']) {
             Donlinee_Enrollment_Forms::render_enrollment_popup();
