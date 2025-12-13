@@ -63,38 +63,34 @@
       animation: scroll-left 25s linear infinite;
     }
 
-    /* iOS 최적화 - 무한 애니메이션 비활성화 */
-    @supports (-webkit-touch-callout: none) {
-      /* iOS Safari 전용 */
+    /* iOS 최적화 - 무한 애니메이션 비활성화 (비활성화 해제 - 롤링 텍스트 복구) */
+    /* @supports (-webkit-touch-callout: none) {
       .animate-scroll {
         animation: none !important;
-        /* 대체: 정적 텍스트 표시 */
         justify-content: center;
       }
-
-      /* iOS에서 will-change 제거 (오히려 느려짐) */
       * {
         will-change: auto !important;
       }
-    }
+    } */
 
-    /* iOS 클래스 기반 최적화 */
-    .ios-device .animate-scroll {
+    /* iOS 클래스 기반 최적화 (비활성화 해제) */
+    /* .ios-device .animate-scroll {
       animation: none !important;
       display: block;
       text-align: center;
       padding: 0 20px;
-    }
+    } */
 
-    /* iOS에서 하드웨어 가속 최적화 */
-    .ios-device * {
+    /* iOS에서 하드웨어 가속 최적화 (전역 적용 제거 - 레이아웃 버그 원인) */
+    /* .ios-device * {
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       -webkit-perspective: 1000;
       perspective: 1000;
-    }
+    } */
 
     .notice-banner {
       line-height: 32px;

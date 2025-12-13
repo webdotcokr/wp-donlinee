@@ -138,7 +138,8 @@
     function optimizeAnimations() {
         if (!isIOS) return;
 
-        // 무한 스크롤 애니메이션 비활성화/단순화
+        // 무한 스크롤 애니메이션 비활성화/단순화 (제거 - 롤링 텍스트 복구)
+        /*
         const scrollElements = document.querySelectorAll('.animate-scroll');
         scrollElements.forEach(el => {
             if (iOSVersion && iOSVersion < 15) {
@@ -157,6 +158,7 @@
                 el.style.animation = 'none';
             }
         });
+        */
     }
 
     // 4. 고정 배너 최적화
@@ -243,7 +245,8 @@
     function setupMemoryManagement() {
         if (!isIOS) return;
 
-        // 페이지 숨김 시 리소스 정리
+        // 페이지 숨김 시 리소스 정리 (제거 - 너무 공격적인 최적화로 인한 부작용 방지)
+        /*
         document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
                 // 불필요한 타이머 정리
@@ -270,6 +273,7 @@
                 });
             }
         });
+        */
     }
 
     // 초기화 함수
