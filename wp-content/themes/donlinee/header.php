@@ -173,7 +173,7 @@
 <?php wp_body_open(); ?>
 
   <!-- 공지사항 롤링 띠 배너 -->
-  <div class="notice-banner fixed top-0 left-0 w-full h-8 bg-[#1a1a1a] text-white z-40 overflow-hidden">
+  <!-- <div class="notice-banner fixed top-0 left-0 w-full h-8 bg-[#1a1a1a] text-white z-40 overflow-hidden">
     <div class="notice-content flex items-center h-full">
       <div class="notice-text whitespace-nowrap animate-scroll text-xs">
         <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. PC 접속을 권장드립니다.</span>
@@ -182,7 +182,7 @@
         <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. PC 접속을 권장드립니다.</span>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <header id="header" class="w-full z-30 fixed bg-white flex items-center border-b border-gray-200 shadow-sm" style="top: 32px;">
     <div class="flex justify-between w-full max-w-6xl mx-auto items-center px-6 max-md:px-3">
