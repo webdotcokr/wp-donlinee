@@ -85,10 +85,10 @@
   <div class="notice-banner fixed top-0 left-0 w-full h-8 bg-[#1a1a1a] text-white z-40 overflow-hidden">
     <div class="notice-content flex items-center h-full">
       <div class="notice-text whitespace-nowrap animate-scroll text-xs">
-        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
-        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
-        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
-        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. PC 접속을 권장드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. PC 접속을 권장드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. PC 접속을 권장드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. PC 접속을 권장드립니다.</span>
       </div>
     </div>
   </div>
