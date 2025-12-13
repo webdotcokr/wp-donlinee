@@ -35,9 +35,8 @@
 </div>
 </footer>
 
-<!-- 하단 고정 배너 (iOS 최적화) -->
-<div id="fixed-banner" class="fixed z-50 w-full lg:w-[50vw] px-4 lg:px-0 bottom-[30px] max-md:bottom-0 max-md:px-0"
-     style="display: none; left: 0; right: 0; margin: 0 auto;">
+<!-- 하단 고정 배너 -->
+<div id="fixed-banner" class="fixed left-1/2 transform -translate-x-1/2 z-50 w-full lg:w-[50vw] px-4 lg:px-0 bottom-[30px] max-md:bottom-0 max-md:px-0" style="display: none; transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;">
     <div class="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] text-white rounded-lg max-md:rounded-none shadow-2xl border border-gray-700">
         <div class="px-4 sm:px-6 py-4">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -65,7 +64,7 @@
 
                     <!-- 신청 버튼 -->
                     <div class="flex items-center">
-                        <a href="#" class="donlinee-waitlist-trigger inline-flex items-center bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-3 max-md:px-6 max-md:py-2 rounded-md text-sm font-bold transition-colors shadow-lg">
+                        <a href="#" class="donlinee-waitlist-trigger inline-flex items-center bg-[#ef4444] hover:bg-[#dc2626] text-white px-6 py-3 max-md:px-6 max-md:py-2 rounded-md text-sm font-bold transition-all duration-200 transform hover:scale-105 shadow-lg">
                             <span>수강 대기신청</span>
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -92,126 +91,117 @@
 </div>
 
 <style>
-/* iOS 최적화 스타일 */
-.hidden-banner {
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-/* 카카오톡 버튼 모바일 위치 */
-@media (max-width: 768px) {
-    #kakao-floating-button {
+/* 카카오톡 플로팅 버튼 스타일 */
+#kakao-floating-button {
+    /* 모바일에서 위치 조정 */
+    @media (max-width: 768px) {
         bottom: 150px !important;
         right: 10px !important;
     }
 }
 
-/* iOS에서 펄스 애니메이션 비활성화 */
-@supports (-webkit-touch-callout: none) {
-    #kakao-floating-button::before {
-        display: none !important;
+#kakao-floating-button a {
+    display: block;
+    position: relative;
+}
+
+/* 펄스 애니메이션 (선택사항) */
+#kakao-floating-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 235, 0, 0.3);
+    animation: pulse 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0;
     }
 }
 </style>
 
   <?php wp_footer(); ?>
-
-  <!-- iOS 최적화 스크립트 로드 -->
-  <script src="<?php echo get_template_directory_uri(); ?>/js/ios-optimization.js"></script>
-
-  <!-- Swiper 로드 (iOS 조건부) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
   <script>
-    // iOS 감지
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-    // Swiper 초기화 - iOS 최적화
-    document.addEventListener('DOMContentLoaded', function() {
-        const testimonialSwiper = new Swiper('.testimonial-swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            speed: isIOS ? 500 : 3000,
-            loop: true,
-            autoplay: isIOS ? {
-                delay: 5000, // iOS: 5초 간격
-                disableOnInteraction: true
-            } : {
-                delay: 0, // 기타: 연속
-                disableOnInteraction: false
-            },
-            freeMode: !isIOS,
-            freeModeMomentum: false,
-            // iOS 전용 설정
-            cssMode: isIOS, // CSS 기반 스크롤
-            watchSlidesProgress: !isIOS,
-            preloadImages: !isIOS,
-            lazy: isIOS
-        });
+    // Swiper 초기화 - Infinite Slide
+    const testimonialSwiper = new Swiper('.testimonial-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      speed: 3000,
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      freeMode: true,
+      freeModeMomentum: false,
     });
 
-    // 하단 고정 배너 스크립트 (iOS 최적화)
+    // 하단 고정 배너 스크립트
     document.addEventListener('DOMContentLoaded', function() {
         const banner = document.getElementById('fixed-banner');
 
         // 배너 초기 표시
         if (banner) {
             banner.style.display = 'block';
-            setTimeout(() => {
-                banner.style.opacity = '1';
-                banner.style.visibility = 'visible';
-            }, 100);
+            banner.style.opacity = '1';
+            banner.style.visibility = 'visible';
         }
 
-        // 스크롤 이벤트 최적화 (Throttling)
-        let scrollTimeout = null;
-        let lastScrollTop = 0;
+        // 스크롤 이벤트로 배너 페이드 인/아웃 처리
+        let isScrolling = false;
 
         function handleBannerVisibility() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight;
-            const windowHeight = window.innerHeight;
-            const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
-            const fadeOutThreshold = documentHeight - footerHeight - 150;
+            if (!isScrolling) {
+                window.requestAnimationFrame(function() {
+                    const scrollPosition = window.scrollY + window.innerHeight;
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
 
-            if (banner) {
-                if (scrollTop + windowHeight > fadeOutThreshold) {
-                    banner.classList.add('hidden-banner');
-                } else {
-                    banner.classList.remove('hidden-banner');
-                }
+                    // 페이지 하단(푸터 영역)에 도달했는지 확인
+                    // 푸터 높이 + 여유 공간(150px) 만큼 위에서부터 페이드아웃 시작
+                    const fadeOutThreshold = documentHeight - footerHeight - 150;
+
+                    if (banner) {
+                        if (scrollPosition > fadeOutThreshold) {
+                            // 푸터 근처에 도달하면 배너를 천천히 사라지게 함
+                            banner.style.opacity = '0';
+                            banner.style.visibility = 'hidden';
+                        } else {
+                            // 푸터에서 멀어지면 배너를 다시 표시
+                            banner.style.opacity = '1';
+                            banner.style.visibility = 'visible';
+                        }
+                    }
+
+                    isScrolling = false;
+                });
+                isScrolling = true;
             }
-
-            lastScrollTop = scrollTop;
         }
 
-        // iOS에서는 throttling 적용
-        if (isIOS) {
-            window.addEventListener('scroll', function() {
-                if (scrollTimeout) {
-                    clearTimeout(scrollTimeout);
-                }
-                scrollTimeout = setTimeout(handleBannerVisibility, 50); // 50ms throttle
-            }, { passive: true });
-        } else {
-            // 일반 브라우저
-            let ticking = false;
-            window.addEventListener('scroll', function() {
-                if (!ticking) {
-                    window.requestAnimationFrame(function() {
-                        handleBannerVisibility();
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            });
-        }
+        // 스크롤 이벤트 리스너 추가
+        window.addEventListener('scroll', handleBannerVisibility);
 
-        // 초기 실행
+        // 초기 실행 (페이지 로드 시 현재 스크롤 위치 확인)
         handleBannerVisibility();
 
-        // 카운트다운 타이머 (iOS 최적화)
+        // 카운트다운 타이머
         function updateCountdown() {
+            // PHP에서 플러그인 설정값 가져오기
             <?php
             if (class_exists('Donlinee_Enrollment_Settings')) {
                 $enrollment_settings = Donlinee_Enrollment_Settings::get_current_settings();
@@ -219,6 +209,7 @@
                 $start_date = $enrollment_settings['start_date'];
                 $end_date = $enrollment_settings['end_date'];
             } else {
+                // 플러그인이 없으면 기본값
                 $current_mode = 'waitlist';
                 $start_date = '2025-12-13 11:00:00';
                 $end_date = '2025-12-28 23:59:59';
@@ -229,25 +220,13 @@
             const startDate = '<?php echo str_replace(' ', 'T', $start_date); ?>+09:00';
             const endDate = '<?php echo str_replace(' ', 'T', $end_date); ?>+09:00';
 
+            // 모드에 따라 타겟 날짜 결정
             const targetDate = currentMode === 'waitlist' ?
-                new Date(startDate).getTime() :
-                new Date(endDate).getTime();
+                new Date(startDate).getTime() :  // 대기 모드: 모집 시작일까지
+                new Date(endDate).getTime();     // 수강 모드: 모집 종료일까지
 
             const now = new Date().getTime();
             const distance = targetDate - now;
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                const timerEl = document.getElementById('countdown-timer');
-                if (timerEl) {
-                    timerEl.innerHTML = '<span class="text-[#ef4444]">모집 중!</span>';
-                }
-                const labelEl = document.getElementById('countdown-label');
-                if (labelEl) {
-                    labelEl.textContent = '현재 모집 중';
-                }
-                return;
-            }
 
             // 시간 계산
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -255,61 +234,50 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // DOM 업데이트 (캐싱)
-            const elements = {
-                days: document.getElementById('days'),
-                hours: document.getElementById('hours'),
-                minutes: document.getElementById('minutes'),
-                seconds: document.getElementById('seconds')
-            };
+            // DOM 업데이트
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
 
-            if (elements.days) elements.days.textContent = String(days).padStart(2, '0');
-            if (elements.hours) elements.hours.textContent = String(hours).padStart(2, '0');
-            if (elements.minutes) elements.minutes.textContent = String(minutes).padStart(2, '0');
-            if (elements.seconds) elements.seconds.textContent = String(seconds).padStart(2, '0');
+            if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+
+            // 타이머 종료 처리
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                const timerEl = document.getElementById('countdown-timer');
+                if (timerEl) {
+                    timerEl.innerHTML = '<span class="text-[#ef4444]">모집 중!</span>';
+                }
+                // 모집 시작까지 텍스트 변경
+                const labelEl = timerEl?.previousElementSibling;
+                if (labelEl) {
+                    labelEl.textContent = '현재 모집 중';
+                }
+            }
         }
 
         // 초기 실행
         updateCountdown();
 
-        // iOS에서는 visibility API 활용
-        let countdownInterval;
+        // 1초마다 업데이트
+        const countdownInterval = setInterval(updateCountdown, 1000);
 
-        function startTimer() {
-            if (!countdownInterval) {
-                countdownInterval = setInterval(updateCountdown, 1000);
-            }
-        }
-
-        function stopTimer() {
-            if (countdownInterval) {
-                clearInterval(countdownInterval);
-                countdownInterval = null;
-            }
-        }
-
-        // 타이머 시작
-        startTimer();
-
-        // iOS에서 백그라운드 처리
-        if (isIOS) {
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    stopTimer();
-                } else {
-                    startTimer();
-                    updateCountdown(); // 즉시 업데이트
-                }
-            });
-        }
+        // 대기신청 버튼 이벤트 제거 - 각 플러그인의 JS에서 처리
+        // 이벤트 중복 방지를 위해 footer.php에서는 제거
     });
 
     // 챕터 레벨 아코디언 기능
     function toggleChapter(button) {
+        // 챕터 아이템 요소 찾기
         const chapterItem = button.closest('.chapter-item');
         const chapterContent = chapterItem.querySelector('.chapter-content');
         const arrow = button.querySelector('.chapter-arrow');
 
+        // 현재 챕터 토글
         if (chapterContent.classList.contains('show')) {
             chapterContent.classList.remove('show');
             chapterContent.style.display = 'none';
@@ -324,14 +292,9 @@
             });
         } else {
             chapterContent.style.display = 'block';
-            // iOS에서는 즉시 적용
-            if (isIOS) {
+            setTimeout(() => {
                 chapterContent.classList.add('show');
-            } else {
-                setTimeout(() => {
-                    chapterContent.classList.add('show');
-                }, 10);
-            }
+            }, 10);
             arrow.classList.add('rotate');
         }
     }

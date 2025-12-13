@@ -1,0 +1,210 @@
+/**
+ * iOS WebKit Performance Optimization CSS
+ * iOS Safari/Chrome 성능 최적화 스타일
+ */
+
+/* iOS 디바이스 감지 시 적용되는 클래스 */
+.ios-device {
+    /* 터치 최적화 */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* iOS에서 하드웨어 가속 사용 */
+.ios-device * {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+/* iOS에서 무한 애니메이션 비활성화/최적화 */
+@supports (-webkit-touch-callout: none) {
+    /* 스크롤 애니메이션 비활성화 */
+    .animate-scroll {
+        animation: none !important;
+        /* 대체: 정적 텍스트 표시 */
+        white-space: normal !important;
+        overflow: visible !important;
+    }
+
+    /* 펄스 애니메이션 비활성화 */
+    #kakao-floating-button::before {
+        animation: none !important;
+        display: none !important;
+    }
+
+    /* 호버 효과 단순화 (터치 디바이스) */
+    .transition-all,
+    .transition-colors {
+        transition-duration: 0.2s !important;
+    }
+
+    /* Transform 애니메이션 최적화 */
+    *[class*="transform"] {
+        will-change: auto !important;
+    }
+}
+
+/* iOS에서 고정 배너 최적화 */
+.ios-device #fixed-banner {
+    /* transform 대신 margin으로 중앙 정렬 */
+    transform: none !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    max-width: 90vw !important;
+
+    /* GPU 가속 힌트 */
+    -webkit-transform: translateZ(0);
+
+    /* transition 단순화 */
+    transition: opacity 0.3s ease !important;
+}
+
+/* 배너 숨김 상태 (JS에서 클래스 토글) */
+.ios-device #fixed-banner.hidden-banner {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* iOS에서 Swiper 최적화 */
+.ios-device .testimonial-swiper {
+    /* CSS 기반 스크롤 사용 */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.ios-device .swiper-wrapper {
+    /* Flexbox 대신 기본 레이아웃 */
+    display: -webkit-box !important;
+    display: flex !important;
+}
+
+.ios-device .swiper-slide {
+    /* 슬라이드 크기 고정 */
+    flex-shrink: 0 !important;
+    width: auto !important;
+}
+
+/* iOS에서 스크롤 성능 개선 */
+.ios-device {
+    /* 모멘텀 스크롤링 */
+    -webkit-overflow-scrolling: touch;
+}
+
+.ios-device body {
+    /* 스크롤 최적화 */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+/* iOS에서 이미지 렌더링 최적화 */
+.ios-device img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* iOS에서 텍스트 렌더링 최적화 */
+.ios-device {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* iOS에서 box-shadow 최적화 (성능 문제 원인) */
+.ios-device .shadow-lg,
+.ios-device .shadow-2xl,
+.ios-device [class*="shadow"] {
+    /* 그림자 단순화 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* iOS에서 backdrop-filter 비활성화 (매우 느림) */
+.ios-device [style*="backdrop-filter"],
+.ios-device .backdrop-blur {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(255,255,255,0.95) !important;
+}
+
+/* iOS에서 position: fixed 요소 최적화 */
+.ios-device .fixed {
+    /* will-change 제거 (iOS에서 오히려 느림) */
+    will-change: auto !important;
+}
+
+/* iOS에서 긴 리스트 최적화 */
+.ios-device .overflow-y-auto,
+.ios-device .overflow-y-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+/* iOS 구버전 대응 (iOS 14 이하) */
+.ios-device.ios-14,
+.ios-device.ios-13,
+.ios-device.ios-12 {
+    /* 모든 애니메이션 비활성화 */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    /* Transform 비활성화 */
+    * {
+        transform: none !important;
+    }
+}
+
+/* iOS에서 비디오 자동재생 최적화 */
+.ios-device video {
+    /* 인라인 재생 */
+    -webkit-playsinline: true;
+    playsinline: true;
+}
+
+/* iOS 가로 모드 최적화 */
+@media screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .ios-device #fixed-banner {
+        bottom: 10px !important;
+        max-width: 60vw !important;
+    }
+}
+
+/* iOS 노치 디스플레이 대응 */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .ios-device #fixed-banner {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* 디버깅용: iOS 감지 표시 */
+.ios-device::before {
+    content: "iOS Optimized";
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 2px 5px;
+    font-size: 10px;
+    z-index: 99999;
+    display: none; /* 프로덕션에서는 none */
+}
+
+/* 성능 문제 요소 강제 비활성화 */
+@supports (-webkit-touch-callout: none) {
+    /* 복잡한 그라디언트 단순화 */
+    .bg-gradient-to-r {
+        background: linear-gradient(90deg, #2c2c2c, #3a3a3a) !important;
+    }
+
+    /* 블러 효과 제거 */
+    .blur,
+    .blur-sm,
+    .blur-md,
+    .blur-lg {
+        filter: none !important;
+    }
+}
