@@ -215,15 +215,15 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // 날짜/시간 입력 필드 min 속성 설정 (현재 시간)
-    const now = new Date();
-    const localDateTime = now.getFullYear() + '-' +
-                         String(now.getMonth() + 1).padStart(2, '0') + '-' +
-                         String(now.getDate()).padStart(2, '0') + 'T' +
-                         String(now.getHours()).padStart(2, '0') + ':' +
-                         String(now.getMinutes()).padStart(2, '0');
-
-    $('#start_date, #end_date, #auto_switch_date').attr('min', localDateTime);
+    // 날짜/시간 입력 필드 min 속성 설정 제거
+    // 모집 시작 후에도 날짜를 수정할 수 있도록 min 속성을 설정하지 않음
+    // const now = new Date();
+    // const localDateTime = now.getFullYear() + '-' +
+    //                      String(now.getMonth() + 1).padStart(2, '0') + '-' +
+    //                      String(now.getDate()).padStart(2, '0') + 'T' +
+    //                      String(now.getHours()).padStart(2, '0') + ':' +
+    //                      String(now.getMinutes()).padStart(2, '0');
+    // $('#start_date, #end_date, #auto_switch_date').attr('min', localDateTime);
 
     // 텍스트 기본값 복원 버튼
     $('#reset-texts-default').on('click', function() {
