@@ -27,7 +27,7 @@
 .donlinee-popup-container {
     background: white;
     border-radius: 12px;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
@@ -164,6 +164,7 @@
 .donlinee-form-actions {
     display: flex;
     justify-content: center;
+    gap: 8px;
 }
 
 .donlinee-submit-btn {
@@ -294,7 +295,7 @@
     }
 
     .donlinee-popup-form {
-        padding: 0 20px 20px;
+        padding: 20px;
     }
 
     #donlinee-success-message {
@@ -306,4 +307,512 @@
         height: 56px;
         font-size: 28px;
     }
+
+    /* 진행 표시바 모바일 스타일 */
+    .enrollment-progress {
+        padding: 15px;
+    }
+
+    .progress-steps {
+        font-size: 11px;
+    }
+
+    .progress-step.completed::before {
+        left: -12px;
+        font-size: 12px;
+    }
+
+    /* 스텝 버튼 모바일 스타일 */
+    .step-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .step-buttons button {
+        width: 100%;
+    }
+
+    .btn-prev-step {
+        margin-top: 10px;
+    }
+}
+
+/* ========================================
+   수강신청 팝업 전용 스타일
+   ======================================== */
+
+/* 진행 표시바 스타일 */
+.enrollment-progress {
+    padding: 20px 24px;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #dc2626;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.progress-step {
+    color: #9ca3af;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.progress-step.active {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.progress-step.completed {
+    color: #111827;
+}
+
+.progress-step.completed::before {
+    content: '✓';
+    position: absolute;
+    left: -15px;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* 폼 스텝 관련 스타일 */
+.enrollment-step {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.form-step {
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 스텝 버튼 스타일 */
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.step-buttons button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 100px;
+}
+
+.btn-prev-step {
+    border-radius: 8px;
+    min-width: 20%;
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.btn-prev-step:hover {
+    background: #e5e7eb;
+}
+
+.btn-next-step {
+    background: #dc2626;
+    color: white;
+    border: none;
+    flex: 1;
+}
+
+.btn-next-step:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.btn-next-step:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Step 5 리뷰 섹션 스타일 */
+.review-section {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.review-section h3 {
+    margin: 0 0 15px 0;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.review-content {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.review-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-label {
+    font-weight: 600;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.review-value {
+    color: #111827;
+    font-size: 14px;
+}
+
+.donlinee-form-notice {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.donlinee-form-notice h3 {
+    margin: 0 0 15px 0;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.notice-content {
+    margin-bottom: 20px;
+}
+
+.notice-content p strong,
+.schedule-info p strong,
+.participation-info p strong {
+    display: block;
+    margin: 20px 0 10px 0;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.notice-content p strong:first-child,
+.schedule-info p strong:first-child,
+.participation-info p strong:first-child {
+    margin-top: 0;
+}
+
+.notice-content ol {
+    background: #f3f4f6;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.participation-info ol {
+    background: #f3f4f6;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notice-content ol li,
+.participation-info ol li {
+    margin-bottom: 8px;
+}
+
+.schedule-info,
+.participation-info {
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+.schedule-info p,
+.participation-info p {
+    margin: 5px 0;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.schedule-details {
+    background: #f3f4f6;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.schedule-details p {
+    margin: 6px 0;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 텍스트영역 스타일 */
+.donlinee-form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.2s;
+    background: white;
+    color: #111827;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.donlinee-form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.donlinee-form-group textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.donlinee-form-group textarea.error {
+    border-color: #ef4444;
+}
+
+/* 폼 설명 텍스트 */
+.form-description {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* 결제 관련 스타일 */
+.payment-methods {
+    padding: 16px;
+    display: grid;
+    gap: 20px;
+}
+
+.payment-method-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.payment-method-card:hover {
+    border-color: #dc2626;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.payment-method-card h4 {
+    margin: 0 0 15px 0;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.account-info {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border: 1px solid #e5e7eb;
+}
+
+.account-number {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 10px 0;
+}
+
+.account-holder {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.payment-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: #dc2626;
+    margin-top: 10px;
+}
+
+.payment-notice {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.payment-select-btn {
+    width: 100%;
+    padding: 12px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.payment-select-btn:hover {
+    background: #dc2929;
+}
+
+.payment-select-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.payment-success-message {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.payment-success-message .success-icon {
+    width: 40px;
+    height: 40px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    color: white;
+}
+
+.payment-success-message h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.payment-success-message p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.payment-complete-message {
+    text-align: center;
+    padding: 30px;
+}
+
+.payment-instructions {
+    margin: 20px 0;
+}
+
+.account-info-final {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.account-info-final .account-number {
+    color: #dc2626;
+}
+
+.notice {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+/* 뒤로가기 및 재시도 버튼 */
+.donlinee-back-btn {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.donlinee-back-btn:hover {
+    background: #e5e7eb;
+}
+
+.payment-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-retry-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.payment-retry-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
 }

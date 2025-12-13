@@ -38,9 +38,33 @@ class Donlinee_Enrollment_Admin {
             31
         );
 
-        // 설정 페이지만 남김 (서브메뉴 제거)
-        // 실제 수강 신청자 목록은 모드가 enrollment일 때만 의미있음
-        // 대기 신청자는 기존 플러그인에서 관리
+        // 서브메뉴 추가
+        add_submenu_page(
+            'donlinee-enrollment',
+            '설정',
+            '설정',
+            'manage_options',
+            'donlinee-enrollment',
+            array($this, 'render_admin_page')
+        );
+
+        add_submenu_page(
+            'donlinee-enrollment',
+            '신청자 목록',
+            '신청자 목록',
+            'manage_options',
+            'donlinee-enrollment-list',
+            array($this, 'render_enrollments_page')
+        );
+
+        add_submenu_page(
+            'donlinee-enrollment',
+            '통계',
+            '통계',
+            'manage_options',
+            'donlinee-enrollment-stats',
+            array($this, 'render_stats_page')
+        );
     }
 
     /**

@@ -109,10 +109,10 @@ class Donlinee_Enrollment {
     public function enqueue_scripts() {
         $settings = Donlinee_Enrollment_Settings::get_current_settings();
 
-        // CSS 파일 로드
+        // 공통 CSS 파일 로드 (waitlist.css에서 모든 팝업 스타일 관리)
         wp_enqueue_style(
-            'donlinee-enrollment',
-            DONLINEE_ENROLLMENT_PLUGIN_URL . 'assets/css/enrollment.css',
+            'donlinee-popup-styles',
+            plugins_url('donlinee-waitlist/assets/css/waitlist.css'),
             array(),
             DONLINEE_ENROLLMENT_VERSION
         );

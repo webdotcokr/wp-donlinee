@@ -30,11 +30,11 @@
             $('#donlinee-success-message').hide();
         }
 
-        // 닫기 버튼 클릭
-        $('.donlinee-popup-close').on('click', closeWaitlistPopup);
+        // 닫기 버튼 클릭 (이벤트 위임 사용)
+        $(document).on('click', '.donlinee-popup-close', closeWaitlistPopup);
 
-        // 확인했습니다 버튼 클릭
-        $('.donlinee-confirm-btn').on('click', closeWaitlistPopup);
+        // 확인했습니다 버튼 클릭 (이벤트 위임 사용)
+        $(document).on('click', '.donlinee-confirm-btn', closeWaitlistPopup);
 
         // 오버레이 클릭시 닫기
         $('#donlinee-waitlist-popup').on('click', function(e) {

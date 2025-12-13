@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
     let currentEnrollmentId = null;
+    let currentStep = 1;
+    let formData = {};
 
     // 모드에 따라 트리거 클래스 및 텍스트 동적 변경
     function updateTriggerButtons() {
@@ -57,6 +59,167 @@ jQuery(document).ready(function($) {
     // body 전체 감시
     observer.observe(document.body, { childList: true, subtree: true });
 
+    // 단계 이동 함수
+    function goToStep(step) {
+        // 현재 단계 데이터 저장
+        saveStepData(currentStep);
+
+        // 모든 단계 숨기기
+        $('.form-step').removeClass('active').hide();
+
+        // 새 단계 표시
+        $(`.form-step.step-${step}`).addClass('active').fadeIn(300);
+
+        // 진행바 업데이트
+        updateProgress(step);
+
+        // 진행 단계 표시 업데이트
+        $('.progress-step').removeClass('active completed');
+        for (let i = 1; i < step; i++) {
+            $(`.progress-step[data-step="${i}"]`).addClass('completed');
+        }
+        $(`.progress-step[data-step="${step}"]`).addClass('active');
+
+        // Step 5일 때 리뷰 데이터 업데이트
+        if (step === 5) {
+            updateReviewData();
+        }
+
+        currentStep = step;
+
+        // 스크롤 맨 위로
+        $('.donlinee-popup-container').scrollTop(0);
+    }
+
+    // 진행바 업데이트
+    function updateProgress(step) {
+        const progressPercentage = (step / 5) * 100;
+        $('#enrollment-progress-fill').css('width', progressPercentage + '%');
+    }
+
+    // 현재 단계 데이터 저장
+    function saveStepData(step) {
+        switch(step) {
+            case 2:
+                formData.name = $('#enrollment-name').val();
+                formData.age_gender = $('#enrollment-age-gender').val();
+                formData.phone = $('#enrollment-phone').val();
+                formData.self_intro = $('#enrollment-self-intro').val();
+                break;
+            case 3:
+                formData.sales_experience = $('#enrollment-sales-exp').val();
+                formData.application_reason = $('#enrollment-reason').val();
+                formData.future_plans = $('#enrollment-future').val();
+                break;
+            case 4:
+                formData.refund_account = $('#enrollment-refund').val();
+                break;
+        }
+        // sessionStorage에 저장
+        sessionStorage.setItem('enrollmentFormData', JSON.stringify(formData));
+    }
+
+    // 저장된 데이터 불러오기
+    function loadSavedData() {
+        const savedData = sessionStorage.getItem('enrollmentFormData');
+        if (savedData) {
+            formData = JSON.parse(savedData);
+            // 각 필드에 값 설정
+            if (formData.name) $('#enrollment-name').val(formData.name);
+            if (formData.age_gender) $('#enrollment-age-gender').val(formData.age_gender);
+            if (formData.phone) $('#enrollment-phone').val(formData.phone);
+            if (formData.self_intro) $('#enrollment-self-intro').val(formData.self_intro);
+            if (formData.sales_experience) $('#enrollment-sales-exp').val(formData.sales_experience);
+            if (formData.application_reason) $('#enrollment-reason').val(formData.application_reason);
+            if (formData.future_plans) $('#enrollment-future').val(formData.future_plans);
+            if (formData.refund_account) $('#enrollment-refund').val(formData.refund_account);
+        }
+    }
+
+    // 리뷰 데이터 업데이트
+    function updateReviewData() {
+        saveStepData(currentStep); // 현재 단계 데이터 저장
+        $('#review-name').text(formData.name || '-');
+        $('#review-age-gender').text(formData.age_gender || '-');
+        $('#review-phone').text(formData.phone || '-');
+        $('#review-refund').text(formData.refund_account || '-');
+    }
+
+    // 단계별 유효성 검사
+    function validateStep(step) {
+        let isValid = true;
+        $('.error-message').removeClass('show');
+
+        switch(step) {
+            case 2:
+                // 이름 검사
+                if (!$('#enrollment-name').val().trim()) {
+                    $('#name-error').text('이름을 입력해주세요.').addClass('show');
+                    isValid = false;
+                }
+                // 나이/성별 검사
+                if (!$('#enrollment-age-gender').val().trim()) {
+                    $('#age-gender-error').text('나이와 성별을 입력해주세요.').addClass('show');
+                    isValid = false;
+                }
+                // 전화번호 검사
+                const phone = $('#enrollment-phone').val().trim();
+                const phoneRegex = /^01[0-9]-?[0-9]{3,4}-?[0-9]{4}$/;
+                if (!phone) {
+                    $('#phone-error').text('연락처를 입력해주세요.').addClass('show');
+                    isValid = false;
+                } else if (!phoneRegex.test(phone.replace(/-/g, ''))) {
+                    $('#phone-error').text('올바른 전화번호 형식이 아닙니다.').addClass('show');
+                    isValid = false;
+                }
+                // 자기소개 검사
+                if (!$('#enrollment-self-intro').val().trim()) {
+                    $('#self-intro-error').text('자기소개를 입력해주세요.').addClass('show');
+                    isValid = false;
+                }
+                break;
+            case 3:
+                // 판매 경험 검사
+                if (!$('#enrollment-sales-exp').val().trim()) {
+                    $('#sales-exp-error').text('판매 경험을 입력해주세요. (없으면 "없음"이라고 작성)').addClass('show');
+                    isValid = false;
+                }
+                // 지원 이유 검사
+                if (!$('#enrollment-reason').val().trim()) {
+                    $('#reason-error').text('지원 이유를 입력해주세요.').addClass('show');
+                    isValid = false;
+                }
+                break;
+            case 4:
+                // 환불 계좌 검사
+                if (!$('#enrollment-refund').val().trim()) {
+                    $('#refund-error').text('환불 계좌를 입력해주세요.').addClass('show');
+                    isValid = false;
+                }
+                break;
+        }
+
+        return isValid;
+    }
+
+    // 다음 버튼 클릭 이벤트
+    $(document).on('click', '.btn-next-step', function() {
+        const nextStep = parseInt($(this).data('next'));
+
+        // 현재 단계 유효성 검사
+        if (currentStep > 1 && !validateStep(currentStep)) {
+            return;
+        }
+
+        goToStep(nextStep);
+    });
+
+    // 이전 버튼 클릭 이벤트
+    $(document).on('click', '.btn-prev-step', function() {
+        const prevStep = parseInt($(this).data('prev'));
+        goToStep(prevStep);
+    });
+
     // 수강 신청 버튼 클릭 이벤트
     $(document).on('click', '.donlinee-enrollment-trigger', function(e) {
         e.preventDefault();
@@ -68,30 +231,51 @@ jQuery(document).ready(function($) {
         // enrollment 팝업만 열기
         $('#donlinee-enrollment-popup').fadeIn(300);
         $('body').css('overflow', 'hidden');
+
+        // 저장된 데이터 불러오기
+        loadSavedData();
+
+        // 저장된 단계가 있으면 해당 단계로, 없으면 첫 단계로
+        const savedStep = sessionStorage.getItem('enrollmentCurrentStep');
+        if (savedStep && parseInt(savedStep) > 1) {
+            goToStep(parseInt(savedStep));
+        } else {
+            goToStep(1);
+        }
     });
 
-    // 팝업 닫기
-    $('.donlinee-popup-close, .donlinee-confirm-btn').on('click', function() {
+    // 팝업 닫기 (데이터 유지)
+    $('.donlinee-popup-close').on('click', function() {
+        saveStepData(currentStep); // 현재 단계 데이터 저장
+        sessionStorage.setItem('enrollmentCurrentStep', currentStep); // 현재 단계 저장
+        $('#donlinee-enrollment-popup').fadeOut(300);
+        $('body').css('overflow', 'auto');
+    });
+
+    // 확인 버튼 클릭 시에만 초기화
+    $('.donlinee-confirm-btn').on('click', function() {
         $('#donlinee-enrollment-popup').fadeOut(300);
         $('body').css('overflow', 'auto');
         resetForm();
     });
 
-    // ESC 키로 팝업 닫기
+    // ESC 키로 팝업 닫기 (데이터 유지)
     $(document).keydown(function(e) {
-        if (e.keyCode === 27) {
+        if (e.keyCode === 27 && $('#donlinee-enrollment-popup').is(':visible')) {
+            saveStepData(currentStep);
+            sessionStorage.setItem('enrollmentCurrentStep', currentStep);
             $('#donlinee-enrollment-popup').fadeOut(300);
             $('body').css('overflow', 'auto');
-            resetForm();
         }
     });
 
-    // 오버레이 클릭으로 팝업 닫기
+    // 오버레이 클릭으로 팝업 닫기 (데이터 유지)
     $('#donlinee-enrollment-popup').on('click', function(e) {
         if ($(e.target).is('#donlinee-enrollment-popup')) {
+            saveStepData(currentStep);
+            sessionStorage.setItem('enrollmentCurrentStep', currentStep);
             $(this).fadeOut(300);
             $('body').css('overflow', 'auto');
-            resetForm();
         }
     });
 
@@ -99,10 +283,8 @@ jQuery(document).ready(function($) {
     $('#donlinee-enrollment-form').on('submit', function(e) {
         e.preventDefault();
 
-        // 유효성 검사
-        if (!validateForm()) {
-            return false;
-        }
+        // Step 5에서 제출하는 경우 최종 데이터 저장
+        saveStepData(currentStep);
 
         const $submitBtn = $(this).find('.donlinee-submit-btn');
         const originalText = $submitBtn.text();
@@ -121,14 +303,14 @@ jQuery(document).ready(function($) {
             data: {
                 action: 'donlinee_submit_enrollment',
                 nonce: donlinee_enrollment.nonce,
-                name: $('#enrollment-name').val(),
-                age_gender: $('#enrollment-age-gender').val(),
-                phone: $('#enrollment-phone').val(),
-                self_intro: $('#enrollment-self-intro').val(),
-                sales_experience: $('#enrollment-sales-exp').val(),
-                application_reason: $('#enrollment-reason').val(),
-                future_plans: $('#enrollment-future').val(),
-                refund_account: $('#enrollment-refund').val()
+                name: formData.name,
+                age_gender: formData.age_gender,
+                phone: formData.phone,
+                self_intro: formData.self_intro,
+                sales_experience: formData.sales_experience,
+                application_reason: formData.application_reason,
+                future_plans: formData.future_plans,
+                refund_account: formData.refund_account
             },
             success: function(response) {
                 if (response.success) {
@@ -137,6 +319,10 @@ jQuery(document).ready(function($) {
 
                     // 이름 표시
                     $('#applicant-name').text(response.data.name);
+
+                    // 성공 시에만 sessionStorage 클리어
+                    sessionStorage.removeItem('enrollmentFormData');
+                    sessionStorage.removeItem('enrollmentCurrentStep');
 
                     // 결제 방법 선택 단계로 이동
                     $('#enrollment-form-step').fadeOut(300, function() {
@@ -331,11 +517,25 @@ jQuery(document).ready(function($) {
         $('#donlinee-enrollment-form')[0].reset();
         $('.error-message').removeClass('show');
         currentEnrollmentId = null;
+        formData = {};
+        currentStep = 1;
+
+        // sessionStorage 클리어
+        sessionStorage.removeItem('enrollmentFormData');
 
         // 모든 스텝 초기화
         $('#enrollment-form-step').show();
         $('#payment-method-step').hide();
         $('#payment-complete-step').hide();
+
+        // 첫 단계로 되돌리기
+        $('.form-step').removeClass('active').hide();
+        $('.form-step.step-1').addClass('active').show();
+
+        // 진행바 초기화
+        updateProgress(1);
+        $('.progress-step').removeClass('active completed');
+        $('.progress-step[data-step="1"]').addClass('active');
     }
 
     // 전화번호 자동 포맷팅
@@ -352,5 +552,19 @@ jQuery(document).ready(function($) {
         }
 
         $(this).val(formattedValue);
+    });
+
+    // 자동 저장 - 입력 필드
+    $('#enrollment-name, #enrollment-age-gender, #enrollment-phone, #enrollment-refund').on('blur', function() {
+        saveStepData(currentStep);
+    });
+
+    // 자동 저장 - textarea (1초 딜레이)
+    let saveTimer;
+    $('#enrollment-self-intro, #enrollment-sales-exp, #enrollment-reason, #enrollment-future').on('input', function() {
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(() => {
+            saveStepData(currentStep);
+        }, 1000);
     });
 });
