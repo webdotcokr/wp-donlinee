@@ -109,7 +109,7 @@
       }
 
       #header {
-        top: 28px !important;
+        top: 0px !important;
       }
     }
 
@@ -184,7 +184,7 @@
     </div>
   </div> -->
 
-  <header id="header" class="w-full z-30 fixed bg-white flex items-center border-b border-gray-200 shadow-sm" style="top: 32px;">
+  <header id="header" class="w-full z-30 fixed bg-white flex items-center border-b border-gray-200 shadow-sm" style="top: 0px;">
     <div class="flex justify-between w-full max-w-6xl mx-auto items-center px-6 max-md:px-3">
       <a href="/"><img src="/wp-content/uploads/2025/12/logo.png" class="w-[110px] max-md:w-[70px]"></a>
       <nav>
