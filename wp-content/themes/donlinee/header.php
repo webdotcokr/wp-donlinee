@@ -25,12 +25,75 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <style>
+    /* 공지사항 롤링 배너 스타일 */
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-scroll {
+      display: flex;
+      animation: scroll-left 25s linear infinite;
+    }
+
+    .notice-banner {
+      line-height: 32px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 768px) {
+      .notice-banner {
+        height: 28px;
+        line-height: 28px;
+      }
+
+      .notice-text {
+        font-size: 11px;
+      }
+
+      #header {
+        top: 28px !important;
+      }
+    }
+
+    /* 페이지 컨텐츠 여백 조정 */
+    body {
+      padding-top: 96px; /* 32px(배너) + 64px(헤더) */
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 76px; /* 28px(배너) + 48px(헤더) */
+      }
+    }
+  </style>
+
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <header id="header" class="w-full z-30 fixed bg-white flex items-center border-b border-gray-200 shadow-sm">
+
+  <!-- 공지사항 롤링 띠 배너 -->
+  <div class="notice-banner fixed top-0 left-0 w-full h-8 bg-[#1a1a1a] text-white z-40 overflow-hidden">
+    <div class="notice-content flex items-center h-full">
+      <div class="notice-text whitespace-nowrap animate-scroll text-xs">
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
+        <span class="px-12">📢 (공지) 오픈일 현재 접속자가 많아, 사이트 접속이 원활하지 않습니다. 양해 부탁드립니다.</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="header" class="w-full z-30 fixed bg-white flex items-center border-b border-gray-200 shadow-sm" style="top: 32px;">
     <div class="flex justify-between w-full max-w-6xl mx-auto items-center px-6 max-md:px-3">
       <a href="/"><img src="/wp-content/uploads/2025/12/logo.png" class="w-[110px] max-md:w-[70px]"></a>
       <nav>
