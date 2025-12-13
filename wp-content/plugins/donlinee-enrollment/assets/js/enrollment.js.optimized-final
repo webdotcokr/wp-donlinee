@@ -197,13 +197,16 @@ jQuery(document).ready(function($) {
                     $('#age-gender-error').text('나이와 성별을 입력해주세요.').addClass('show');
                     isValid = false;
                 }
-                // 전화번호 검사 (형식 검사 제거 - 어떤 형식이든 허용)
+                // 전화번호 검사
                 const phone = $('#enrollment-phone').val().trim();
+                const phoneRegex = /^01[0-9]-?[0-9]{3,4}-?[0-9]{4}$/;
                 if (!phone) {
                     $('#phone-error').text('연락처를 입력해주세요.').addClass('show');
                     isValid = false;
+                } else if (!phoneRegex.test(phone.replace(/-/g, ''))) {
+                    $('#phone-error').text('올바른 전화번호 형식이 아닙니다.').addClass('show');
+                    isValid = false;
                 }
-                // 형식 검사 제거 - 어떤 번호든 허용
                 // 자기소개 검사
                 if (!$('#enrollment-self-intro').val().trim()) {
                     $('#self-intro-error').text('자기소개를 입력해주세요.').addClass('show');
@@ -288,16 +291,16 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // 팝업 닫기 (데이터 유지) - 동적 로딩된 요소에도 작동
-    $(document).on('click', '.donlinee-popup-close', function() {
+    // 팝업 닫기 (데이터 유지)
+    $('.donlinee-popup-close').on('click', function() {
         saveStepData(currentStep); // 현재 단계 데이터 저장
         sessionStorage.setItem('enrollmentCurrentStep', currentStep); // 현재 단계 저장
         $('#donlinee-enrollment-popup').fadeOut(300);
         $('body').css('overflow', 'auto');
     });
 
-    // 확인 버튼 클릭 시에만 초기화 - 동적 로딩된 요소에도 작동
-    $(document).on('click', '.donlinee-confirm-btn', function() {
+    // 확인 버튼 클릭 시에만 초기화
+    $('.donlinee-confirm-btn').on('click', function() {
         $('#donlinee-enrollment-popup').fadeOut(300);
         $('body').css('overflow', 'auto');
         resetForm();
@@ -313,8 +316,8 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // 오버레이 클릭으로 팝업 닫기 (데이터 유지) - 동적 로딩된 요소에도 작동
-    $(document).on('click', '#donlinee-enrollment-popup', function(e) {
+    // 오버레이 클릭으로 팝업 닫기 (데이터 유지)
+    $('#donlinee-enrollment-popup').on('click', function(e) {
         if ($(e.target).is('#donlinee-enrollment-popup')) {
             saveStepData(currentStep);
             sessionStorage.setItem('enrollmentCurrentStep', currentStep);
@@ -323,8 +326,8 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // 폼 제출 처리 (동적 로딩된 폼에도 작동하도록 이벤트 위임 사용)
-    $(document).on('submit', '#donlinee-enrollment-form', function(e) {
+    // 폼 제출 처리
+    $('#donlinee-enrollment-form').on('submit', function(e) {
         e.preventDefault();
 
         // Step 5에서 제출하는 경우 최종 데이터 저장
@@ -391,8 +394,8 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // 결제 방법 선택 - 계좌이체 (동적 로딩된 요소에도 작동)
-    $(document).on('click', '#select-transfer', function() {
+    // 결제 방법 선택 - 계좌이체
+    $('#select-transfer').on('click', function() {
         if (!currentEnrollmentId) {
             alert('신청 정보가 없습니다. 다시 시도해주세요.');
             return;
@@ -432,8 +435,8 @@ jQuery(document).ready(function($) {
         });
     });
 
-    // 결제 방법 선택 - 카드결제 (동적 로딩된 요소에도 작동)
-    $(document).on('click', '#select-card', function() {
+    // 결제 방법 선택 - 카드결제
+    $('#select-card').on('click', function() {
         if (!currentEnrollmentId) {
             alert('신청 정보가 없습니다. 다시 시도해주세요.');
             return;
@@ -481,15 +484,15 @@ jQuery(document).ready(function($) {
         window.open(donlinee_enrollment.payment_url, '_blank');
     });
 
-    // 이전 단계로 돌아가기 (동적 로딩된 요소에도 작동)
-    $(document).on('click', '#back-to-form', function() {
+    // 이전 단계로 돌아가기
+    $('#back-to-form').on('click', function() {
         $('#payment-method-step').fadeOut(300, function() {
             $('#enrollment-form-step').fadeIn(300);
         });
     });
 
-    // 팝업 닫기 (최종) (동적 로딩된 요소에도 작동)
-    $(document).on('click', '#close-enrollment-popup', function() {
+    // 팝업 닫기 (최종)
+    $('#close-enrollment-popup').on('click', function() {
         $('#donlinee-enrollment-popup').fadeOut(300);
         $('body').css('overflow', 'auto');
         resetForm();
@@ -514,13 +517,16 @@ jQuery(document).ready(function($) {
             isValid = false;
         }
 
-        // 전화번호 검사 (형식 검사 제거 - 어떤 형식이든 허용)
+        // 전화번호 검사
         const phone = $('#enrollment-phone').val().trim();
+        const phoneRegex = /^01[0-9]-?[0-9]{3,4}-?[0-9]{4}$/;
         if (!phone) {
             $('#phone-error').text('연락처를 입력해주세요.').addClass('show');
             isValid = false;
+        } else if (!phoneRegex.test(phone.replace(/-/g, ''))) {
+            $('#phone-error').text('올바른 전화번호 형식이 아닙니다.').addClass('show');
+            isValid = false;
         }
-        // 형식 검사 제거 - 어떤 번호든 허용
 
         // 자기소개 검사
         const selfIntro = $('#enrollment-self-intro').val().trim();

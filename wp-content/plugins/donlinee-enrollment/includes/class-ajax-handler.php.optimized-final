@@ -44,9 +44,15 @@ class Donlinee_Enrollment_Ajax {
             }
         }
 
-        // 전화번호 형식 검증 제거 - 어떤 형식이든 허용
-        $phone = sanitize_text_field($_POST['phone']);
-        // 형식 검증 제거 - 어떤 번호든 허용
+        // 전화번호 형식 검증
+        $phone = preg_replace('/[^0-9-]/', '', $_POST['phone']);
+        if (!preg_match('/^01[0-9]-?[0-9]{3,4}-?[0-9]{4}$/', $phone)) {
+            wp_send_json_error(array(
+                'message' => '올바른 전화번호 형식이 아닙니다.',
+                'field' => 'phone'
+            ));
+            return;
+        }
 
         // 현재 설정 가져오기
         $settings = Donlinee_Enrollment_Settings::get_current_settings();

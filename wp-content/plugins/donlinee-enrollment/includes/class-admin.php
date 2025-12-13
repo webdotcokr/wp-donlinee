@@ -1,6 +1,7 @@
 <?php
 /**
- * 관리자 페이지 클래스
+ * 관리자 페이지 클래스 (View & UI 전담)
+ * 수정사항: AJAX 로직 제거 (class-ajax-handler.php로 이관됨)
  */
 
 if (!defined('ABSPATH')) {
@@ -15,13 +16,9 @@ class Donlinee_Enrollment_Admin {
 
         // 관리자 스크립트 및 스타일 로드
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
-
-        // AJAX 핸들러
-        add_action('wp_ajax_donlinee_save_settings', array($this, 'ajax_save_settings'));
-        add_action('wp_ajax_donlinee_switch_mode', array($this, 'ajax_switch_mode'));
-        add_action('wp_ajax_donlinee_export_enrollments', array($this, 'ajax_export_enrollments'));
-        add_action('wp_ajax_donlinee_update_enrollment_status', array($this, 'ajax_update_enrollment_status'));
-        add_action('wp_ajax_donlinee_delete_enrollment', array($this, 'ajax_delete_enrollment'));
+        
+        // [중요] 여기에 있던 add_action('wp_ajax_...') 코드들은 모두 삭제했습니다.
+        // 이제 class-ajax-handler.php가 모든 처리를 담당하므로 충돌이 해결됩니다.
     }
 
     /**
@@ -71,6 +68,7 @@ class Donlinee_Enrollment_Admin {
      * 관리자 스크립트 및 스타일 로드
      */
     public function enqueue_admin_scripts($hook) {
+        // donlinee-enrollment 관련 페이지에서만 로드
         if (strpos($hook, 'donlinee-enrollment') === false) {
             return;
         }
@@ -92,7 +90,7 @@ class Donlinee_Enrollment_Admin {
             true
         );
 
-        // AJAX 설정
+        // AJAX 설정 (Nonce 이름 확인됨: donlinee-enrollment-admin-nonce)
         wp_localize_script('donlinee-enrollment-admin', 'donlinee_enrollment_admin', array(
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('donlinee-enrollment-admin-nonce')
@@ -109,7 +107,6 @@ class Donlinee_Enrollment_Admin {
         <div class="wrap">
             <h1>수강 신청 관리 시스템</h1>
 
-            <!-- 현재 상태 대시보드 -->
             <div class="donlinee-status-dashboard">
                 <div class="status-card <?php echo $settings['mode'] === 'enrollment' ? 'active' : ''; ?>">
                     <h3>현재 모드</h3>
@@ -144,7 +141,6 @@ class Donlinee_Enrollment_Admin {
                 </div>
             </div>
 
-            <!-- 설정 폼 -->
             <form id="enrollment-settings-form" class="donlinee-settings-form">
                 <h2>모집 설정</h2>
 
@@ -200,7 +196,7 @@ class Donlinee_Enrollment_Admin {
                         <td>
                             <input type="datetime-local" name="auto_switch_date" id="auto_switch_date"
                                    value="<?php echo date('Y-m-d\TH:i', strtotime($settings['auto_switch_date'])); ?>">
-                            <p class="description">대기 신청에서 수강 신청으로 자동 전환될 시간입니다. (예: 2025-12-13 11:00)</p>
+                            <p class="description">대기 신청에서 수강 신청으로 자동 전환될 시간입니다.</p>
                         </td>
                     </tr>
 
@@ -245,7 +241,6 @@ class Donlinee_Enrollment_Admin {
                             <input type="text" name="waitlist_button_text" id="waitlist_button_text"
                                    value="<?php echo esc_attr($settings['waitlist_button_text'] ?? '수강 대기신청'); ?>"
                                    style="width: 300px;">
-                            <p class="description">대기 신청 모드에서 표시될 버튼 텍스트</p>
                         </td>
                     </tr>
                     <tr>
@@ -256,7 +251,6 @@ class Donlinee_Enrollment_Admin {
                             <input type="text" name="countdown_text_waitlist" id="countdown_text_waitlist"
                                    value="<?php echo esc_attr($settings['countdown_text_waitlist'] ?? '모집 시작까지'); ?>"
                                    style="width: 300px;">
-                            <p class="description">대기 신청 모드에서 카운트다운 타이머 위에 표시될 텍스트</p>
                         </td>
                     </tr>
 
@@ -273,7 +267,6 @@ class Donlinee_Enrollment_Admin {
                             <input type="text" name="enrollment_button_text" id="enrollment_button_text"
                                    value="<?php echo esc_attr($settings['enrollment_button_text'] ?? '(OPEN) 수강 신청하기'); ?>"
                                    style="width: 300px;">
-                            <p class="description">수강 신청 모드에서 표시될 버튼 텍스트</p>
                         </td>
                     </tr>
                     <tr>
@@ -284,7 +277,6 @@ class Donlinee_Enrollment_Admin {
                             <input type="text" name="countdown_text_enrollment" id="countdown_text_enrollment"
                                    value="<?php echo esc_attr($settings['countdown_text_enrollment'] ?? '모집 마감까지'); ?>"
                                    style="width: 300px;">
-                            <p class="description">수강 신청 모드에서 카운트다운 타이머 위에 표시될 텍스트</p>
                         </td>
                     </tr>
 
@@ -294,9 +286,6 @@ class Donlinee_Enrollment_Admin {
                             <button type="button" id="reset-texts-default" class="button button-secondary">
                                 기본 텍스트로 복원
                             </button>
-                            <p class="description" style="margin-top: 10px;">
-                                <strong>💡 참고:</strong> 텍스트 변경 후 저장하면 사이트 전체에 즉시 반영됩니다.
-                            </p>
                         </td>
                     </tr>
                 </table>
@@ -308,7 +297,6 @@ class Donlinee_Enrollment_Admin {
                 </p>
             </form>
 
-            <!-- 자동화 설정 안내 -->
             <div class="donlinee-info-box">
                 <h3>⚡ 자동화 기능 안내</h3>
                 <ul>
@@ -357,7 +345,6 @@ class Donlinee_Enrollment_Admin {
 
             <hr class="wp-header-end">
 
-            <!-- 통계 카드 -->
             <div class="donlinee-stats-cards">
                 <div class="stats-card">
                     <h3>전체 신청</h3>
@@ -381,7 +368,6 @@ class Donlinee_Enrollment_Admin {
                 </div>
             </div>
 
-            <!-- 필터 -->
             <div class="tablenav top">
                 <div class="alignleft actions">
                     <select name="status" id="status-filter">
@@ -395,7 +381,6 @@ class Donlinee_Enrollment_Admin {
                 </div>
             </div>
 
-            <!-- 신청 목록 테이블 -->
             <table class="wp-list-table widefat fixed striped">
                 <thead>
                     <tr>
@@ -463,7 +448,6 @@ class Donlinee_Enrollment_Admin {
                 </tbody>
             </table>
 
-            <!-- 페이징 -->
             <?php if ($total_pages > 1) : ?>
                 <div class="tablenav bottom">
                     <div class="tablenav-pages">
@@ -497,7 +481,6 @@ class Donlinee_Enrollment_Admin {
             <?php endif; ?>
         </div>
 
-        <!-- 상세보기 모달 -->
         <div id="enrollment-detail-modal" style="display: none;">
             <div class="modal-content">
                 <h2>신청 상세 정보</h2>
@@ -606,134 +589,5 @@ class Donlinee_Enrollment_Admin {
             </div>
         </div>
         <?php
-    }
-
-    /**
-     * AJAX: 설정 저장
-     */
-    public function ajax_save_settings() {
-        check_ajax_referer('donlinee-enrollment-admin-nonce', 'nonce');
-
-        if (!current_user_can('manage_options')) {
-            wp_die('권한이 없습니다.');
-        }
-
-        $settings = array(
-            'mode' => sanitize_text_field($_POST['mode']),
-            'batch_number' => intval($_POST['batch_number']),
-            'start_date' => sanitize_text_field($_POST['start_date']),
-            'end_date' => sanitize_text_field($_POST['end_date']),
-            'auto_switch_date' => sanitize_text_field($_POST['auto_switch_date']),
-            'max_capacity' => intval($_POST['max_capacity']),
-            'is_active' => isset($_POST['is_active']) ? 'true' : 'false',
-            // 버튼 텍스트 설정
-            'waitlist_button_text' => sanitize_text_field($_POST['waitlist_button_text']),
-            'enrollment_button_text' => sanitize_text_field($_POST['enrollment_button_text']),
-            'countdown_text_waitlist' => sanitize_text_field($_POST['countdown_text_waitlist']),
-            'countdown_text_enrollment' => sanitize_text_field($_POST['countdown_text_enrollment'])
-        );
-
-        $result = Donlinee_Enrollment_Settings::update_settings($settings);
-
-        if ($result) {
-            wp_send_json_success('설정이 저장되었습니다.');
-        } else {
-            wp_send_json_error('설정 저장 중 오류가 발생했습니다.');
-        }
-    }
-
-    /**
-     * AJAX: 모드 전환
-     */
-    public function ajax_switch_mode() {
-        check_ajax_referer('donlinee-enrollment-admin-nonce', 'nonce');
-
-        if (!current_user_can('manage_options')) {
-            wp_die('권한이 없습니다.');
-        }
-
-        $current_mode = Donlinee_Enrollment_Settings::get_setting('mode');
-        $new_mode = $current_mode === 'enrollment' ? 'waitlist' : 'enrollment';
-
-        $result = Donlinee_Enrollment_Settings::update_mode($new_mode);
-
-        if ($result) {
-            wp_send_json_success(array(
-                'message' => '모드가 전환되었습니다.',
-                'new_mode' => $new_mode
-            ));
-        } else {
-            wp_send_json_error('모드 전환 중 오류가 발생했습니다.');
-        }
-    }
-
-    /**
-     * AJAX: 신청자 상태 업데이트
-     */
-    public function ajax_update_enrollment_status() {
-        check_ajax_referer('donlinee-enrollment-admin-nonce', 'nonce');
-
-        if (!current_user_can('manage_options')) {
-            wp_die('권한이 없습니다.');
-        }
-
-        $id = intval($_POST['id']);
-        $status = sanitize_text_field($_POST['status']);
-
-        $result = Donlinee_Enrollment_Database::update_payment_status($id, $status);
-
-        if ($result) {
-            wp_send_json_success('상태가 업데이트되었습니다.');
-        } else {
-            wp_send_json_error('상태 업데이트 중 오류가 발생했습니다.');
-        }
-    }
-
-    /**
-     * AJAX: 신청 삭제
-     */
-    public function ajax_delete_enrollment() {
-        check_ajax_referer('donlinee-enrollment-admin-nonce', 'nonce');
-
-        if (!current_user_can('manage_options')) {
-            wp_die('권한이 없습니다.');
-        }
-
-        $id = intval($_POST['id']);
-
-        $result = Donlinee_Enrollment_Database::delete_enrollment($id);
-
-        if ($result) {
-            wp_send_json_success('삭제되었습니다.');
-        } else {
-            wp_send_json_error('삭제 중 오류가 발생했습니다.');
-        }
-    }
-
-    /**
-     * AJAX: CSV 내보내기
-     */
-    public function ajax_export_enrollments() {
-        check_ajax_referer('donlinee-enrollment-admin-nonce', 'nonce');
-
-        if (!current_user_can('manage_options')) {
-            wp_die('권한이 없습니다.');
-        }
-
-        $settings = Donlinee_Enrollment_Settings::get_current_settings();
-        $export_data = Donlinee_Enrollment_Database::get_export_data($settings['batch_number']);
-
-        header('Content-Type: text/csv; charset=UTF-8');
-        header('Content-Disposition: attachment; filename="enrollments_batch_' . $settings['batch_number'] . '_' . date('Ymd') . '.csv"');
-
-        // BOM 추가 (Excel에서 UTF-8 인식)
-        echo "\xEF\xBB\xBF";
-
-        $output = fopen('php://output', 'w');
-        foreach ($export_data as $row) {
-            fputcsv($output, $row);
-        }
-        fclose($output);
-        exit;
     }
 }
