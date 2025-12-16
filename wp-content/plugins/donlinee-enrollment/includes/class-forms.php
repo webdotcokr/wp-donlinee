@@ -221,7 +221,7 @@ class Donlinee_Enrollment_Forms {
                                             <p>귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있습니다. 다만, 필수 항목에 대한 동의를 거부하실 경우 프로그램 신청이 제한될 수 있습니다.</p>
 
                                             <div class="privacy-full-link">
-                                                <a href="/privacy" target="_blank">개인정보처리방침 전문 보기 →</a>
+                                                <a href="/privacy" target="_blank">개인정보처리방침 전문 보기</a>
                                             </div>
                                         </div>
                                     </div>
