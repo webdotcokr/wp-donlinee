@@ -195,6 +195,47 @@ class Donlinee_Enrollment_Forms {
                                 </div>
                             </div>
 
+                            <!-- 개인정보 수집·이용 동의 섹션 -->
+                            <div class="privacy-agreement-section">
+                                <h4>개인정보 수집·이용 동의</h4>
+                                <div class="privacy-content-wrapper">
+                                    <div class="privacy-scrollable-content">
+                                        <div class="privacy-content">
+                                            <h5>1. 수집 항목</h5>
+                                            <p>• 필수항목: 성명, 나이, 성별, 연락처, 환불계좌정보</p>
+                                            <p>• 선택항목: 판매경험, 지원동기, 향후 계획</p>
+
+                                            <h5>2. 수집 및 이용목적</h5>
+                                            <p>• 돈마고치 프로그램 신청 및 운영</p>
+                                            <p>• 교육비 결제, 환불 등의 거래 처리</p>
+                                            <p>• 오프라인 강의 출결 관리 및 과제 제출 확인</p>
+                                            <p>• 프로그램 관련 안내 및 고지사항 전달</p>
+                                            <p>• 문의 대응 및 불만 처리</p>
+
+                                            <h5>3. 보유 및 이용기간</h5>
+                                            <p>• 프로그램 참여자 정보: 프로그램 종료 후 5년</p>
+                                            <p>• 교육비 결제 정보: 거래 종료 후 5년 (전자상거래법에 따름)</p>
+                                            <p>• 고객 상담 기록: 상담 종료 후 3년</p>
+
+                                            <h5>4. 동의 거부 권리</h5>
+                                            <p>귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있습니다. 다만, 필수 항목에 대한 동의를 거부하실 경우 프로그램 신청이 제한될 수 있습니다.</p>
+
+                                            <div class="privacy-full-link">
+                                                <a href="/privacy" target="_blank">개인정보처리방침 전문 보기 →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="privacy-checkbox-wrapper">
+                                    <label class="privacy-checkbox-label">
+                                        <input type="checkbox" id="privacy-agreement" name="privacy_agreement" required>
+                                        <span>개인정보 수집·이용에 동의합니다 <span class="required">*</span></span>
+                                    </label>
+                                    <span class="error-message" id="privacy-error"></span>
+                                </div>
+                            </div>
+
                             <div class="donlinee-form-actions">
                                 <button type="button" class="btn-prev-step" data-prev="4">이전</button>
                                 <button type="submit" class="donlinee-submit-btn">신청 완료</button>

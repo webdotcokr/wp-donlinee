@@ -229,6 +229,13 @@ jQuery(document).ready(function($) {
                     isValid = false;
                 }
                 break;
+            case 5:
+                // 개인정보 동의 체크박스 검사
+                if (!$('#privacy-agreement').is(':checked')) {
+                    $('#privacy-error').text('개인정보 수집·이용에 동의해주세요.').addClass('show');
+                    isValid = false;
+                }
+                break;
         }
 
         return isValid;
@@ -336,6 +343,11 @@ jQuery(document).ready(function($) {
     // 폼 제출 처리 (동적 로딩된 폼에도 작동하도록 이벤트 위임 사용)
     $(document).on('submit', '#donlinee-enrollment-form', function(e) {
         e.preventDefault();
+
+        // Step 5 검증 (개인정보 동의 포함)
+        if (!validateStep(5)) {
+            return false;
+        }
 
         // Step 5에서 제출하는 경우 최종 데이터 저장
         saveStepData(currentStep);
