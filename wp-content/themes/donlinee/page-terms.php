@@ -86,50 +86,6 @@ get_header(); ?>
 
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800">제6조 [환불규정]</h2>
-                <p class="mb-4">① 회사는 프로그램에 대해 원칙적으로 다음과 같은 환불 규정을 적용합니다.</p>
-
-                <div class="overflow-x-auto mb-6">
-                    <table class="min-w-full border-collapse border border-gray-300 text-sm">
-                        <thead class="bg-gray-100">
-                            <tr>
-                                <th class="border border-gray-300 px-4 py-2 text-left">구분</th>
-                                <th class="border border-gray-300 px-4 py-2 text-left">반환사유 발생일</th>
-                                <th class="border border-gray-300 px-4 py-2 text-left">반환금액</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2 align-top">
-                                    회사의 사정으로 인하여 프로그램을 제공할 수 없게 된 경우
-                                </td>
-                                <td class="border border-gray-300 px-4 py-2">프로그램을 제공할 수 없게 된 날</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 납부한 교육비 전액</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3" class="border border-gray-300 px-4 py-2 align-top">회원이 본인의 의사로 프로그램 참여를 포기한 경우</td>
-                                <td class="border border-gray-300 px-4 py-2">프로그램 시작 전</td>
-                                <td class="border border-gray-300 px-4 py-2">이미 납부한 교육비 전액</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 px-4 py-2">프로그램 시작 이후</td>
-                                <td class="border border-gray-300 px-4 py-2">반환하지 아니함</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="bg-gray-50 p-4 rounded-lg mb-6">
-                    <p class="text-sm space-y-1">
-                        <strong>※ 주의사항</strong><br>
-                        • 특별 환불 보장 프로그램은 아래 조건을 모두 충족해야 합니다.
-                    </p>
-                </div>
-
-                <ol class="list-none space-y-4">
-                    <li>② 회원이 환불을 요청하고자 하는 경우 회사 고객센터 또는 이메일을 통하여 회사에 그 의사를 표시하여야 하며, 회사는 환불요청을 접수하고 회원의 요청과 환불규정을 확인한 후, 5영업일 이내에 환불금을 지급합니다.</li>
-                    <li>③ 회원이 프로그램 참여와 관련하여 지급받은 교재가 있는 경우에는 환불 신청시 해당 교재를 회원의 비용으로 반납하여야 하며, 반납이 완료된 날로부터 5영업일 이내에 환불금이 지급됩니다.</li>
-                    <li>④ 특별 프로그램의 경우 별도의 환불규정이 적용될 수 있으며, 자세한 내용은 프로그램 신청 시 안내됩니다.</li>
-                </ol>
 
                 <div class="bg-gray-50 p-6 rounded-lg mt-6">
                     <h3 class="text-lg font-bold mb-3">환불 보장 규정</h3>
@@ -138,12 +94,12 @@ get_header(); ?>
                         <li><strong>모든 오프라인 강의 참석</strong> (불참 없이 전 회차 참석)</li>
                         <li><strong>오프라인 강의 지각 3회 미만</strong> (정시 참석 기준)</li>
                         <li><strong>평일 과제 사항 100% 이행</strong> (제출 기한 내 모든 과제 완료)</li>
-                        <li><strong>광고 실습 완료</strong>: 네이버 파워링크, 구글 키워드 광고 2가지 모두 진행하여 총 광고비 30만원 이상 지출
+                        <li><strong>광고 실습 완료</strong>: 네이버 파워링크, 구글 광고, 블로그, 인스타그램, 메타, 유튜브 마케팅 5가지 모두 진행하여 총 광고비 30만원 이상 지출
                             <br><span class="text-xs text-gray-600 ml-4">* 광고비는 회원이 직접 광고 플랫폼에 지출하는 비용으로 환불 대상에서 제외</span>
                         </li>
                     </ul>
                     <p class="text-sm mt-4 text-gray-700">
-                        ※ 위 조건을 모두 충족했음에도 프로그램에 만족하지 못한 경우, 매출 미발생 시 프로그램 종료 후 7일 이내 환불 신청 가능<br>
+                        ※ 위 조건을 모두 충족했음에도, 매출 미발생 시 프로그램 종료 후 7일 이내 환불 신청 가능<br>
                         ※ 환불 심사는 출석부, 과제 제출 기록, 광고 계정 증빙 자료를 통해 진행됩니다.
                     </p>
                 </div>

@@ -460,7 +460,7 @@ get_header(); ?>
             <p>강제 사업 시작</p>
         </div>
         <div class="flex flex-col gap-[30px]">
-            <h3 class="point">6주 ~ 16주 차</h3>
+            <h3 class="point">6주 ~ 12주 차</h3>
             <p>노하우 전달 및 무한 피드백</p>
         </div>
         <p><b>​더 자세한 내용은 아래를 확인해 주세요.</b></p>
