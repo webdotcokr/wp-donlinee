@@ -250,8 +250,8 @@ class Donlinee_Enrollment_Forms {
                         <div class="success-icon">✓</div>
                         <h3>신청서가 접수되었습니다!</h3>
                         <p><span id="applicant-name"></span>님의 돈마고치 <?php echo $settings['batch_number']; ?>기 수강 신청서가 접수되었습니다.</p>
-                        <p class="underline">참가 비용 결제 후 지원 신청이 최종 완료됩니다.</p>
-                        <p class="underline">아래 결제 방법 중 하나를 선택해주세요.</p>
+                        <p class="underline text-black text-base">참가 비용 결제 후 지원 신청이 최종 완료됩니다.</p>
+                        <!-- <p class="underline">아래 결제 방법 중 하나를 선택해주세요.</p> -->
                     </div>
 
                     <div class="payment-methods">
