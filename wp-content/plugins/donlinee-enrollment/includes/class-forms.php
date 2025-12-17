@@ -259,7 +259,7 @@ class Donlinee_Enrollment_Forms {
 
                         <!-- 계좌이체 -->
                         <div class="payment-method-card" id="bank-transfer-method">
-                            <h4>1. 계좌이체</h4>
+                            <h4>계좌이체</h4>
                             <div class="account-info">
                                 <p><strong>입금 계좌 정보</strong></p>
                                 <p class="account-number">하나은행 562-910513-14907 (박래완)</p>
@@ -271,12 +271,12 @@ class Donlinee_Enrollment_Forms {
                         </div>
 
                         <!-- 카드결제 -->
-                        <div class="payment-method-card" id="card-payment-method">
+                        <!-- <div class="payment-method-card" id="card-payment-method">
                             <h4>2. 카드결제</h4>
                             <button type="button" class="payment-select-btn" id="select-card">
                                 카드 결제하기 →
                             </button>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="payment-footer">
