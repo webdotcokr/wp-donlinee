@@ -22,6 +22,9 @@ class Donlinee_Enrollment_Ajax {
         // 팝업 HTML 동적 로딩용 AJAX 액션 추가
         add_action('wp_ajax_donlinee_load_enrollment_popup', array($this, 'ajax_load_enrollment_popup'));
         add_action('wp_ajax_nopriv_donlinee_load_enrollment_popup', array($this, 'ajax_load_enrollment_popup'));
+
+        // CSV 내보내기 (관리자 전용)
+        add_action('wp_ajax_donlinee_export_enrollments', array($this, 'handle_export_enrollments'));
     }
 
     /**
@@ -289,6 +292,35 @@ class Donlinee_Enrollment_Ajax {
             'body' => json_encode($message),
             'headers' => array('Content-Type' => 'application/json')
         ));
+    }
+
+    /**
+     * CSV 내보내기 처리
+     */
+    public function handle_export_enrollments() {
+        check_ajax_referer('donlinee-enrollment-admin-nonce', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_die('권한이 없습니다.');
+        }
+
+        $settings = Donlinee_Enrollment_Settings::get_current_settings();
+        $batch_number = isset($_GET['batch']) ? intval($_GET['batch']) : $settings['batch_number'];
+
+        $export_data = Donlinee_Enrollment_Database::get_export_data($batch_number);
+
+        header('Content-Type: text/csv; charset=utf-8');
+        header('Content-Disposition: attachment; filename="enrollments_' . $batch_number . '기_' . date('Y-m-d') . '.csv"');
+
+        echo "\xEF\xBB\xBF";
+
+        $output = fopen('php://output', 'w');
+        foreach ($export_data as $row) {
+            fputcsv($output, $row);
+        }
+        fclose($output);
+
+        exit;
     }
 
     /**

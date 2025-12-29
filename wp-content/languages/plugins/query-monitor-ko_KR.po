@@ -1,0 +1,1653 @@
+# Translation of Plugins - Query Monitor &#8211; The developer tools panel for WordPress - Stable (latest release) in Korean
+# This file is distributed under the same license as the Plugins - Query Monitor &#8211; The developer tools panel for WordPress - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-11-24 08:56:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ko_KR\n"
+"Project-Id-Version: Plugins - Query Monitor &#8211; The developer tools panel for WordPress - Stable (latest release)\n"
+
+#. translators: 1: PHP class name, 2: Version number.
+#: classes/Deprecated_Class_Run.php:35
+msgid "Class %1$s is deprecated since version %2$s with no alternative available."
+msgstr "%1$s 클래스는 %2$s 버전부터 더 이상 사용되지 않으며 대체할 수 없습니다."
+
+#. translators: 1: PHP class name, 2: Version number, 3: Alternative class or
+#. function name.
+#: classes/Deprecated_Class_Run.php:26
+msgid "Class %1$s is deprecated since version %2$s! Use %3$s instead."
+msgstr "%1$s 클래스는 버전 %2$s부터 더 이상 사용되지 않습니다! 대신 %3$s를 사용하십시오."
+
+#. translators: An HTTP API request redirected to another URL
+#: output/html/http.php:205
+msgid "This HTTP request was redirected to:"
+msgstr "이 HTTP 요청은 다음으로 리디렉션되었습니다:"
+
+#. translators: %s: The name of a filter that short-circuited an HTTP API
+#. request
+#: output/html/http.php:194
+msgid "This HTTP request was short-circuited by the %s filter and was not sent"
+msgstr "이 HTTP 요청은 %s 필터에 의해 단락되어 전송되지 않았습니다."
+
+#: output/html/environment.php:281
+msgid "Basic Auth"
+msgstr "기본 인증"
+
+#: output/html/assets.php:53
+msgid "Module"
+msgstr "모듈"
+
+#: collectors/logger.php:173
+msgid "Assertion failed"
+msgstr "어설션 실패"
+
+#. translators: %s: Assertion message
+#: collectors/logger.php:169
+msgid "Assertion failed: %s"
+msgstr "어설션 실패: %s"
+
+#: collectors/logger.php:161
+msgid "Assertion passed"
+msgstr "어설션 통과"
+
+#. translators: %s: Assertion message
+#: collectors/logger.php:157
+msgid "Assertion passed: %s"
+msgstr "어설션 통과: %s"
+
+#: classes/Collector.php:124 output/html/environment.php:240
+msgid "empty string"
+msgstr "빈 문자열"
+
+#. translators: %s: Drop-in plugin file name
+#: classes/Component_Dropin.php:12
+msgid "Drop-in: %s"
+msgstr "드롭인: %s"
+
+#: output/html/hooks.php:36
+msgid "Hooks, Actions, & Filters"
+msgstr "훅, 액션, 필터"
+
+#: output/html/environment.php:245
+msgid "Development Mode"
+msgstr "개발 모드"
+
+#. translators: %s: Total number of Doing it Wrong occurrences
+#: output/html/doing_it_wrong.php:118
+msgctxt "Total Doing it Wrong occurrences"
+msgid "Total: %s"
+msgstr "합계: %s"
+
+#: output/html/doing_it_wrong.php:57
+msgid "No occurrences."
+msgstr "발생하지 않았습니다."
+
+#. translators: %s: Total number of Doing it Wrong occurrences
+#: output/html/doing_it_wrong.php:43
+msgctxt "Doing it Wrong"
+msgid "Doing it Wrong (%s)"
+msgstr "잘못 수행 (%s)"
+
+#: output/html/doing_it_wrong.php:41
+msgid "Doing it Wrong occurrences"
+msgstr "잘못된 발생"
+
+#. translators: %s: Total number of Doing it Wrong occurrences
+#: output/html/doing_it_wrong.php:40
+msgctxt "Doing it Wrong"
+msgid "Total: %s"
+msgstr "합계: %s"
+
+#: output/html/doing_it_wrong.php:31
+msgid "Doing it Wrong"
+msgstr "잘못 수행"
+
+#. translators: %s: Name of WordPress filter
+#: dispatchers/Html.php:608
+msgid "The file link format for your editor is set by the %s filter."
+msgstr "편집기의 파일 링크 형식은 %s 필터로 설정됩니다."
+
+#. translators: 1: WordPress hook name, 2: Version number, 3: Optional message
+#. regarding the change.
+#: classes/Deprecated_Hook_Run.php:38
+msgid "Hook %1$s is deprecated since version %2$s with no alternative available. %3$s"
+msgstr "%1$s 후크는 버전 %2$s부터 더 이상 사용되지 않으며 대체할 수 없습니다. %3$s"
+
+#. translators: 1: WordPress hook name, 2: Version number, 3: Alternative hook
+#. name, 4: Optional message regarding the change.
+#: classes/Deprecated_Hook_Run.php:28
+msgid "Hook %1$s is deprecated since version %2$s! Use %3$s instead. %4$s"
+msgstr "%1$s 훅은 버전 %2$s부터 더 이상 사용되지 않습니다! 대신 %3$s를 사용하십시오. %4$s"
+
+#. translators: 1: PHP function name, 2: Version number.
+#: classes/Deprecated_Argument_Run.php:35
+msgid "Function %1$s was called with an argument that is deprecated since version %2$s with no alternative available."
+msgstr "사용할 수 있는 대체 인수가 없는 %2$s 버전부터 더 이상 사용되지 않는 인수를 사용하여 %1$s 함수를 호출했습니다."
+
+#. translators: 1: PHP function name, 2: Version number, 3: Optional message
+#. regarding the change.
+#: classes/Deprecated_Argument_Run.php:26
+msgid "Function %1$s was called with an argument that is deprecated since version %2$s! %3$s"
+msgstr "버전 %2$s부터 더 이상 사용되지 않는 인수를 사용하여 %1$s 함수를 호출했습니다! %3$s"
+
+#. translators: 1: PHP file name, 2: Version number, 3: Optional message
+#. regarding the change.
+#: classes/Deprecated_File_Included.php:38
+msgid "File %1$s is deprecated since version %2$s with no alternative available. %3$s"
+msgstr "파일 %1$s은(는) 버전 %2$s부터 더 이상 사용되지 않으며 대체할 수 없습니다. %3$s"
+
+#. translators: 1: PHP file name, 2: Version number, 3: Alternative file name,
+#. 4: Optional message regarding the change.
+#: classes/Deprecated_File_Included.php:28
+msgid "File %1$s is deprecated since version %2$s! Use %3$s instead. %4$s"
+msgstr "파일 %1$s은(는) 버전 %2$s부터 사용되지 않습니다! 대신 %3$s를 사용하십시오. %4$s"
+
+#. translators: 1: PHP class name, 2: PHP parent class name, 3: Version number,
+#. 4: __construct() method.
+#: classes/Deprecated_Constructor_Run.php:26
+msgid "The called constructor method for %1$s class in %2$s is deprecated since version %3$s! Use %4$s instead."
+msgstr "%2$s에서 %1$s 클래스에 대해 호출된 생성자 메서드는 버전 %3$s부터 더 이상 사용되지 않습니다! 대신 %4$s를 사용하십시오."
+
+#. translators: 1: PHP class name, 2: Version number, 3: __construct() method.
+#: classes/Deprecated_Constructor_Run.php:36
+msgid "The called constructor method for %1$s class is deprecated since version %2$s! Use %3$s instead."
+msgstr "%1$s 클래스에 대해 호출된 생성자 메서드는 버전 %2$s부터 더 이상 사용되지 않습니다! 대신 %3$s를 사용하십시오."
+
+#. translators: 1: PHP function name, 2: Version number, 3: Alternative
+#. function name.
+#: classes/Deprecated_Function_Run.php:26
+msgid "Function %1$s is deprecated since version %2$s! Use %3$s instead."
+msgstr "함수 %1$s는 버전 %2$s부터 더 이상 사용되지 않습니다! 대신 %3$s를 사용하십시오."
+
+#. translators: 1: PHP function name, 2: Version number.
+#: classes/Deprecated_Function_Run.php:35
+msgid "Function %1$s is deprecated since version %2$s with no alternative available."
+msgstr "함수 %1$s는 버전 %2$s부터 더 이상 사용되지 않으며 대체할 수 없습니다."
+
+#. translators: Developer debugging message. 1: PHP function name, 2:
+#. Explanatory message, 3: WordPress version number.
+#: classes/Doing_It_Wrong_Run.php:33
+msgid "Function %1$s was called incorrectly. %2$s %3$s"
+msgstr "함수 %1$s가(가) 잘못 호출되었습니다. %2$s %3$s"
+
+#. translators: %s: Version number.
+#: classes/Doing_It_Wrong_Run.php:26
+msgid "(This message was added in version %s.)"
+msgstr "(이 메시지는 %s 버전에 추가되었습니다.)"
+
+#. translators: %s: Number of PHP errors
+#: output/html/php_errors.php:201
+msgctxt "PHP error count"
+msgid "Total: %s"
+msgid_plural "Total: %s"
+msgstr[0] "합계: %s"
+
+#: output/html/theme.php:84
+msgid "Block Template"
+msgstr "블록 템플릿"
+
+#: output/html/timing.php:216
+msgid "Timings"
+msgstr "타이밍"
+
+#. translators: %s: Link to help article
+#: output/html/timing.php:45
+msgid "No data logged. <a href=\"%s\">Read about timing and profiling in Query Monitor</a>."
+msgstr "기록된 데이터가 없습니다. <a href=\"%s\">쿼리 모니터에서 타이밍 및 프로파일링에 대해 읽어보세요</a>."
+
+#: output/html/multisite.php:52
+msgid "Site Switch"
+msgstr "사이트 전환"
+
+#: output/html/multisite.php:51
+msgid "Function"
+msgstr "함수"
+
+#: output/html/multisite.php:37
+msgid "No data logged."
+msgstr "기록된 데이터가 없습니다."
+
+#. translators: A closure is an anonymous PHP function
+#: classes/Util.php:421
+msgid "Unknown closure"
+msgstr "알 수 없는 종료"
+
+#. translators: %s: Name of a multilingual plugin
+#: output/html/languages.php:62 output/html/languages.php:75
+msgid "%s Language"
+msgstr "%s 언어"
+
+#: dispatchers/Html.php:624
+msgctxt "colour scheme"
+msgid "Dark"
+msgstr "다크"
+
+#: dispatchers/Html.php:623
+msgctxt "colour scheme"
+msgid "Light"
+msgstr "라이트"
+
+#: dispatchers/Html.php:622
+msgctxt "colour scheme"
+msgid "Auto"
+msgstr "자동"
+
+#: dispatchers/Html.php:619
+msgid "Your browser color scheme is respected by default. You can override it here."
+msgstr "브라우저 색 구성표는 기본적으로 존중됩니다. 여기에서 재정의할 수 있습니다."
+
+#: dispatchers/Html.php:617
+msgid "Appearance"
+msgstr "모양"
+
+#. translators: %s: Memory usage in megabytes with a decimal fraction. Note the
+#. space between value and unit symbol.
+#: output/headers/overview.php:40 output/html/overview.php:392
+msgid "%s MB"
+msgstr "%s MB"
+
+#: output/html/overview.php:361
+msgid "Speak to your web host about enabling an opcode cache such as OPcache."
+msgstr "웹 호스트에게 OPcache와 같은 옵코드 캐시를 활성화하는 방법에 대해 문의하세요."
+
+#: output/html/overview.php:358
+msgid "Opcode cache not in use"
+msgstr "옵코드 캐시가 사용되지 않음"
+
+#: output/html/overview.php:342
+msgid "Opcode Cache"
+msgstr "옵코드 캐시"
+
+#: output/html/overview.php:325
+msgid "Speak to your web host about enabling an object cache extension such as Redis or Memcached."
+msgstr "Redis 또는 Memcached와 같은 객체 캐시 확장 기능 활성화에 대해서는 웹 호스트에게 문의하세요."
+
+#. translators: 1: PHP extension name, 2: URL to plugin directory
+#: output/html/overview.php:308
+msgid "The %1$s object cache extension for PHP is installed but is not in use by WordPress. You should <a href=\"%2$s\" target=\"_blank\" class=\"qm-external-link\">install a %1$s plugin</a>."
+msgstr "PHP용 %1$s 객체 캐시 확장이 설치되어 있지만 워드프레스에서 사용하지 않습니다. <a href=\"%2$s\" target=\"_blank\" class=\"qm-external-link\">%1$s 플러그인을 설치해야 합니다</a>."
+
+#: output/html/overview.php:293
+msgid "Persistent object cache plugin not in use"
+msgstr "영구 객체 캐시 플러그인이 사용 중이 아님"
+
+#: output/html/overview.php:286
+msgid "Persistent object cache plugin in use"
+msgstr "사용 중인 영구 객체 캐시 플러그인"
+
+#. translators: 1: Memory used in bytes, 2: Memory used in megabytes
+#: output/html/overview.php:147
+msgid "%1$s bytes (%2$s MB)"
+msgstr "%1$s 바이트 (%2$s MB)"
+
+#. translators: %s: A time in seconds with a decimal fraction. No space between
+#. value and unit symbol.
+#: output/html/db_queries.php:489 output/html/overview.php:105
+#: output/html/overview.php:190 output/html/overview.php:238
+#: output/html/overview.php:387
+msgctxt "Time in seconds"
+msgid "%ss"
+msgstr "%s초"
+
+#. translators: %s: Total number of items in a list
+#: output/html/logger.php:75
+msgid "All (%d)"
+msgstr "모두 (%d)"
+
+#: output/html/environment.php:280
+msgid "Architecture"
+msgstr "아키텍처"
+
+#. translators: %s: Number of database queries. Note the space between value
+#. and unit symbol.
+#: output/html/db_queries.php:494 output/html/db_queries.php:508
+msgid "%s Q"
+msgid_plural "%s Q"
+msgstr[0] "%s 쿼리"
+
+#: output/html/assets_styles.php:38
+msgid "No CSS files were enqueued."
+msgstr "대기열에 추가된 CSS 파일이 없습니다."
+
+#: output/html/assets_scripts.php:38
+msgid "No JavaScript files were enqueued."
+msgstr "대기열에 추가된 JavaScript 파일이 없습니다."
+
+#: output/Html.php:324
+msgid "Non-WordPress Core"
+msgstr "비 워드프레스 코어"
+
+#: dispatchers/Html.php:664
+msgid "Allow the wp-content/db.php file symlink to be put into place during activation. Set to false to prevent the symlink creation."
+msgstr "활성화하는 동안 wp-content/db.php 파일 심볼 링크가 제자리에 배치되도록 허용합니다. 심볼 링크 생성을 방지하려면 false로 설정합니다."
+
+#. translators: %s: Number of hooks
+#: dispatchers/Html.php:388
+msgid "Hooks in Use (%s)"
+msgstr "사용 중인 후크 (%s)"
+
+#: dispatchers/Html.php:293
+msgid "Data collection ceased"
+msgstr "데이터 수집이 중단됨"
+
+#: classes/Component_Core.php:10 output/Html.php:319 output/html/hooks.php:96
+msgid "WordPress Core"
+msgstr "워드프레스 코어"
+
+#: output/html/overview.php:246
+msgctxt "HTTP API calls"
+msgid "Total"
+msgstr "총"
+
+#: output/html/block_editor.php:64
+msgid "Context"
+msgstr "컨텍스트"
+
+#. translators: 1: Percentage of memory limit used, 2: Memory limit in
+#. megabytes
+#: output/headers/overview.php:47 output/html/overview.php:161
+msgid "%1$s%% of %2$s MB server limit"
+msgstr "%2$s MB 서버 제한의 %1$s%%"
+
+#: classes/QueryMonitor.php:84
+msgctxt "verb"
+msgid "Sponsor"
+msgstr "스폰서"
+
+#. translators: %s: File name
+#: output/html/db_queries.php:194
+msgid "Extended query information such as the component and affected rows is not available. Query Monitor was unable to symlink its %s file into place."
+msgstr "구성 요소 및 영향을 받는 행과 같은 확장 쿼리 정보를 사용할 수 없습니다. 쿼리 모니터가 %s 파일을 제자리에 심볼릭 링크할 수 없습니다."
+
+#. translators: 1: File name, 2: Configuration constant name
+#: output/html/db_queries.php:191
+msgid "Extended query information such as the component and affected rows is not available. Query Monitor was prevented from symlinking its %1$s file into place by the %2$s constant."
+msgstr "구성 요소 및 영향을 받는 행과 같은 확장 쿼리 정보를 사용할 수 없습니다. 쿼리 모니터가 %2$s 상수에 의해 %1$s 파일을 제자리에 심볼릭 링크하지 못했습니다."
+
+#. translators: %s: File name
+#: output/html/db_queries.php:188
+msgid "Extended query information such as the component and affected rows is not available. A conflicting %s file is present."
+msgstr "구성 요소 및 영향을 받는 행과 같은 확장 쿼리 정보를 사용할 수 없습니다. 충돌하는 %s 파일이 있습니다."
+
+#. translators: %s: Dependency name
+#: classes/Component_Altis_Vendor.php:12
+msgid "Dependency: %s"
+msgstr "종속성: %s"
+
+#. translators: %s: Link to help article
+#: output/html/logger.php:46
+msgid "No data logged. <a href=\"%s\">Read about logging variables in Query Monitor</a>."
+msgstr "기록된 데이터가 없습니다. <a href=\"%s\">쿼리 모니터에서 변수를 로깅하는 방법에 대해 읽어보세요</a>."
+
+#: output/html/environment.php:226
+msgid "Environment Type"
+msgstr "환경 유형"
+
+#: dispatchers/Html.php:652
+msgid "Hide Query Monitor itself from various panels. Set to false if you want to see how Query Monitor hooks into WordPress."
+msgstr "다양한 패널에서 쿼리 모니터 자체를 숨깁니다. 쿼리 모니터가 워드프레스에 어떻게 연결되는지 보려면 false로 설정합니다."
+
+#: dispatchers/Html.php:264
+msgid "PHP Fatal Error"
+msgstr "PHP 치명적 오류"
+
+#. translators: 1: CLI command to run, 2: plugin directory name
+#: dispatchers/Html.php:211
+msgid "Asset files for Query Monitor need to be built. Run %1$s from the %2$s directory."
+msgstr "쿼리 모니터용 자산 파일을 빌드해야 합니다. %2$s 디렉터리에서 %1$s를 실행합니다."
+
+#. translators: %s: Plugin or theme name
+#: dispatchers/WP_Die.php:120
+msgid "This message was triggered by %s."
+msgstr "이 메시지는 %s에 의해 트리거되었습니다."
+
+#: dispatchers/Html.php:604
+msgid "Saved! Reload to apply changes."
+msgstr "저장되었습니다! 변경 사항을 적용하려면 새로고침하세요."
+
+#: dispatchers/Html.php:600
+msgid "Set editor cookie"
+msgstr "편집기 쿠키 설정"
+
+#: dispatchers/Html.php:576
+msgid "You can set your editor here, so that when you click on stack trace links the file opens in your editor."
+msgstr "여기에서 편집기를 설정하여 스택 추적 링크를 클릭하면 파일이 편집기에서 열리도록 할 수 있습니다."
+
+#: dispatchers/Html.php:573
+msgid "Editor"
+msgstr "편집기"
+
+#. translators: %s: Number of logs that are available
+#: output/html/logger.php:219
+msgid "Logs (%s)"
+msgstr "로그 (%s)"
+
+#: output/html/request.php:197
+msgid "Requested URL"
+msgstr "요청 URL"
+
+#: output/html/request.php:196
+msgid "HTTP method"
+msgstr "HTTP 메서드"
+
+#: output/html/request.php:195
+msgid "Remote IP"
+msgstr "원격 IP"
+
+#: output/html/admin.php:75
+msgid "Global Variable"
+msgstr "전역 변수"
+
+#: output/html/admin.php:71
+msgid "Globals"
+msgstr "전역 변수"
+
+#: output/html/headers.php:119
+msgid "Response Headers"
+msgstr "응답 헤더"
+
+#: output/html/headers.php:118
+msgid "Request Headers"
+msgstr "요청 헤더"
+
+#: output/html/headers.php:102
+msgid "Note that header names are not case-sensitive."
+msgstr "헤더 이름은 대소문자를 구분하지 않습니다."
+
+#: output/html/headers.php:69
+msgid "Response Header Name"
+msgstr "응답 헤더 이름"
+
+#: output/html/headers.php:54
+msgid "Request Header Name"
+msgstr "요청 헤더 이름"
+
+#: output/html/timing.php:61
+msgid "Stopped"
+msgstr "중지됨"
+
+#: output/html/timing.php:60
+msgid "Started"
+msgstr "시작됨"
+
+#. translators: %s: Number of database queries
+#: output/html/db_queries.php:290
+msgctxt "Query count"
+msgid "Total: %s"
+msgid_plural "Total: %s"
+msgstr[0] "합계: %s"
+
+#: output/html/overview.php:84
+msgid "Unknown HTTP Response Code"
+msgstr "알 수 없는 HTTP 응답 코드"
+
+#: output/html/headers.php:34 output/html/request.php:191
+msgid "Request Data"
+msgstr "요청 데이터"
+
+#. translators: %s: Default value for a PHP constant
+#: dispatchers/Html.php:707
+msgid "Default value: %s"
+msgstr "기본값: %s"
+
+#: output/html/theme.php:181
+msgid "Not Loaded"
+msgstr "로드되지 않음"
+
+#. translators: 1: Query Monitor, 2: Required PHP version number, 3: Current
+#. PHP version number, 4: URL of PHP update help page
+#: classes/PHP.php:32
+msgid "The %1$s plugin requires PHP version %2$s or higher. This site is running PHP version %3$s. <a href=\"%4$s\">Learn about updating PHP</a>."
+msgstr "%1$s 플러그인에는 PHP 버전 %2$s 이상이 필요합니다. 이 사이트는 PHP 버전 %3$s를 실행 중입니다. <a href=\"%4$s\">PHP 업데이트에 대해 자세히 알아보기</a>."
+
+#. translators: %s: Total number of enqueued scripts
+#: output/html/assets_scripts.php:37
+msgctxt "Enqueued scripts"
+msgid "Scripts (%s)"
+msgstr "스크립트 (%s)"
+
+#. translators: %s: Total number of enqueued styles
+#: output/html/assets_styles.php:37
+msgctxt "Enqueued styles"
+msgid "Styles (%s)"
+msgstr "스타일 (%s)"
+
+#: output/html/overview.php:331
+msgid "Object cache statistics are not available"
+msgstr "개체 캐시 통계를 사용할 수 없습니다."
+
+#: output/Html.php:393
+msgid "Toggle more information"
+msgstr "자세한 정보 토글하기"
+
+#: output/Html.php:380
+msgid "Sort data by this column"
+msgstr "이 열을 기준으로 데이터 정렬"
+
+#: output/Html.php:177 output/html/hooks.php:59
+msgid "Callback"
+msgstr "콜백"
+
+#. translators: %s: Panel name
+#: output/Html.php:167
+msgid "%s: Related Hooks with Filters or Actions Attached"
+msgstr "%s: 필터 또는 액션이 첨부된 관련 훅"
+
+#: output/Html.php:147 output/html/hooks.php:62 output/html/hooks.php:160
+msgid "Filter"
+msgstr "필터"
+
+#: output/Html.php:146
+msgid "Related Hooks with Filters Attached"
+msgstr "필터가 첨부된 관련 훅"
+
+#: output/Html.php:142
+msgid "Related Hooks with Actions Attached"
+msgstr "액션이 첨부된 관련 훅"
+
+#: output/html/languages.php:95
+msgid "Translation File"
+msgstr "번역 파일"
+
+#. translators: %s: Name of cache driver
+#: output/html/overview.php:349
+msgid "Opcode cache in use: %s"
+msgstr "사용 중인 연산 코드 캐시: %s"
+
+#: output/html/overview.php:212
+msgctxt "database queries"
+msgid "Total"
+msgstr "총합계"
+
+#: output/html/block_editor.php:206
+msgid "None (Classic block)"
+msgstr "없음(클래식 블록)"
+
+#: output/html/block_editor.php:70
+msgid "Render Time"
+msgstr "렌더링 시간"
+
+#: output/html/theme.php:205
+msgid "Twig Template Files"
+msgstr "트위그 템플릿 파일"
+
+#: dispatchers/Html.php:491
+msgid "Toggle panel position"
+msgstr "패널 위치 전환"
+
+#. translators: %1$s: Erroneous post type name, %2$s: WordPress attachment post
+#. type name
+#: output/html/block_editor.php:172
+msgid "Referenced media is of type %1$s instead of %2$s."
+msgstr "참조된 미디어의 유형이 %2$s가 아닌 %1$s입니다."
+
+#: output/html/block_editor.php:164
+msgid "Referenced media does not exist."
+msgstr "참조된 미디어가 존재하지 않습니다."
+
+#. translators: %s: Total number of content blocks used
+#: output/html/block_editor.php:103
+msgctxt "Content blocks used"
+msgid "Total: %s"
+msgid_plural "Total: %s"
+msgstr[0] "합계: %s"
+
+#: classes/QueryMonitor.php:61
+msgid "Add-ons"
+msgstr "애드온"
+
+#. translators: 1: Name of the PHP directive, 2: Value of the PHP directive
+#: output/html/overview.php:171
+msgid "No memory limit. The %1$s PHP configuration directive is set to %2$s."
+msgstr "메모리 제한이 없습니다. %1$s PHP 구성 지시어가 %2$s로 설정되었습니다."
+
+#. translators: 1: Name of the PHP directive, 2: Value of the PHP directive
+#: output/html/overview.php:129
+msgid "No execution time limit. The %1$s PHP configuration directive is set to %2$s."
+msgstr "실행 시간 제한이 없습니다. %1$s PHP 구성 지시어가 %2$s로 설정되었습니다."
+
+#: classes/Collector_Assets.php:467
+msgid "Insecure content"
+msgstr "안전하지 않은 콘텐츠"
+
+#. translators: %1$s: Erroneous post type name, %2$s: WordPress block post type
+#. name
+#: output/html/block_editor.php:141
+msgid "Referenced post is of type %1$s instead of %2$s."
+msgstr "참조된 게시물의 유형이 %2$s가 아닌 %1$s입니다."
+
+#: output/html/block_editor.php:133
+msgid "Referenced block does not exist."
+msgstr "참조된 블록이 존재하지 않습니다."
+
+#: output/html/block_editor.php:73
+msgid "Inner HTML"
+msgstr "내부 HTML"
+
+#: output/html/block_editor.php:67
+msgid "Render Callback"
+msgstr "렌더링 콜백"
+
+#: output/html/block_editor.php:61
+msgid "Attributes"
+msgstr "속성"
+
+#: output/html/block_editor.php:60
+msgid "Block Name"
+msgstr "블록 이름"
+
+#: output/html/block_editor.php:47
+msgid "This post contains no blocks."
+msgstr "이 글에는 블록이 없습니다."
+
+#. translators: %s: The number of times that a template part file was included
+#. in the page
+#: output/html/theme.php:166
+msgctxt "template parts"
+msgid "Included %s time"
+msgid_plural "Included %s times"
+msgstr[0] "포함 횟수 %s"
+
+#: output/html/block_editor.php:30 output/html/block_editor.php:339
+msgid "Blocks"
+msgstr "블록"
+
+#: classes/QueryMonitor.php:217
+msgctxt "Human readable label for the user capability required to view Query Monitor."
+msgid "View Query Monitor"
+msgstr "쿼리 모니터 보기"
+
+#: output/html/transients.php:129
+msgid "No transients set."
+msgstr "트랜지언트가 설정되지 않았습니다."
+
+#: output/html/overview.php:62
+msgid "PHP errors were triggered during an Ajax request. See your browser developer console for details."
+msgstr "Ajax 요청 중에 PHP 오류가 발생했습니다. 자세한 내용은 브라우저 개발자 콘솔을 참조하세요."
+
+#: output/html/logger.php:221 output/raw/logger.php:21
+msgid "Logs"
+msgstr "로그"
+
+#: output/html/http.php:367
+msgid "No HTTP API calls."
+msgstr "HTTP API 호출이 없습니다."
+
+#. translators: %s: Number of HTTP API requests
+#: output/html/http.php:355
+msgctxt "HTTP API calls"
+msgid "Total: %s"
+msgid_plural "Total: %s"
+msgstr[0] "합계: %s"
+
+#: output/html/environment.php:158
+msgid "Client Version"
+msgstr "클라이언트 버전"
+
+#: output/html/environment.php:157
+msgid "Extension"
+msgstr "확장"
+
+#: output/html/environment.php:156
+msgid "Server Version"
+msgstr "서버 버전"
+
+#. translators: %s: Number of user capability checks
+#: output/html/caps.php:198
+msgctxt "User capability checks"
+msgid "Total: %s"
+msgid_plural "Total: %s"
+msgstr[0] "합계: %s"
+
+#: output/html/assets.php:78
+msgid "Source"
+msgstr "소스"
+
+#. translators: %s: Total number of enqueued styles
+#: output/html/assets_styles.php:34
+msgctxt "Enqueued styles"
+msgid "Total: %s"
+msgstr "합계: %s"
+
+#. translators: %s: Total number of enqueued scripts
+#: output/html/assets_scripts.php:34
+msgctxt "Enqueued scripts"
+msgid "Total: %s"
+msgstr "합계: %s"
+
+#: output/Html.php:374
+msgid "Sequence"
+msgstr "시퀀스"
+
+#. translators: %s: Current value for a PHP constant
+#: dispatchers/Html.php:721
+msgid "Current value: %s"
+msgstr "현재 값: %s"
+
+#. translators: %s: Name of the config file
+#: dispatchers/Html.php:687
+msgid "The following PHP constants can be defined in your %s file in order to control the behavior of Query Monitor:"
+msgstr "쿼리 모니터의 동작을 제어하기 위해 %s 파일에 다음 PHP 상수를 정의할 수 있습니다:"
+
+#: dispatchers/Html.php:683
+msgid "Configuration"
+msgstr "구성"
+
+#: dispatchers/Html.php:660
+msgid "In the Hooks & Actions panel, show every hook that has an action or filter attached (instead of every action hook that fired during the request)."
+msgstr "훅 및 액션 패널에서 액션 또는 필터가 연결된 모든 훅을 표시합니다(요청 중에 실행된 모든 액션 훅 대신)."
+
+#: dispatchers/Html.php:656
+msgid "Don't specify jQuery as a dependency of Query Monitor. If jQuery isn't enqueued then Query Monitor will still operate, but with some reduced functionality."
+msgstr "JQuery를 쿼리 모니터의 종속성으로 지정하지 마세요. jQuery를 큐에 넣지 않으면 쿼리 모니터는 계속 작동하지만 기능이 일부 축소됩니다."
+
+#: dispatchers/Html.php:648
+msgid "Hide WordPress core on the Hooks & Actions panel."
+msgstr "훅 & 액션 패널에서 워드프레스 코어를 숨깁니다."
+
+#: dispatchers/Html.php:644
+msgid "Enable the Capability Checks panel."
+msgstr "기능 검사 패널을 활성화합니다."
+
+#: dispatchers/Html.php:640
+msgid "Disable the handling of PHP errors."
+msgstr "PHP 오류 처리를 비활성화합니다."
+
+#: dispatchers/Html.php:636
+msgid "Disable Query Monitor entirely."
+msgstr "쿼리 모니터를 완전히 비활성화합니다."
+
+#: dispatchers/Html.php:632
+msgid "If an individual database query takes longer than this time to execute, it's considered \"slow\" and triggers a warning."
+msgstr "개별 데이터베이스 쿼리를 실행하는 데 이 시간보다 오래 걸리면 '느린' 쿼리로 간주되어 경고가 트리거됩니다."
+
+#: dispatchers/Html.php:567
+msgid "Authentication cookie is set"
+msgstr "인증 쿠키가 설정됨"
+
+#: dispatchers/Html.php:560
+msgid "You can set an authentication cookie which allows you to view Query Monitor output when you&rsquo;re not logged in, or when you&rsquo;re logged in as a different user."
+msgstr "로그인하지 않았을 때 또는 다른 사용자로 로그인했을 때 쿼리 모니터 출력을 볼 수 있도록 인증 쿠키를 설정할 수 있습니다."
+
+#: dispatchers/Html.php:498
+msgid "Query Monitor Menu"
+msgstr "쿼리 모니터 메뉴"
+
+#: output/html/logger.php:31
+msgid "Logger"
+msgstr "로거"
+
+#. Description of the plugin
+#: query-monitor.php
+msgid "The developer tools panel for WordPress."
+msgstr "워드프레스용 개발자 도구 패널입니다."
+
+#. translators: %s: Number of function timing results that are available
+#: output/html/timing.php:214
+msgid "Timings (%s)"
+msgstr "타이밍 (%s)"
+
+#. translators: %s: Approximate memory used in kilobytes
+#: output/html/timing.php:110 output/html/timing.php:142
+msgid "~%s kB"
+msgstr "~%s kB"
+
+#: output/html/timing.php:63
+msgid "Memory"
+msgstr "메모리"
+
+#: output/html/timing.php:59
+msgid "Tracked Function"
+msgstr "추적 기능"
+
+#: output/html/theme.php:275
+msgid "Template"
+msgstr "템플릿"
+
+#: output/html/request.php:163
+msgid "Current User"
+msgstr "현재 사용자"
+
+#. translators: used between list items, there is a space after the comma
+#: output/html/php_errors.php:296
+msgid ", "
+msgstr ", "
+
+#. translators: %s: List of PHP error types
+#. translators: %s: Number of errors
+#: output/html/php_errors.php:293 output/html/php_errors.php:343
+msgid "PHP Errors (%s)"
+msgstr "PHP 오류 (%s)"
+
+#. translators: %s: Number of PHP warnings
+#: output/html/php_errors.php:246
+msgctxt "PHP error level"
+msgid "%s Warning"
+msgid_plural "%s Warnings"
+msgstr[0] "%s 경고"
+
+#. translators: %s: Number of PHP notices
+#: output/html/php_errors.php:244
+msgctxt "PHP error level"
+msgid "%s Notice"
+msgid_plural "%s Notices"
+msgstr[0] "%s 공지 사항"
+
+#. translators: %s: Number of strict PHP errors
+#: output/html/php_errors.php:242
+msgctxt "PHP error level"
+msgid "%s Strict"
+msgid_plural "%s Stricts"
+msgstr[0] "%s 제한"
+
+#. translators: %s: Number of deprecated PHP errors
+#: output/html/php_errors.php:240
+msgctxt "PHP error level"
+msgid "%s Deprecated"
+msgid_plural "%s Deprecated"
+msgstr[0] "%s 폐기 예정"
+
+#: output/html/doing_it_wrong.php:69 output/html/logger.php:85
+#: output/html/php_errors.php:79
+msgid "Message"
+msgstr "메시지"
+
+#: output/html/logger.php:83 output/html/php_errors.php:77
+msgid "Level"
+msgstr "등급"
+
+#: output/html/overview.php:61
+msgid "A JavaScript problem on the page is preventing Query Monitor from working correctly. jQuery may have been blocked from loading."
+msgstr "페이지의 JavaScript 문제로 인해 쿼리 모니터가 제대로 작동하지 않습니다. jQuery가 로드되지 않도록 차단되었을 수 있습니다."
+
+#: output/html/languages.php:96
+msgid "Size"
+msgstr "크기"
+
+#: output/html/environment.php:276 output/html/http.php:277
+msgid "IP Address"
+msgstr "IP 주소"
+
+#: output/html/http.php:276
+msgid "Response Content Type"
+msgstr "응답 콘텐츠 유형"
+
+#: output/html/http.php:81
+msgid "Response Size"
+msgstr "응답 크기"
+
+#: output/html/http.php:262
+msgid "Transfer Start Time (TTFB)"
+msgstr "전송 시작 시간(TTFB)"
+
+#: output/html/http.php:261
+msgid "Connection Time"
+msgstr "연결 시간"
+
+#: output/html/http.php:260
+msgid "DNS Resolution Time"
+msgstr "DNS 확인 시간"
+
+#: output/html/http.php:69
+msgid "URL"
+msgstr "URL"
+
+#: output/html/http.php:67
+msgid "Method"
+msgstr "메소드"
+
+#: output/Html.php:176 output/html/hooks.php:72
+msgid "Priority"
+msgstr "우선순위"
+
+#. translators: OS stands for Operating System
+#: output/html/environment.php:279
+msgid "OS"
+msgstr "OS"
+
+#: output/html/db_queries.php:78
+msgid "No database queries were logged."
+msgstr "데이터베이스 쿼리가 기록되지 않았습니다."
+
+#: output/html/conditionals.php:57
+msgid "False Conditionals"
+msgstr "잘못된 조건부"
+
+#: output/html/conditionals.php:44
+msgid "True Conditionals"
+msgstr "트루 컨디셔너"
+
+#. translators: %s: Configuration file name.
+#: output/html/caps.php:47
+msgid "For performance reasons, this panel is not enabled by default. To enable it, add the following code to your %s file:"
+msgstr "성능상의 이유로 이 패널은 기본적으로 활성화되어 있지 않습니다. 이 패널을 활성화하려면 %s 파일에 다음 코드를 추가하세요:"
+
+#: output/html/assets.php:69
+msgid "Handle"
+msgstr "핸들"
+
+#: output/html/assets.php:76 output/html/environment.php:160
+#: output/html/environment.php:277
+msgid "Host"
+msgstr "호스트"
+
+#: output/html/assets.php:61 output/html/assets.php:153
+msgid "Other"
+msgstr "기타"
+
+#: output/html/assets.php:52
+msgid "Missing Dependencies"
+msgstr "누락된 종속성"
+
+#: output/html/admin.php:105
+msgid "Class:"
+msgstr "클래스:"
+
+#: output/html/admin.php:102
+msgid "List Table"
+msgstr "목록 테이블"
+
+#: dispatchers/Html.php:493
+msgid "Close Panel"
+msgstr "패널 닫기"
+
+#: classes/QueryMonitor.php:60 dispatchers/Html.php:478
+#: dispatchers/Html.php:489 dispatchers/Html.php:554
+msgid "Settings"
+msgstr "설정"
+
+#: collectors/timing.php:143
+msgid "Timer not stopped"
+msgstr "타이머가 중지되지 않음"
+
+#: collectors/timing.php:81 collectors/timing.php:101
+msgid "Timer not started"
+msgstr "타이머가 시작되지 않음"
+
+#: output/html/timing.php:30
+msgid "Timing"
+msgstr "타이밍"
+
+#. translators: %d: Multisite network ID
+#: collectors/request.php:179
+msgid "Current Network: #%d"
+msgstr "현재 네트워크: #%d"
+
+#: output/html/php_errors.php:63
+msgctxt "Silenced PHP error level"
+msgid "Deprecated (Silenced)"
+msgstr "폐기예정(무음)"
+
+#: output/html/php_errors.php:62
+msgctxt "Silenced PHP error level"
+msgid "Strict (Silenced)"
+msgstr "제한(무음)"
+
+#: output/html/php_errors.php:61
+msgctxt "Silenced PHP error level"
+msgid "Notice (Silenced)"
+msgstr "알림(무음)"
+
+#: output/html/php_errors.php:60
+msgctxt "Silenced PHP error level"
+msgid "Warning (Silenced)"
+msgstr "경고(무음)"
+
+#. translators: A non-blocking HTTP API request
+#: output/html/http.php:57 output/html/http.php:119
+msgid "Non-blocking"
+msgstr "비차단"
+
+#. translators: %s: Timing lap number
+#: classes/Timer.php:91
+msgid "Lap %s"
+msgstr "횟수 %s"
+
+#. translators: No user
+#: collectors/request.php:156
+msgctxt "user"
+msgid "None"
+msgstr "없음"
+
+#. translators: %d: User ID
+#: collectors/request.php:151
+msgid "Current User: #%d"
+msgstr "현재 사용자: #%d"
+
+#: output/html/db_queries.php:218
+msgid "Non-SELECT"
+msgstr "비선택"
+
+#: output/html/db_queries.php:97
+msgid "Error Message"
+msgstr "오류 메시지"
+
+#: output/html/db_queries.php:98
+msgid "Error Code"
+msgstr "오류 코드"
+
+#: output/html/caps.php:209
+msgid "No capability checks were recorded."
+msgstr "기능 검사가 기록되지 않았습니다."
+
+#: output/html/caps.php:91
+msgid "Result"
+msgstr "결과"
+
+#: output/html/caps.php:87 output/html/environment.php:81
+#: output/html/environment.php:159
+msgid "User"
+msgstr "사용자"
+
+#: output/html/caps.php:79
+msgid "Capability Check"
+msgstr "기능 검사"
+
+#: output/html/caps.php:30
+msgid "Capability Checks"
+msgstr "기능 검사"
+
+#. translators: %s: Number of transient values that were updated
+#: output/html/transients.php:148
+msgid "Transient Updates (%s)"
+msgstr "일시적 업데이트 (%s)"
+
+#: output/html/transients.php:51
+msgctxt "size of transient value"
+msgid "Size"
+msgstr "크기"
+
+#: output/html/transients.php:48
+msgctxt "transient type"
+msgid "Type"
+msgstr "유형"
+
+#: output/html/transients.php:46
+msgid "Updated Transient"
+msgstr "업데이트된 일시적"
+
+#: output/html/transients.php:146
+msgid "Transient Updates"
+msgstr "트랜지언트 업데이트"
+
+#: output/html/request.php:107
+msgid "View Main Query"
+msgstr "주요 쿼리 보기"
+
+#. translators: %s: Number of calls to the HTTP API
+#: output/html/http.php:406
+msgid "HTTP API Calls (%s)"
+msgstr "HTTP API 호출 (%s)"
+
+#: output/html/http.php:72
+msgid "Status"
+msgstr "상태"
+
+#: output/html/http.php:31 output/html/http.php:404
+#: output/html/overview.php:229 output/raw/http.php:21
+msgid "HTTP API Calls"
+msgstr "HTTP API 호출"
+
+#: output/html/environment.php:126
+msgid "Extensions"
+msgstr "확장"
+
+#: output/html/environment.php:111
+msgid "Error Reporting"
+msgstr "오류 보고"
+
+#: output/html/hooks.php:33
+msgid "Hooks & Actions"
+msgstr "훅 & 액션"
+
+#: output/html/db_queries.php:237 output/html/db_queries.php:423
+msgid "Main Query"
+msgstr "주요 쿼리"
+
+#. translators: 1: Cache hit rate percentage, 2: number of cache hits, 3:
+#. number of cache misses
+#: output/html/overview.php:273
+msgid "%1$s%% hit rate (%2$s hits, %3$s misses)"
+msgstr "%1$s%% 적중률(%2$s 적중, %3$s 불합격)"
+
+#: output/html/theme.php:133
+msgid "Template Hierarchy"
+msgstr "템플릿 계층 구조"
+
+#: output/html/php_errors.php:57
+msgctxt "Suppressed PHP error level"
+msgid "Deprecated (Suppressed)"
+msgstr "폐기예정(표시되지 않음)"
+
+#: output/html/php_errors.php:56
+msgctxt "Suppressed PHP error level"
+msgid "Strict (Suppressed)"
+msgstr "제한(표시되지 않음)"
+
+#: output/html/php_errors.php:55
+msgctxt "Suppressed PHP error level"
+msgid "Notice (Suppressed)"
+msgstr "공지사항(표시되지 않음)"
+
+#: output/html/php_errors.php:54
+msgctxt "Suppressed PHP error level"
+msgid "Warning (Suppressed)"
+msgstr "경고(표시되지 않음)"
+
+#: output/html/assets.php:68
+msgid "Position"
+msgstr "위치"
+
+#: output/html/assets.php:55
+msgid "Footer"
+msgstr "바닥글"
+
+#: output/html/assets.php:54
+msgid "Header"
+msgstr "헤더"
+
+#: output/html/assets.php:51
+msgid "Missing"
+msgstr "누락"
+
+#: output/html/admin.php:54 output/html/admin.php:76 output/html/headers.php:85
+msgid "Value"
+msgstr "값"
+
+#: output/html/admin.php:53
+msgid "Property"
+msgstr "속성"
+
+#. translators: 1: Post type name, 2: Post ID
+#: collectors/request.php:251
+msgid "Single %1$s: #%2$d"
+msgstr "단일 %1$s: #%2$d"
+
+#. translators: %d: Multisite site ID
+#: collectors/request.php:168
+msgid "Current Site: #%d"
+msgstr "현재 사이트: #%d"
+
+#: output/html/php_errors.php:51
+msgctxt "PHP error level"
+msgid "Deprecated"
+msgstr "폐기 예정"
+
+#: output/html/php_errors.php:50
+msgctxt "PHP error level"
+msgid "Strict"
+msgstr "제한"
+
+#: output/html/php_errors.php:49
+msgctxt "PHP error level"
+msgid "Notice"
+msgstr "공지"
+
+#: output/html/php_errors.php:48
+msgctxt "PHP error level"
+msgid "Warning"
+msgstr "경고"
+
+#. translators: An HTTP API request was not executed. %s: Hook name
+#: output/html/http.php:103
+msgid "Request not executed due to a filter on %s"
+msgstr "%s의 필터로 인해 요청이 실행되지 않았습니다."
+
+#. translators: Undefined PHP constant
+#: classes/Collector.php:122
+msgid "undefined"
+msgstr "정의되지 않음"
+
+#: output/html/theme.php:140
+msgid "Template Parts"
+msgstr "템플릿 파트"
+
+#: output/html/overview.php:261 output/raw/cache.php:21
+msgid "Object Cache"
+msgstr "객체 캐시"
+
+#. translators: An HTTP API request has disabled certificate verification. 1:
+#. Relevant argument name
+#: output/html/http.php:145
+msgid "Certificate verification disabled (%s)"
+msgstr "인증서 확인 사용 안 함 (%s)"
+
+#. translators: %s: Number of duplicate database queries
+#: output/html/db_dupes.php:154
+msgid "Duplicate Queries (%s)"
+msgstr "중복 쿼리 (%s)"
+
+#. translators: %s: Number of calls to a PHP function
+#: output/html/db_dupes.php:65
+msgid "%s call"
+msgid_plural "%s calls"
+msgstr[0] "%s 호출"
+
+#: output/html/db_dupes.php:57
+msgid "Potential Troublemakers"
+msgstr "잠재적 문제"
+
+#: output/html/db_dupes.php:55
+msgid "Components"
+msgstr "구성요소"
+
+#: output/html/db_dupes.php:53
+msgid "Callers"
+msgstr "호출자"
+
+#: output/html/db_dupes.php:31
+msgid "Duplicate Queries"
+msgstr "중복 쿼리"
+
+#. translators: %s: Plugin name
+#: classes/Component_MU_Plugin.php:12 classes/Component_MU_Vendor.php:12
+msgid "MU Plugin: %s"
+msgstr "MU 플러그인: %s"
+
+#: output/html/php_errors.php:160
+msgid "Unknown location"
+msgstr "알 수 없는 위치"
+
+#: output/html/db_callers.php:111 output/html/languages.php:137
+#: output/html/overview.php:221 output/html/overview.php:253
+#: output/html/theme.php:177
+msgid "None"
+msgstr "아무 것도 사용하지 않음"
+
+#: output/html/request.php:80
+msgid "All Matching Rewrite Rules"
+msgstr "모든 일치하는 재작성 규칙"
+
+#: output/html/languages.php:151
+msgid "Not Found"
+msgstr "찾을 수 없음"
+
+#: output/html/languages.php:92
+msgid "Text Domain"
+msgstr "텍스트 도메인"
+
+#: output/html/environment.php:274
+msgid "Software"
+msgstr "소프트웨어"
+
+#: output/html/environment.php:150 output/html/environment.php:161
+msgid "Database"
+msgstr "데이터베이스"
+
+#. translators: 1: Name of PHP constant, 2: Value of PHP constant
+#: output/html/db_queries.php:73
+msgid "No database queries were logged because the %1$s constant is set to %2$s."
+msgstr "%1$s 상수가 %2$s로 설정되어 있으므로 데이터베이스 쿼리가 기록되지 않았습니다."
+
+#: output/html/languages.php:30
+msgid "Languages"
+msgstr "언어"
+
+#. Author of the plugin
+#: query-monitor.php
+msgid "John Blackbourn"
+msgstr "존 블랙본"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: query-monitor.php
+msgid "https://querymonitor.com/"
+msgstr "https://querymonitor.com/"
+
+#. translators: %s: Symlink file location
+#: classes/QueryMonitor.php:185
+msgid "The symlink at %s is no longer pointing to the correct location. Please remove the symlink, then deactivate and reactivate Query Monitor."
+msgstr "%s의 심볼 링크가 더 이상 올바른 위치를 가리키지 않습니다. 심볼 링크를 제거한 다음 쿼리 모니터를 비활성화했다가 다시 활성화하세요."
+
+#: output/html/transients.php:50
+msgid "Expiration"
+msgstr "만료"
+
+#: output/Html.php:175 output/html/hooks.php:63 output/html/languages.php:93
+msgid "Type"
+msgstr "유형"
+
+#. translators: %s: Template file name
+#: output/html/theme.php:260
+msgid "Template: %s"
+msgstr "템플릿: %s"
+
+#: output/html/theme.php:219
+msgid "Body Classes"
+msgstr "본문 클래스"
+
+#: output/html/theme.php:113
+msgid "Template File"
+msgstr "템플릿 파일"
+
+#. translators: %s: Number of additional query variables
+#: output/html/request.php:225
+msgid "Request (+%s)"
+msgstr "요청 (+%s)"
+
+#: output/html/request.php:149
+msgid "Queried Object"
+msgstr "쿼리된 객체"
+
+#: output/html/multisite.php:27 output/html/request.php:175
+msgid "Multisite"
+msgstr "멀티사이트"
+
+#: output/html/request.php:100
+msgid "Query Vars"
+msgstr "쿼리 변수"
+
+#: output/html/request.php:52
+msgid "Query String"
+msgstr "쿼리 문자열"
+
+#: output/html/request.php:51
+msgid "Matched Query"
+msgstr "일치 쿼리"
+
+#: output/html/request.php:50
+msgid "Matched Rule"
+msgstr "일치 규칙"
+
+#: output/html/php_errors.php:80
+msgid "Location"
+msgstr "위치"
+
+#: output/html/db_dupes.php:51 output/html/php_errors.php:81
+msgid "Count"
+msgstr "카운트"
+
+#. translators: %s: Memory used in kilobytes
+#: output/html/http.php:226 output/html/http.php:232
+#: output/html/languages.php:145 output/html/languages.php:168
+msgid "%s kB"
+msgstr "%s kB"
+
+#: output/html/overview.php:139
+msgid "Peak Memory Usage"
+msgstr "최대 메모리 사용량"
+
+#: output/html/overview.php:100
+msgid "Page Generation Time"
+msgstr "페이지 생성 시간"
+
+#. translators: 1: Percentage of time limit used, 2: Time limit in seconds
+#: output/headers/overview.php:32 output/html/overview.php:119
+msgid "%1$s%% of %2$ss limit"
+msgstr "%2$s초 제한의 %1$s%%"
+
+#: output/html/http.php:82
+msgid "Timeout"
+msgstr "시간 초과"
+
+#: output/html/request.php:148
+msgid "Response"
+msgstr "응답"
+
+#. translators: %s: Error message text
+#: output/html/block_editor.php:275 output/html/hooks.php:208
+msgid "Error: %s"
+msgstr "오류: %s"
+
+#. translators: %s: Action name
+#: output/html/hooks.php:152
+msgid "Warning: The %s action is extremely resource intensive. Try to avoid using it."
+msgstr "경고: %s 작업은 리소스를 매우 많이 사용합니다. 사용하지 않도록 하세요."
+
+#: output/Html.php:143 output/html/hooks.php:55 output/html/hooks.php:61
+#: output/html/hooks.php:160
+msgid "Action"
+msgstr "액션"
+
+#: output/Html.php:174 output/html/hooks.php:69
+msgid "Hook"
+msgstr "훅"
+
+#: output/html/environment.php:271
+msgid "Server"
+msgstr "서버"
+
+#: classes/QueryMonitor.php:62 output/html/environment.php:56
+#: output/html/environment.php:230 output/html/environment.php:249
+msgid "Help"
+msgstr "도움말"
+
+#. translators: %s: Number of slow database queries
+#: output/html/db_queries.php:579
+msgid "Slow Queries (%s)"
+msgstr "느린 쿼리 (%s)"
+
+#. translators: %s: Number of database errors
+#: output/html/db_queries.php:565
+msgid "Database Errors (%s)"
+msgstr "데이터베이스 오류 (%s)"
+
+#: output/html/db_queries.php:136 output/html/db_queries.php:265
+msgid "Rows"
+msgstr "행"
+
+#: output/html/caps.php:93 output/html/db_callers.php:51
+#: output/html/db_queries.php:95 output/html/db_queries.php:129
+#: output/html/db_queries.php:243 output/html/doing_it_wrong.php:70
+#: output/html/http.php:74 output/html/languages.php:94
+#: output/html/logger.php:86 output/html/multisite.php:53
+#: output/html/transients.php:52
+msgid "Caller"
+msgstr "호출자"
+
+#. translators: %s: Database query time in seconds
+#: output/html/db_queries.php:121
+msgid "Slow Database Queries (above %ss)"
+msgstr "느린 데이터베이스 쿼리 (%s초 이상)"
+
+#: output/Html.php:178 output/html/caps.php:96 output/html/db_components.php:51
+#: output/html/db_queries.php:96 output/html/db_queries.php:132
+#: output/html/db_queries.php:254 output/html/doing_it_wrong.php:71
+#: output/html/hooks.php:76 output/html/http.php:79 output/html/logger.php:89
+#: output/html/multisite.php:56 output/html/php_errors.php:84
+#: output/html/timing.php:64 output/html/transients.php:53
+msgid "Component"
+msgstr "컴포넌트"
+
+#: dispatchers/WP_Die.php:127
+msgid "Call stack:"
+msgstr "호출 스택:"
+
+#: output/html/db_dupes.php:50 output/html/db_queries.php:94
+#: output/html/db_queries.php:128 output/html/db_queries.php:230
+msgid "Query"
+msgstr "쿼리"
+
+#: output/html/db_queries.php:90
+msgid "Database Errors"
+msgstr "데이터베이스 오류"
+
+#: output/html/db_callers.php:60 output/html/db_components.php:60
+#: output/html/db_dupes.php:52 output/html/db_queries.php:139
+#: output/html/db_queries.php:270 output/html/http.php:83
+#: output/html/timing.php:62
+msgid "Time"
+msgstr "시간"
+
+#. translators: %s: Name of missing script or style dependency
+#: output/html/assets.php:144
+msgid "%s (missing)"
+msgstr "%s (누락)"
+
+#: output/html/request.php:65 output/html/request.php:141
+#: output/html/request.php:160 output/html/request.php:171
+#: output/html/transients.php:77
+msgid "none"
+msgstr "없음"
+
+#: output/html/assets.php:85 output/html/environment.php:62
+#: output/html/environment.php:220 output/html/environment.php:275
+msgid "Version"
+msgstr "버전"
+
+#: output/html/assets.php:83
+msgid "Dependents"
+msgstr "종속성"
+
+#: output/html/assets.php:80
+msgid "Dependencies"
+msgstr "종속성"
+
+#: output/html/assets_styles.php:25 output/html/assets_styles.php:35
+msgid "Styles"
+msgstr "스타일"
+
+#: output/html/assets_scripts.php:25 output/html/assets_scripts.php:35
+msgid "Scripts"
+msgstr "스크립트"
+
+#: output/html/admin.php:112
+msgid "Column Action:"
+msgstr "열 동작:"
+
+#: output/html/admin.php:109
+msgid "Column Filters:"
+msgstr "열 필터:"
+
+#: output/Html.php:316
+msgctxt "\"All\" option for filters"
+msgid "All"
+msgstr "전체"
+
+#: dispatchers/Html.php:549
+msgid "Clear authentication cookie"
+msgstr "인증 쿠키 지우기"
+
+#: dispatchers/Html.php:550
+msgid "Set authentication cookie"
+msgstr "인증 쿠키 설정"
+
+#: dispatchers/Html.php:558
+msgid "Authentication"
+msgstr "인증"
+
+#: dispatchers/Html.php:257
+msgid "PHP Errors in Ajax Response"
+msgstr "Ajax 응답의 PHP 오류"
+
+#. Plugin Name of the plugin
+#: query-monitor.php classes/QueryMonitor.php:199 classes/QueryMonitor.php:232
+#: dispatchers/Html.php:147 dispatchers/Html.php:448 dispatchers/Html.php:841
+#: dispatchers/WP_Die.php:132
+msgid "Query Monitor"
+msgstr "쿼리 모니터"
+
+#: output/html/transients.php:30 output/raw/transients.php:21
+msgid "Transients"
+msgstr "트랜지언트"
+
+#: collectors/request.php:288
+msgid "Unknown queried object"
+msgstr "알 수 없는 쿼리된 개체"
+
+#. translators: %s: Post type name
+#: collectors/request.php:281
+msgid "Post type archive: %s"
+msgstr "글 유형 아카이브: %s"
+
+#. translators: %s: Taxonomy term name
+#: collectors/request.php:271
+msgid "Term archive: %s"
+msgstr "텀 아카이브: %s"
+
+#. translators: %s: Author name
+#: collectors/request.php:261
+msgid "Author archive: %s"
+msgstr "작성자 아카이브: %s"
+
+#: output/html/request.php:30 output/html/request.php:49
+#: output/html/request.php:223
+msgid "Request"
+msgstr "요청"
+
+#: output/html/php_errors.php:32 output/html/php_errors.php:304
+msgid "PHP Errors"
+msgstr "PHP 오류"
+
+#: dispatchers/Html.php:455 dispatchers/Html.php:504
+#: output/html/overview.php:30
+msgid "Overview"
+msgstr "개요"
+
+#: output/html/http.php:54
+msgid "Error"
+msgstr "오류"
+
+#. translators: An HTTP API request timed out
+#: output/html/http.php:109
+msgid "Request timed out"
+msgstr "요청 시간 초과"
+
+#: output/html/environment.php:30
+msgid "Environment"
+msgstr "환경"
+
+#: output/html/db_queries.php:38 output/html/db_queries.php:553
+#: output/html/overview.php:183 output/raw/db_queries.php:26
+msgid "Database Queries"
+msgstr "데이터베이스 쿼리"
+
+#: output/html/db_components.php:30 output/html/db_components.php:128
+msgid "Queries by Component"
+msgstr "컴포넌트별 쿼리"
+
+#: output/html/db_callers.php:30 output/html/db_callers.php:131
+msgid "Queries by Caller"
+msgstr "호출자별 쿼리"
+
+#: output/html/conditionals.php:31 output/html/conditionals.php:107
+#: output/raw/conditionals.php:21
+msgid "Conditionals"
+msgstr "조건부"
+
+#: output/html/admin.php:30
+msgid "Admin Screen"
+msgstr "관리자 화면"
+
+#. translators: A closure is an anonymous PHP function. 1: Line number, 2: File
+#. name
+#: classes/Util.php:414 output/Html.php:508
+msgid "Closure on line %1$d of %2$s"
+msgstr "%2$s의 %1$d 번째 줄에서 닫힘"
+
+#: classes/Component_Unknown.php:10 output/html/db_queries.php:346
+#: output/html/db_queries.php:442 output/html/environment.php:70
+#: output/html/environment.php:77 output/html/environment.php:85
+#: output/html/environment.php:171 output/html/environment.php:293
+#: output/html/overview.php:143 output/html/php_errors.php:186
+#: output/html/request.php:153 output/html/theme.php:128
+#: output/html/theme.php:254
+msgid "Unknown"
+msgstr "알 수 없음"
+
+#: classes/Component_Template.php:10 output/html/theme.php:64
+msgid "Parent Theme"
+msgstr "부모 테마"
+
+#: classes/Component_Stylesheet.php:14 output/html/theme.php:31
+#: output/html/theme.php:48
+msgid "Theme"
+msgstr "테마"
+
+#: classes/Component_Stylesheet.php:11
+msgid "Child Theme"
+msgstr "하위 테마"
+
+#. translators: %s: Plugin name
+#: classes/Component_VIP_Plugin.php:12
+msgid "VIP Plugin: %s"
+msgstr "VIP 플러그인: %s"
+
+#. translators: %s: Plugin name
+#: classes/Component_Plugin.php:12
+msgid "Plugin: %s"
+msgstr "플러그인: %s"

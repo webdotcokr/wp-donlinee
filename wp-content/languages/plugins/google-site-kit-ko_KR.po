@@ -1,0 +1,1892 @@
+# Translation of Plugins - Site Kit by Google &#8211; Analytics, Search Console, AdSense, Speed - Stable (latest release) in Korean
+# This file is distributed under the same license as the Plugins - Site Kit by Google &#8211; Analytics, Search Console, AdSense, Speed - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-11-21 08:42:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ko_KR\n"
+"Project-Id-Version: Plugins - Site Kit by Google &#8211; Analytics, Search Console, AdSense, Speed - Stable (latest release)\n"
+
+#: includes/Modules/Analytics_4.php:1335
+msgid "Batch report requests must be an array with 1-5 requests."
+msgstr "배치 보고서 요청은 1~5개의 요청이 포함된 배열이어야 합니다."
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:244
+msgid "⚠️ some failed in last run"
+msgstr "⚠️ 마지막 실행에서 일부 실패"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:238
+msgid "❌ all failed in last run"
+msgstr "마지막 실행에서 모두 실패했습니다."
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:231
+msgid "✅ all emails in last run sent"
+msgstr "✅ 마지막으로 전송된 모든 이메일"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:81
+msgid "Email Reports last sent"
+msgstr "마지막으로 전송된 이메일 보고서"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:76
+msgid "Email Reports deliverability"
+msgstr "이메일 보고서 전달률"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:71
+msgid "Email Reports subscribers"
+msgstr "이메일 보고서 구독자"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:66
+msgid "Email Reports status"
+msgstr "이메일 보고서 상태"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Pointer.php:108
+msgid "Keep track of your site with Site Kit"
+msgstr "사이트 킷으로 사이트 추적"
+
+#: includes/Core/Dashboard_Sharing/View_Only_Pointer.php:113
+msgid "View dashboard"
+msgstr "대시보드 보기"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Pointer.php:153
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:37
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:52
+msgid "Set up"
+msgstr "설정"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Pointer.php:99
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:52
+msgid "Get site insights in your inbox"
+msgstr "사이트 인사이트를 받은 편지함에서 확인하세요"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:675
+msgid "%s: Show next to comments"
+msgstr "%s: 댓글 옆에 표시"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Pointer.php:109
+#: dist/assets/js/googlesitekit-notifications-2367a0e39a4641cf0a86.js:10
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:52
+msgid "Receive the most important insights about your site’s performance, key trends, and tailored metrics directly in your inbox"
+msgstr "사이트 성능, 주요 트렌드 및 맞춤형 지표에 대한 가장 중요한 인사이트를 직접 받은 편지함에서 받아보세요."
+
+#: includes/Modules/Sign_In_With_Google/Datapoint/Compatibility_Checks.php:61
+msgid "You are not allowed to access this resource."
+msgstr "이 리소스에 접근할 수 없습니다."
+
+#. translators: %s: plugin name
+#: includes/Modules/Sign_In_With_Google/Compatibility_Checks/Conflicting_Plugins_Check.php:68
+msgid "%s may prevent Sign in with Google from working properly."
+msgstr "%s로 인해 Google로 로그인 기능이 제대로 작동하지 않을 수 있습니다."
+
+#: includes/Core/Admin/Screens.php:572
+msgid "Key Metrics Setup"
+msgstr "주요 지표 설정"
+
+#: includes/Core/HTTP/Middleware.php:38
+msgid "User has blocked requests through HTTP."
+msgstr "사용자가 HTTP를 통한 요청을 차단했습니다."
+
+#: includes/Core/Tags/GTag.php:107
+msgid "Google tag gateway for advertisers snippet added by Site Kit"
+msgstr "광고자를 위한 Google 태그 게이트웨이 스니펫이 Site Kit에 의해 추가됨"
+
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:201
+msgid "Google tag gateway for advertisers: Script accessible"
+msgstr "광고자를 위한 Google 태그 게이트웨이: 스크립트 액세스 가능"
+
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:196
+msgid "Google tag gateway for advertisers: Service healthy"
+msgstr "광고자를 위한 Google 태그 게이트웨이: 서비스 양호"
+
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:191
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:4
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:30
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:15
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:35
+#: dist/assets/js/googlesitekit-modules-tagmanager-b4d14f8336e2d04a117d.js:2
+#: dist/assets/js/googlesitekit-modules-tagmanager-b4d14f8336e2d04a117d.js:34
+msgid "Google tag gateway for advertisers"
+msgstr "광고자를 위한 Google 태그 게이트웨이"
+
+#: includes/Core/Conversion_Tracking/Conversion_Event_Providers/WooCommerce.php:159
+msgid "Events tracked through Analytics integration addon"
+msgstr "Analytics 통합 추가 기능을 통해 추적된 이벤트"
+
+#: dist/assets/blocks/reader-revenue-manager/subscribe-with-google/block.json
+#: dist/assets/blocks/reader-revenue-manager/subscribe-with-google/v3/block.json
+msgctxt "block description"
+msgid "Allow users to subscribe using Reader Revenue Manager to access content behind a paywall."
+msgstr "사용자가 Reader Revenue Manager를 사용하여 유료 벽 뒤의 콘텐츠에 접근할 수 있도록 허용합니다."
+
+#: dist/assets/blocks/reader-revenue-manager/subscribe-with-google/block.json
+#: dist/assets/blocks/reader-revenue-manager/subscribe-with-google/v3/block.json
+msgctxt "block title"
+msgid "Subscribe with Google"
+msgstr "Google로 구독"
+
+#: dist/assets/blocks/reader-revenue-manager/contribute-with-google/block.json
+#: dist/assets/blocks/reader-revenue-manager/contribute-with-google/v3/block.json
+msgctxt "block description"
+msgid "Allow users to make voluntary contributions using Reader Revenue Manager."
+msgstr "사용자가 Reader Revenue Manager를 사용하여 자발적인 기여를 할 수 있도록 허용합니다."
+
+#: dist/assets/blocks/reader-revenue-manager/contribute-with-google/block.json
+#: dist/assets/blocks/reader-revenue-manager/contribute-with-google/v3/block.json
+msgctxt "block title"
+msgid "Contribute with Google"
+msgstr "Google에 기여하기"
+
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:157
+msgid "— No Change —"
+msgstr "— 변경 없음 —"
+
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:145
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:158
+#: dist/assets/blocks/reader-revenue-manager/block-editor-plugin/index.js:2
+msgid "Default"
+msgstr "기본"
+
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:96
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:166
+msgid "Reader Revenue CTA"
+msgstr "독자 수익 행동 유도"
+
+#: includes/Modules/Analytics_4.php:1562
+msgid "User does not have permission to save audience settings."
+msgstr "사용자에게 잠재고객 설정을 저장할 권한이 없습니다."
+
+#: includes/Modules/Ads.php:400
+msgid "Ads: Conversion ID"
+msgstr "Ads: 전환 ID"
+
+#: dist/assets/blocks/sign-in-with-google/block.json
+#: dist/assets/blocks/sign-in-with-google/v3/block.json
+msgctxt "block description"
+msgid "Allow users to sign in to your site using their Google Account."
+msgstr "사용자가 Google 계정을 사용하여 귀하의 사이트에 로그인할 수 있도록 허용합니다."
+
+#: dist/assets/blocks/sign-in-with-google/block.json
+#: dist/assets/blocks/sign-in-with-google/v3/block.json
+msgctxt "block title"
+msgid "Sign in with Google"
+msgstr "Google로 로그인"
+
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:121
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:160
+#: dist/assets/blocks/reader-revenue-manager/block-editor-plugin/index.js:2
+#: dist/assets/js/googlesitekit-modules-reader-revenue-manager-607d96f98f5402c25944.js:3
+#: dist/assets/js/googlesitekit-modules-reader-revenue-manager-607d96f98f5402c25944.js:6
+msgid "Open access"
+msgstr "오픈 액세스"
+
+#. translators: %1$s: Sign in with Google service name, %2$s: Plugin name
+#: includes/Modules/Sign_In_With_Google.php:850
+msgid "%1$s (via %2$s)"
+msgstr "%1$s (경유 %2$s)"
+
+#: includes/Modules/Reader_Revenue_Manager.php:783
+msgid "Reader Revenue Manager: Payment option"
+msgstr "Reader Revenue Manager: 결제 옵션"
+
+#: includes/Modules/Reader_Revenue_Manager.php:778
+msgid "Reader Revenue Manager: Available product IDs"
+msgstr "독자 수익 관리자: 사용 가능한 제품 ID"
+
+#: includes/Modules/Reader_Revenue_Manager.php:793
+msgid "Reader Revenue Manager: Product ID"
+msgstr "독자 수익 관리자: 제품 ID"
+
+#: includes/Modules/Reader_Revenue_Manager.php:801
+msgid "Reader Revenue Manager: Post types"
+msgstr "독자 수익 관리자: 글 유형"
+
+#: includes/Modules/Reader_Revenue_Manager.php:788
+msgid "Reader Revenue Manager: Snippet placement"
+msgstr "독자 수익 관리자: 스니펫 삽입"
+
+#: includes/Modules/Reader_Revenue_Manager.php:750
+msgid "Sitewide"
+msgstr "사이트 전체"
+
+#: includes/Modules/Reader_Revenue_Manager.php:749
+msgid "Per post"
+msgstr "글당"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:771
+msgid "%s button added by Site Kit"
+msgstr "Site Kit에서 %s 버튼 추가"
+
+#. translators: %1$s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:681
+msgid "%1$s: Number of users who have authenticated using %1$s"
+msgstr "%1$s: %1$s를 사용하여 인증한 사용자 수입니다"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:669
+msgid "%s: One Tap Enabled"
+msgstr "%s: 원탭 사용"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:663
+msgid "%s: Theme"
+msgstr "%s: 테마"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:657
+msgid "%s: Text"
+msgstr "%s: 텍스트"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:651
+msgid "%s: Shape"
+msgstr "%s: 모양"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:645
+msgid "%s: Client ID"
+msgstr "%s: 클라이언트 ID"
+
+#. translators: %s: Sign in with Google service name
+#: includes/Modules/Sign_In_With_Google.php:298
+msgid "Login with %s failed."
+msgstr "%s로 로그인하지 못하였습니다."
+
+#: includes/Core/Admin/Screens.php:550
+msgid "Select Key Metrics"
+msgstr "주요 지표 선택"
+
+#: includes/Modules/Sign_In_With_Google.php:870
+msgid "Disconnect Google Account"
+msgstr "Google 계정 연결 해제"
+
+#: includes/Modules/Sign_In_With_Google.php:861
+msgid "This user can sign in with their Google account."
+msgstr "이 사용자는 Google 계정으로 로그인할 수 있습니다."
+
+#: includes/Modules/Sign_In_With_Google.php:856
+msgid "You can sign in with your Google account."
+msgstr "Google 계정으로 로그인할 수 있습니다."
+
+#: includes/Modules/Sign_In_With_Google.php:301
+msgid "The user is not registered on this site."
+msgstr "이 사용자는 이 사이트에 등록되어 있지 않습니다."
+
+#: includes/Modules/Reader_Revenue_Manager.php:388
+#: includes/Modules/Reader_Revenue_Manager.php:403
+msgid "Publication not found."
+msgstr "게시를 찾을 수 없습니다."
+
+#: includes/Modules/AdSense.php:290
+msgid "AdSense: Ad Blocking Recovery setup status"
+msgstr "AdSense: 광고 차단 복구 설정 상태"
+
+#: includes/Modules/AdSense.php:274
+msgid "AdSense: Ad Blocking Recovery snippet placed"
+msgstr "AdSense: 광고 차단 복구 스니펫 삽입"
+
+#: includes/Modules/AdSense.php:261
+msgid "AdSense: Web Stories Ad Unit ID"
+msgstr "AdSense: 웹 스토리 광고 단위 ID"
+
+#: includes/Core/Site_Health/Debug_Data.php:688
+msgid "Key Metrics Source"
+msgstr "주요 지표 소스"
+
+#: includes/Core/Site_Health/Debug_Data.php:680
+msgid "Tailored Metrics"
+msgstr "맞춤 지표"
+
+#: includes/Core/Site_Health/Debug_Data.php:679
+msgid "Manual Selection"
+msgstr "수동 선택"
+
+#: includes/Core/Site_Health/Debug_Data.php:675
+msgid "Setup and Enabled"
+msgstr "설정 및 사용 설정"
+
+#: includes/Core/Site_Health/Debug_Data.php:674
+msgid "Setup and Disabled"
+msgstr "설정 및 사용 안 함"
+
+#: includes/Core/Site_Health/Debug_Data.php:668
+msgid "Not setup"
+msgstr "설정되지 않음"
+
+#: includes/Core/Site_Health/Debug_Data.php:667
+#: includes/Core/Site_Health/Debug_Data.php:684
+msgid "Key Metrics Status"
+msgstr "주요 지표 상태"
+
+#: includes/Modules/Sign_In_With_Google/Web_Tag.php:261
+msgid "End Sign in with Google button added by Site Kit"
+msgstr "사이트 키트에서 추가한 구글로 로그인 종료 버튼"
+
+#: includes/Modules/Sign_In_With_Google/Web_Tag.php:253
+msgid "Sign in with Google button added by Site Kit"
+msgstr "사이트 킷에서 추가한 구글로 로그인 버튼"
+
+#: includes/Modules/Analytics_4.php:1592
+msgid "User must be authenticated to sync audiences."
+msgstr "잠재고객을 동기화하려면 사용자를 인증해야 합니다."
+
+#: includes/Modules/Ads.php:298
+msgid "Grow sales, leads or awareness for your business by advertising with Google Ads"
+msgstr "Google Ads로 광고하여 비즈니스의 매출, 잠재 고객 또는 인지도를 높이세요"
+
+#: includes/Modules/Sign_In_With_Google.php:352
+msgid "https://developers.google.com/identity/gsi/web/guides/overview"
+msgstr "https://developers.google.com/identity/gsi/web/guides/overview"
+
+#: includes/Modules/Sign_In_With_Google.php:351
+msgid "Improve user engagement, trust and data privacy, while creating a simple, secure and personalized experience for your visitors"
+msgstr "사용자 참여, 신뢰 및 데이터 개인 정보 보호를 개선하는 동시에 방문자를 위한 간편하고 안전하며 개인화된 환경을 구축하세요"
+
+#: includes/Modules/Reader_Revenue_Manager/Web_Tag.php:140
+msgid "End Google Reader Revenue Manager snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Reader Revenue Manager 스니펫 종료"
+
+#: includes/Modules/Reader_Revenue_Manager/Web_Tag.php:139
+msgid "Google Reader Revenue Manager snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Reader Revenue Manager 스니펫"
+
+#: includes/Modules/Reader_Revenue_Manager.php:773
+msgid "Reader Revenue Manager: Publication onboarding state"
+msgstr "독자 수익 관리자: 발행물 온보딩 상태"
+
+#: includes/Modules/Reader_Revenue_Manager.php:768
+msgid "Reader Revenue Manager: Publication ID"
+msgstr "독자 수익 관리자: 발행물 ID"
+
+#: includes/Core/Consent_Mode/Consent_Mode.php:140
+msgid "You do not have permission to activate plugins on this site."
+msgstr "이 사이트에서 플러그인을 활성화할 수 있는 권한이 없습니다."
+
+#: includes/Modules/Reader_Revenue_Manager.php:469
+msgid "Reader Revenue Manager helps publishers grow, retain, and engage their audiences, creating new revenue opportunities"
+msgstr "Reader Revenue Manager는 발행자가 잠재고객을 성장, 유지 및 참여시켜 새로운 수익 기회를 창출할 수 있도록 지원합니다"
+
+#: includes/Modules/Reader_Revenue_Manager.php:468
+#: dist/assets/js/googlesitekit-modules-reader-revenue-manager-607d96f98f5402c25944.js:3
+msgctxt "Service name"
+msgid "Reader Revenue Manager"
+msgstr "Reader Revenue Manager"
+
+#: includes/Modules/Analytics_4.php:642
+msgid "Analytics: Site created audiences"
+msgstr "Analytics: 사이트가 잠재고객 생성함"
+
+#: includes/Core/Admin/Authorize_Application.php:126
+msgid "Powered by Site Kit"
+msgstr "Site Kit 제공"
+
+#. translators: %s: Missing parameter name
+#: includes/Core/Expirables/REST_Expirable_Items_Controller.php:134
+msgid "Request parameter is invalid: %s."
+msgstr "요청 매개변수가 잘못되었습니다: %s."
+
+#: includes/Core/Site_Health/Debug_Data.php:647
+msgid "Active conversion event providers"
+msgstr "활성 전환 이벤트 제공자"
+
+#: includes/Modules/Analytics_4/Web_Tag.php:72
+msgid "Please use the consent mode feature instead."
+msgstr "대신 동의 모드 기능을 사용해 주세요."
+
+#. translators: 1: provider classname 2: Conversion_Events_Provider classname
+#: includes/Core/Conversion_Tracking/Conversion_Tracking.php:208
+msgid "The '%1$s' class must extend the base conversion event provider class: %2$s"
+msgstr "'%1$s' 클래스는 기본 변환 이벤트 공급자 클래스인 %2$s를 확장해야 합니다"
+
+#. translators: %s: provider classname
+#: includes/Core/Conversion_Tracking/Conversion_Tracking.php:198
+msgid "The '%s' class does not exist"
+msgstr "'%s' 클래스가 존재하지 않습니다."
+
+#. translators: %s: provider slug
+#: includes/Core/Conversion_Tracking/Conversion_Tracking.php:188
+msgid "A conversion event provider class name is required to instantiate a provider: %s"
+msgstr "공급자를 인스턴스화하려면 변환 이벤트 공급자 클래스 이름이 필요합니다: %s"
+
+#: includes/Modules/Ads/AMP_Tag.php:83
+msgid "Google Ads AMP snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Ads AMP 스니펫"
+
+#: includes/Core/Site_Health/Debug_Data.php:622
+msgid "Not detected"
+msgstr "감지되지 않음"
+
+#: includes/Core/Site_Health/Debug_Data.php:622
+msgid "Detected"
+msgstr "감지됨"
+
+#: includes/Core/Site_Health/Debug_Data.php:621
+msgid "WP Consent API"
+msgstr "WP 동의 API"
+
+#: includes/Modules/Analytics_4.php:631
+msgid "Analytics: AdSense Linked Last Synced At"
+msgstr "Analytics: AdSense 연결 최근 동기화 시점"
+
+#: includes/Modules/Analytics_4.php:625
+msgid "Analytics: AdSense Linked"
+msgstr "Analytics: AdSense 연동"
+
+#: includes/Modules/Analytics_4.php:617
+msgid "Analytics: Ads Linked Last Synced At"
+msgstr "Analytics: 최근 동기화된 Ads 연결 위치"
+
+#: includes/Modules/Analytics_4.php:612
+msgid "Analytics: Ads Linked"
+msgstr "Analytics: Ads 연결"
+
+#: includes/Modules/Ads/Web_Tag.php:83
+msgid "Google Ads snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Ads 스니펫"
+
+#: includes/Core/Tags/GTag.php:199
+msgid "Google tag (gtag.js) snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google 태그(gtag.js) 스니펫"
+
+#. translators: %s: Invalid parameter
+#: includes/Core/REST_API/Exception/Invalid_Param_Exception.php:46
+msgid "Invalid parameter: %s."
+msgstr "잘못된 매개변수: %s."
+
+#: includes/Core/Site_Health/Debug_Data.php:616
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:52
+msgid "Consent mode"
+msgstr "동의 모드"
+
+#: includes/Core/Consent_Mode/Consent_Mode.php:263
+msgid "End Google tag (gtag.js) consent mode dataLayer added by Site Kit"
+msgstr "사이트 키트에 의해 추가된 Google 태그(gtag.js) 동의 모드 dataLayer 종료"
+
+#: includes/Core/Consent_Mode/Consent_Mode.php:250
+msgid "Google tag (gtag.js) consent mode dataLayer added by Site Kit"
+msgstr "사이트 키트에 의해 추가된 Google 태그(gtag.js) 동의 모드 dataLayer"
+
+#: includes/Modules/Analytics_4.php:618 includes/Modules/Analytics_4.php:632
+msgid "Never synced"
+msgstr "동기화되지 않음"
+
+#: includes/Modules/Ads.php:299
+msgid "https://google.com/ads"
+msgstr "https://google.com/ads"
+
+#: includes/Modules/Ads.php:298
+msgid "Track conversions for your existing Google Ads campaigns"
+msgstr "기존 Google Ads 캠페인에 대한 전환 추적"
+
+#: includes/Modules/Ads.php:297
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:30
+msgctxt "Service name"
+msgid "Ads"
+msgstr "Ads"
+
+#. translators: %s: Invalid property names
+#: includes/Modules/Analytics_4.php:1225
+msgid "Invalid properties in audience: %s."
+msgstr "잠재고객에 잘못된 속성: %s"
+
+#: includes/Modules/Analytics_4.php:780
+msgid "You’ll need to grant Site Kit permission to create new audiences for your Analytics property on your behalf."
+msgstr "사용자를 대신하여 Analytics 속성에 대한 새 잠재고객을 만들려면 Site Kit에 권한을 부여해야 합니다."
+
+#: includes/Modules/AdSense.php:980
+msgid "End Google AdSense meta tags added by Site Kit"
+msgstr "Site Kit에서 추가한 Google AdSense 메타 태그 종료"
+
+#: includes/Modules/AdSense.php:976
+msgid "Google AdSense meta tags added by Site Kit"
+msgstr "Site Kit에서 추가한 Google AdSense 메타 태그"
+
+#: includes/Core/Site_Health/Tag_Placement.php:244
+#: includes/Core/Site_Health/Tag_Placement.php:251
+msgid "No tag detected."
+msgstr "태그가 감지되지 않았습니다."
+
+#: includes/Core/Site_Health/Tag_Placement.php:237
+msgid "Tag detected but could not verify that Site Kit placed the tag."
+msgstr "태그가 감지되었지만 Site Kit에서 태그를 삽입했는지 확인할 수 없습니다."
+
+#: includes/Core/Site_Health/Tag_Placement.php:230
+msgid "Tag detected and placed by Site Kit."
+msgstr "Site Kit에서 태그를 감지하여 삽입하였습니다."
+
+#: includes/Core/Site_Health/Tag_Placement.php:151
+msgid "Tag placement disabled in settings."
+msgstr "설정에서 태그 삽입를 비활성화하였습니다."
+
+#: includes/Core/Site_Health/Tag_Placement.php:125
+msgid "Tags are not output in the current environment."
+msgstr "현재 환경에서는 태그가 출력되지 않습니다."
+
+#: includes/Core/Site_Health/Tag_Placement.php:168
+msgid "There was an error while trying to get the status, please try again later."
+msgstr "상태를 가져오는 동안 오류가 발생하였습니다. 나중에 다시 시도해 주세요."
+
+#: includes/Core/Site_Health/Tag_Placement.php:135
+msgid "Tag status not available: no modules that place tags are connected."
+msgstr "태그 상태를 사용할 수 없음: 태그를 삽입하는 모듈이 연결되어 있지 않습니다."
+
+#: includes/Core/Site_Health/Tag_Placement.php:116
+msgid "This feature requires WordPress version 5.6 or higher"
+msgstr "이 기능을 사용하려면 워드프레스 버전 5.6 이상이 필요합니다"
+
+#: includes/Core/Site_Health/Tag_Placement.php:73
+#: includes/Core/Site_Health/Tag_Placement.php:81
+#: includes/Core/Site_Health/Tag_Placement.php:103
+msgid "Tag Placement"
+msgstr "태그 삽입"
+
+#. translators: %s: translatable module name
+#: includes/Core/Modules/Module_With_Tag_Trait.php:38
+msgid "Google %s snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google %s 스니펫"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:88
+#: includes/Core/Site_Health/Debug_Data.php:617
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:192
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:30
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:82
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:9
+#: dist/assets/js/googlesitekit-modules-tagmanager-b4d14f8336e2d04a117d.js:28
+msgid "Disabled"
+msgstr "비활성화됨"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:88
+#: includes/Core/Site_Health/Debug_Data.php:617
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:192
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:30
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:82
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:9
+#: dist/assets/js/googlesitekit-modules-tagmanager-b4d14f8336e2d04a117d.js:28
+msgid "Enabled"
+msgstr "활성화"
+
+#. translators: %s: Invalid custom dimension slug
+#: includes/Modules/Analytics_4.php:1641
+msgid "Invalid custom dimension slug: %s."
+msgstr "잘못된 사용자 정의 크기 슬러그: %s"
+
+#: includes/Modules/Analytics_4.php:599
+msgid "Analytics: Available Custom Dimensions"
+msgstr "Analytics: 사용 가능한 사용자 지정 차원"
+
+#. translators: %s: Invalid scope
+#: includes/Modules/Analytics_4.php:1525
+msgid "Invalid scope: %s."
+msgstr "잘못된 범위: %s"
+
+#. translators: %s: Invalid property names
+#: includes/Modules/Analytics_4.php:1509
+msgid "Invalid properties in customDimension: %s."
+msgstr "CustomDimension의 잘못된 속성: %s입니다."
+
+#. translators: %s: Invalid property names
+#: includes/Modules/Analytics_4.php:1452
+msgid "Invalid properties in enhancedMeasurementSettings: %s."
+msgstr "향상된 측정 설정에 잘못된 속성: %s가 있습니다."
+
+#: includes/Modules/Analytics_4.php:758
+msgid "You’ll need to grant Site Kit permission to update enhanced measurement settings for this Analytics web data stream on your behalf."
+msgstr "사용자를 대신하여 이 Analytics 웹 데이터 스트림에 대한 향상된 측정 설정을 업데이트하려면 Site Kit에 권한을 부여해야 합니다."
+
+#: includes/Core/Key_Metrics/REST_Key_Metrics_Controller.php:128
+msgid "Selected metrics cannot be empty."
+msgstr "선택한 지표는 비워둘 수 없습니다."
+
+#: includes/Modules/AdSense.php:1119
+msgid "Not set up"
+msgstr "설정되지 않음"
+
+#: includes/Modules/AdSense.php:1117
+msgid "Setup complete"
+msgstr "설정 완료"
+
+#: includes/Modules/AdSense.php:1115
+msgid "Snippet is placed"
+msgstr "스니펫이 삽입됨"
+
+#: includes/Modules/AdSense.php:282
+msgid "AdSense: Ad Blocking Recovery error protection snippet placed"
+msgstr "AdSense: 광고 차단 복구 오류 방지 스니펫 삽입"
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:62
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:219
+#: includes/Modules/AdSense.php:270
+msgid "Not available"
+msgstr "사용할 수 없음"
+
+#: includes/Modules/AdSense.php:266
+msgid "AdSense: Setup completed at"
+msgstr "AdSense: 다음에서 설정 완료"
+
+#: includes/Modules/AdSense/Ad_Blocking_Recovery_Web_Tag.php:92
+msgid "End Google AdSense Ad Blocking Recovery Error Protection snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google AdSense 광고 차단 복구 오류 보호 스니펫 종료"
+
+#: includes/Modules/AdSense/Ad_Blocking_Recovery_Web_Tag.php:90
+msgid "Google AdSense Ad Blocking Recovery Error Protection snippet added by Site Kit"
+msgstr "Site Kit에서 Google AdSense 광고 차단 복구 오류 보호 스니펫 추가"
+
+#: includes/Modules/AdSense/Ad_Blocking_Recovery_Web_Tag.php:88
+msgid "End Google AdSense Ad Blocking Recovery snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google AdSense 광고 차단 복구 스니펫 종료"
+
+#: includes/Modules/AdSense/Ad_Blocking_Recovery_Web_Tag.php:86
+msgid "Google AdSense Ad Blocking Recovery snippet added by Site Kit"
+msgstr "Site Kit에서 Google AdSense 광고 차단 복구 스니펫 추가"
+
+#: includes/Core/Admin/Screens.php:541
+#: dist/assets/js/googlesitekit-ad-blocking-recovery-4464ef45f8c34471ee3f.js:11
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:24
+msgid "Ad Blocking Recovery"
+msgstr "광고 차단 복구"
+
+#. translators: 1: the regular expression for a valid name, 2: the invalid
+#. metric.
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:182
+msgid "Metric name should match the expression %1$s: %2$s"
+msgstr "지표 이름은 %1$s 표현식과 일치해야 합니다. %2$s"
+
+#. translators: 1: the regular expression for a valid name, 2: a comma
+#. separated list of the invalid metrics.
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:170
+msgid "Metric names should match the expression %1$s: %2$s"
+msgstr "지표 이름은 %1$s: %2$s 표현식과 일치해야 합니다"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:520
+msgid "Module does not support setting data available state."
+msgstr "모듈은 설정 데이터 사용 가능 상태를 지원하지 않습니다."
+
+#: includes/Modules/Analytics_4.php:1198 includes/Modules/Analytics_4.php:1306
+#: includes/Modules/Analytics_4.php:1344 includes/Modules/Analytics_4.php:1601
+#: includes/Modules/Analytics_4.php:1617 includes/Modules/Analytics_4.php:1777
+#: includes/Modules/Analytics_4.php:2331
+msgid "No connected Google Analytics property ID."
+msgstr "연결된 Google Analytics 속성 ID가 없습니다."
+
+#: includes/Core/Key_Metrics/REST_Key_Metrics_Controller.php:140
+msgid "No more than 4 key metrics can be selected."
+msgstr "4개 이상의 주요 지표를 선택할 수 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:161
+msgid "Whether the module is recoverable."
+msgstr "모듈이 복구 가능한지 여부입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:157
+msgid "Whether the module is shareable."
+msgstr "모듈이 공유 가능한지 여부입니다."
+
+#. translators: %s: is replaced with a comma separated list of the invalid
+#. dimensions.
+#: includes/Modules/AdSense.php:1082
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:308
+msgid "Unsupported dimensions requested: %s"
+msgstr "지원되지 않는 크기가 요청됨: %s"
+
+#. translators: %s: is replaced with a comma separated list of the invalid
+#. metrics.
+#: includes/Modules/AdSense.php:1038
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:241
+msgid "Unsupported metrics requested: %s"
+msgstr "지원되지 않는 지표가 요청됨: %s"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:623
+msgid "Request parameter slugs is not valid."
+msgstr "요청 매개변수 슬러그가 유효하지 않습니다."
+
+#: includes/Plugin.php:76
+msgid "The Site Kit by Google plugin does <strong>not yet offer</strong> a network mode, but we&#8217;re actively working on that."
+msgstr "Google Site Kit 플러그인은 네트워크 모드를 <strong>아직 제공하지 않지만</strong>, 적극적으로 작업하고 있습니다."
+
+#: includes/Core/Util/BC_Functions.php:144
+msgid "Inactive widgets"
+msgstr "비활성 위젯"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:552
+#: includes/Core/Modules/REST_Modules_Controller.php:574
+msgid "Module must be active to request data."
+msgstr "데이터를 요청하려면 모듈이 활성 상태여야 합니다."
+
+#. translators: 1: Admin splash URL. 2: Support link URL.
+#: includes/Core/Authentication/Authentication.php:1320
+msgid "<a href=\"%1$s\">Please try again</a>. Retry didn’t work? <a href=\"%2$s\" target=\"_blank\">Get help</a>."
+msgstr "<a href=\"%1$s\">다시 시도해 주세요</a>. 재시도가 작동하지 않습니까? <a href=\"%2$s\" target=\"_blank\">도움 얻기</a>."
+
+#. translators: %s: version number
+#: google-site-kit.php:58
+msgid "Site Kit requires WordPress version %s or higher"
+msgstr "Site Kit에는 워드프레스 버전 %s 이상이 필요합니다"
+
+#. translators: %s: version number
+#: google-site-kit.php:50
+msgid "Site Kit requires PHP version %s or higher"
+msgstr "Site Kit에는 PHP 버전 %s 이상이 필요합니다"
+
+#: includes/Core/Dashboard_Sharing/View_Only_Pointer.php:81
+msgid "Check Site Kit’s dashboard to find out how much traffic your site is getting, your most popular pages, top keywords people use to find your site on Search, and more."
+msgstr "Site Kit의 대시보드를 확인하여 귀하의 사이트가 얼마나 많은 트래픽을 받고 있는지, 가장 인기 있는 페이지, 사람들이 검색에서 귀하의 사이트를 찾기 위해 사용하는 상위 키워드 등을 알아보세요."
+
+#: includes/Core/Dashboard_Sharing/View_Only_Pointer.php:76
+msgid "You now have access to Site Kit"
+msgstr "이제 Site Kit에 액세스할 수 있습니다"
+
+#. translators: %s: is replaced with the invalid dimension.
+#: includes/Modules/AdSense.php:1093
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:319
+msgid "Unsupported dimension requested: %s"
+msgstr "지원되지 않는 크기가 요청됨: %s"
+
+#. translators: %s: is replaced with the invalid metric.
+#: includes/Modules/AdSense.php:1049
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:252
+msgid "Unsupported metric requested: %s"
+msgstr "지원되지 않는 지표가 요청됨: %s"
+
+#: includes/Modules/Reader_Revenue_Manager.php:748
+msgid "Post types"
+msgstr "글 유형"
+
+#. translators: 1: Support link URL. 2: Get help string.
+#: includes/Core/Authentication/Setup.php:136
+msgid "<a href=\"%1$s\" target=\"_blank\">%2$s</a>"
+msgstr "<a href=\"%1$s\" target=\"_blank\">%2$s</a>"
+
+#. translators: 1: Plugin name. 2: URL change message. 3: Proxy setup URL. 4:
+#. Reconnect string. 5: Proxy support link for the url-has-changed help page.
+#. 6: Help link message.
+#: includes/Core/Authentication/Authentication.php:1082
+msgid "%1$s: %2$s <a href=\"%3$s\">%4$s</a>. <a target=\"_blank\" href=\"%5$s\">%6$s</a>"
+msgstr "%1$s: %2$s <a href=\"%3$s\">%4$s</a>. <a target=\"_blank\" href=\"%5$s\">%6$s</a>"
+
+#: includes/Core/Authentication/Authentication.php:1088
+#: includes/Core/Authentication/Setup.php:138
+#: dist/assets/js/googlesitekit-ad-blocking-recovery-4464ef45f8c34471ee3f.js:3
+#: dist/assets/js/googlesitekit-adminbar-8d712dcb290a2efa6f0d.js:10
+#: dist/assets/js/googlesitekit-entity-dashboard-446e6cd4802f6bb746df.js:15
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:19
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:24
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:28
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:54
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:3
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:4
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:12
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:15
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:52
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:56
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:82
+#: dist/assets/js/googlesitekit-modules-dce334184f43e93590f0.js:2
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights-31bab748fa72671d2060.js:2
+#: dist/assets/js/googlesitekit-modules-search-console-27a4f67f2b1a12d2ac83.js:13
+#: dist/assets/js/googlesitekit-notifications-2367a0e39a4641cf0a86.js:10
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:7
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:17
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:21
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:25
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:51
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:10
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:13
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:16
+#: dist/assets/js/googlesitekit-widgets-1de0c76dabc56b27df59.js:12
+#: dist/assets/js/googlesitekit-widgets-1de0c76dabc56b27df59.js:17
+#: dist/assets/js/googlesitekit-widgets-1de0c76dabc56b27df59.js:21
+#: dist/assets/js/googlesitekit-widgets-1de0c76dabc56b27df59.js:47
+#: dist/assets/js/googlesitekit-wp-dashboard-a28ad41333bd838dc673.js:13
+msgid "Get help"
+msgstr "도움 받기"
+
+#. translators: %s: Sign in with Google service name
+#. translators: %1$s: Sign in with Google service name
+#. translators: %1$s: Sign in with Google service name, %2$s: Plugin name
+#: includes/Modules/Sign_In_With_Google.php:298
+#: includes/Modules/Sign_In_With_Google.php:350
+#: includes/Modules/Sign_In_With_Google.php:645
+#: includes/Modules/Sign_In_With_Google.php:651
+#: includes/Modules/Sign_In_With_Google.php:657
+#: includes/Modules/Sign_In_With_Google.php:663
+#: includes/Modules/Sign_In_With_Google.php:669
+#: includes/Modules/Sign_In_With_Google.php:675
+#: includes/Modules/Sign_In_With_Google.php:681
+#: includes/Modules/Sign_In_With_Google.php:771
+#: includes/Modules/Sign_In_With_Google.php:850
+#: dist/assets/js/googlesitekit-ad-blocking-recovery-4464ef45f8c34471ee3f.js:6
+#: dist/assets/js/googlesitekit-entity-dashboard-446e6cd4802f6bb746df.js:13
+#: dist/assets/js/googlesitekit-key-metrics-setup-7155d7d87c08d0f347db.js:6
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:13
+#: dist/assets/js/googlesitekit-metric-selection-eac03cd59f5737142e49.js:6
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:7
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:4
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:5
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:6
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:7
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:8
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:9
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:10
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:11
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:12
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:13
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:14
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:15
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:5
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:19
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:21
+#: dist/assets/js/googlesitekit-user-input-52ccecb53d5ce5ff13d2.js:6
+msgctxt "Service name"
+msgid "Sign in with Google"
+msgstr "Google로 로그인"
+
+#: includes/Core/Site_Health/Debug_Data.php:500
+msgid "Owner"
+msgstr "소유자"
+
+#: includes/Core/Site_Health/Debug_Data.php:495
+#: dist/assets/js/googlesitekit-entity-dashboard-446e6cd4802f6bb746df.js:44
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:57
+msgid "Any admin signed in with Google"
+msgstr "Google로 로그인한 모든 관리자"
+
+#. translators: %s: module name
+#: includes/Core/Site_Health/Debug_Data.php:437
+msgid "%s: Management"
+msgstr "%s: 관리"
+
+#. translators: %s: module name
+#: includes/Core/Site_Health/Debug_Data.php:429
+msgid "%s: Shared Roles"
+msgstr "%s: 공유 역할"
+
+#: includes/Core/Site_Health/Debug_Data.php:402
+msgid "Recoverable Modules"
+msgstr "복구 가능한 모듈"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:360
+msgid "Module access cannot be checked."
+msgstr "모듈 액세스를 확인할 수 없습니다."
+
+#. translators: 1: Error message or error code. 2: Get help link.
+#: includes/Core/Authentication/Setup.php:177
+msgid "The request to the authentication proxy has failed with an error: %1$s %2$s."
+msgstr "인증 프록시에 대한 요청이 오류로 인해 실패하였습니다: %1$s %2$s."
+
+#. translators: 1: Plugin name. 2: Message.
+#. translators: 1: Module name, 2: Error message
+#: includes/Core/Authentication/Authentication.php:1139
+#: dist/assets/js/googlesitekit-notifications-2367a0e39a4641cf0a86.js:9
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:701
+msgid "Module is not accessible by current user."
+msgstr "현재 사용자가 모듈에 액세스할 수 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:668
+msgid "Module is not recoverable."
+msgstr "모듈을 복구할 수 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:655
+msgid "Module is not shareable."
+msgstr "모듈을 공유할 수 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:348
+#: includes/Core/Modules/REST_Modules_Controller.php:516
+#: includes/Modules/AdSense.php:489
+msgid "Module is not connected."
+msgstr "모듈이 연결되지 않았습니다."
+
+#. translators: %s: The module name
+#: includes/Core/Admin/Screens.php:453
+msgid "The %s module cannot be set up as it has not been activated yet."
+msgstr "%s 모듈은 아직 활성화되지 않았기 때문에 설정할 수 없습니다."
+
+#: includes/Modules/AdSense.php:252
+msgid "AdSense: Site status"
+msgstr "AdSense: 사이트 상태"
+
+#. translators: %s: Get help link.
+#: includes/Core/Authentication/Setup.php:196
+msgid "The request to the authentication proxy has failed. Please, try again later. %s."
+msgstr "인증 프록시에 대한 요청이 실패하였습니다. 나중에 다시 시도해 주세요. %s."
+
+#: includes/Core/Authentication/Google_Proxy.php:478
+msgid "Failed to retrieve redirect URL."
+msgstr "리디렉션 URL을 검색하지 못하였습니다."
+
+#: includes/Core/Authentication/Google_Proxy.php:140
+msgid "Missing site_id or site_code parameter for setup URL."
+msgstr "설정 URL에 대한 site_id 또는 site_code 매개변수가 누락되었습니다."
+
+#: includes/Core/Authentication/Google_Proxy.php:137
+msgid "Missing code parameter for setup URL."
+msgstr "설정 URL에 대한 코드 매개변수가 누락되었습니다."
+
+#: includes/Modules/PageSpeed_Insights.php:184
+msgid "https://pagespeed.web.dev"
+msgstr "https://pagespeed.web.dev"
+
+#: includes/Core/Authentication/Setup.php:244
+msgid "Verifying site ownership requires a token and verification method."
+msgstr "사이트 소유권을 확인하려면 토큰과 확인 방법이 필요합니다."
+
+#: includes/Core/Authentication/Setup.php:240
+#: includes/Core/Authentication/Setup.php:297
+msgid "Invalid request."
+msgstr "잘못된 요청."
+
+#. translators: %s: Current URL
+#: includes/Core/Authentication/Authentication.php:1103
+msgid "New URL: %s"
+msgstr "새 URL: %s"
+
+#. translators: %s: Previous URL
+#: includes/Core/Authentication/Authentication.php:1098
+msgid "Old URL: %s"
+msgstr "이전 URL: %s"
+
+#: includes/Core/Authentication/Authentication.php:1316
+msgid "The link you followed has expired."
+msgstr "팔로우한 링크가 만료되었습니다."
+
+#: includes/Modules/Tag_Manager/Web_Tag.php:130
+msgid "End Google Tag Manager (noscript) snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Tag Manager(noscript) 스니펫 종료"
+
+#: includes/Modules/Tag_Manager/Web_Tag.php:126
+msgid "Google Tag Manager (noscript) snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Tag Manager(noscript) 스니펫"
+
+#: includes/Modules/Tag_Manager/Web_Tag.php:104
+msgid "End Google Tag Manager snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Tag Manager 스니펫 종료"
+
+#: includes/Modules/Tag_Manager/Web_Tag.php:102
+#: includes/Modules/Tag_Manager/Web_Tag.php:173
+msgid "Google Tag Manager snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Tag Manager 스니펫"
+
+#: includes/Modules/Tag_Manager/AMP_Tag.php:75
+msgid "End Google Tag Manager AMP snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Tag Manager AMP 스니펫 종료"
+
+#: includes/Modules/Tag_Manager/AMP_Tag.php:66
+msgid "Google Tag Manager AMP snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Tag Manager AMP 스니펫"
+
+#: includes/Modules/Ads/AMP_Tag.php:91
+msgid "End Google Ads AMP snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 엔드 Google Ads AMP 스니펫"
+
+#: includes/Modules/Analytics_4/Web_Tag.php:144
+msgid "Google Analytics snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Analytics 스니펫"
+
+#: includes/Modules/Analytics_4/AMP_Tag.php:132
+msgid "End Google Analytics AMP snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Analytics AMP 스니펫 종료"
+
+#: includes/Modules/Analytics_4/AMP_Tag.php:124
+msgid "Google Analytics AMP snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Analytics AMP 스니펫"
+
+#: includes/Modules/Analytics_4.php:912
+msgid "End Google Analytics opt-out snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Analytics 차단 스니펫 종료"
+
+#: includes/Modules/Analytics_4.php:903
+msgid "Google Analytics opt-out snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Analytics 옵트아웃 스니펫"
+
+#: includes/Modules/Analytics_4.php:901
+msgid "End Google Analytics AMP opt-out snippet added by Site Kit"
+msgstr "Site Kit에서 추가한 Google Analytics AMP 옵트아웃 스니펫 종료"
+
+#: includes/Modules/Analytics_4.php:899
+msgid "Google Analytics AMP opt-out snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google Analytics AMP 옵트아웃 스니펫"
+
+#: includes/Modules/AdSense/Web_Tag.php:97
+msgid "End Google AdSense snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google AdSense 스니펫 종료"
+
+#: includes/Modules/AdSense/Web_Tag.php:95
+msgid "Google AdSense snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google AdSense 스니펫"
+
+#: includes/Modules/AdSense/AMP_Tag.php:123
+#: includes/Modules/AdSense/AMP_Tag.php:143
+#: includes/Modules/AdSense/AMP_Tag.php:188
+msgid "End Google AdSense AMP snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google AdSense AMP 스니펫 종료"
+
+#: includes/Modules/AdSense/AMP_Tag.php:115
+#: includes/Modules/AdSense/AMP_Tag.php:142
+#: includes/Modules/AdSense/AMP_Tag.php:184
+msgid "Google AdSense AMP snippet added by Site Kit"
+msgstr "Site Kit에 의해 추가된 Google AdSense AMP 스니펫"
+
+#: includes/Modules/Analytics_4.php:738
+msgid "You’ll need to grant Site Kit permission to create a new Analytics web data stream for this site on your behalf."
+msgstr "사용자를 대신하여 이 사이트에 대한 새 Analytics 웹 데이터 스트림을 만들려면 Site Kit에 권한을 부여해야 합니다."
+
+#: includes/Core/Site_Health/Debug_Data.php:342
+msgid "Verified outside of Site Kit"
+msgstr "Site Kit 외부에서 확인됨"
+
+#: includes/Core/Site_Health/Debug_Data.php:335
+msgid "Verified through meta tag"
+msgstr "메타 태그를 통해 확인됨"
+
+#: includes/Core/Site_Health/Debug_Data.php:327
+msgid "Verified through file"
+msgstr "파일을 통해 확인됨"
+
+#: includes/Core/Site_Health/Debug_Data.php:319
+msgid "Not verified"
+msgstr "확인되지 않음"
+
+#: includes/Core/Site_Health/Debug_Data.php:310
+msgid "Verification Status"
+msgstr "확인 상태"
+
+#. translators: %s: module name
+#: includes/Core/Modules/Module.php:440
+msgid "Site Kit can’t access the relevant data from %s because you haven’t granted all permissions requested during setup."
+msgstr "설정 중에 요청된 모든 권한을 부여하지 않았기 때문에 Site Kit가 %s에서 관련 데이터에 액세스할 수 없습니다."
+
+#. translators: %s: List of invalid parameters.
+#: includes/Modules/Analytics_4.php:1708
+msgid "Invalid parameter(s): %s"
+msgstr "잘못된 매개변수: %s"
+
+#: includes/Core/Admin/Available_Tools.php:50
+msgid "Resetting will disconnect all users and remove all Site Kit settings and data within WordPress. You and any other users who wish to use Site Kit will need to reconnect to restore access."
+msgstr "초기화하면 모든 사용자의 연결을 해제하고 워드프레스 내 모든 Site Kit 설정과 데이터가 제거됩니다. 회원님과 Site Kit을 사용하려는 다른 사용자는 다시 연결하여 액세스를 복원해야 합니다."
+
+#: includes/Modules/Analytics_4.php:763
+msgid "You’ll need to grant Site Kit permission to create a new Analytics custom dimension on your behalf."
+msgstr "회원님을 대신하여 새 Analytics 사용자 지정 차원을 만들려면 Site Kit에 권한을 부여해야 합니다."
+
+#: includes/Modules/Analytics_4.php:589
+msgid "Analytics: Measurement ID"
+msgstr "Analytics: 측정 ID"
+
+#: includes/Core/Authentication/Google_Proxy.php:326
+msgid "Failed to parse response."
+msgstr "응답을 구문 분석하지 못하였습니다."
+
+#: includes/Core/Authentication/Google_Proxy.php:269
+#: includes/Core/Authentication/Google_Proxy.php:514
+msgid "OAuth credentials haven't been found."
+msgstr "OAuth 자격 증명을 찾을 수 없습니다."
+
+#: includes/Core/Site_Health/Debug_Data.php:590
+msgid "Features"
+msgstr "주요 기능"
+
+#: includes/Core/Admin/Plugin_Row_Meta.php:51
+msgid "Support"
+msgstr "지원"
+
+#: includes/Core/Admin/Plugin_Row_Meta.php:50
+msgid "Rate Site Kit"
+msgstr "Site Kit 평가하기"
+
+#: includes/Core/Site_Health/Debug_Data.php:543
+msgid "User Capabilities"
+msgstr "사용자 권한"
+
+#: includes/Core/Modules/Datapoint.php:135
+msgid "You’ll need to grant Site Kit permission to do this."
+msgstr "이를 수행하려면 Site Kit 권한을 승인할 필요가 있을 것입니다."
+
+#: includes/Core/Email_Reporting/Email_Reporting_Site_Health.php:281
+#: dist/assets/js/googlesitekit-key-metrics-setup-7155d7d87c08d0f347db.js:8
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:16
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:17
+#: dist/assets/js/googlesitekit-user-input-52ccecb53d5ce5ff13d2.js:8
+msgid "Never"
+msgstr "하지 않음"
+
+#: includes/Core/User_Input/REST_User_Input_Controller.php:145
+msgid "Missing settings data."
+msgstr "설정 데이터가 사라졌습니다."
+
+#: includes/Core/Authentication/Authentication.php:1324
+msgid "Something went wrong."
+msgstr "뭔가 잘못되었습니다."
+
+#: includes/Core/Authentication/Authentication.php:1264
+msgid "You have insufficient permissions to manage Site Kit permissions."
+msgstr "Site Kit 권한을 관리할 충분하지 않은 권한을 가지고 있습니다."
+
+#: includes/Core/Admin/Screens.php:532
+msgid "User Input"
+msgstr "사용자 입력"
+
+#: includes/Core/Authentication/Authentication.php:1268
+#: includes/Core/Authentication/Setup.php:158
+msgid "Site Kit is not configured to use the authentication proxy."
+msgstr "인증 프록시를 사용하도록 Site Kit을 구성하지 않았습니다."
+
+#: includes/Core/Authentication/Setup.php:154
+msgid "You have insufficient permissions to connect Site Kit."
+msgstr "Site Kit을 연결할 충분한 권한을 가지고 있지 않습니다."
+
+#: includes/Core/Authentication/Authentication.php:1086
+msgid "Reconnect"
+msgstr "재연결"
+
+#: includes/Core/Authentication/Authentication.php:1084
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:19
+msgid "Looks like the URL of your site has changed. In order to continue using Site Kit, you’ll need to reconnect, so that your plugin settings are updated with the new URL."
+msgstr "사이트의 URL이 바뀐 것처럼 보입니다. Site Kit을 계속 사용하기 위해, 다시 연결할 필요가 있기에, 플러그인 설정을 새 URL로 업데이트해야 합니다."
+
+#: includes/Modules/Site_Verification.php:356
+msgctxt "Service name"
+msgid "Site Verification"
+msgstr "사이트 확인"
+
+#: includes/Core/Site_Health/Debug_Data.php:365
+msgid "Connected user count"
+msgstr "연결한 사용자 수"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:173
+msgid "Owner login."
+msgstr "소유자 로그인입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:168
+msgid "Owner ID."
+msgstr "소유자 ID입니다."
+
+#. translators: 1: Title prefix. 2: Title.
+#: includes/Core/Util/Entity_Factory.php:499
+msgctxt "archive title"
+msgid "%1$s %2$s"
+msgstr "%1$s/%2$s"
+
+#: includes/Core/Util/Entity_Factory.php:409
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "Y년 m월 d일"
+
+#: includes/Core/Util/Entity_Factory.php:408
+msgctxt "date archive title prefix"
+msgid "Day:"
+msgstr "일:"
+
+#: includes/Core/Util/Entity_Factory.php:402
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: includes/Core/Util/Entity_Factory.php:401
+msgctxt "date archive title prefix"
+msgid "Month:"
+msgstr "월:"
+
+#: includes/Core/Util/Entity_Factory.php:396
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: includes/Core/Util/Entity_Factory.php:395
+msgctxt "date archive title prefix"
+msgid "Year:"
+msgstr "년:"
+
+#: includes/Core/Util/Entity_Factory.php:367
+msgctxt "post type archive title prefix"
+msgid "Archives:"
+msgstr "아카이브:"
+
+#: includes/Core/Util/Entity_Factory.php:342
+msgctxt "author archive title prefix"
+msgid "Author:"
+msgstr "작성자:"
+
+#. translators: %s: Taxonomy singular name.
+#: includes/Core/Util/Entity_Factory.php:314
+msgctxt "taxonomy term archive title prefix"
+msgid "%s:"
+msgstr "%s:"
+
+#: includes/Core/Util/Entity_Factory.php:305
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "채팅"
+
+#: includes/Core/Util/Entity_Factory.php:302
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "오디오"
+
+#: includes/Core/Util/Entity_Factory.php:299
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "상태"
+
+#: includes/Core/Util/Entity_Factory.php:296
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "링크"
+
+#: includes/Core/Util/Entity_Factory.php:293
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "인용"
+
+#: includes/Core/Util/Entity_Factory.php:290
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "동영상"
+
+#: includes/Core/Util/Entity_Factory.php:287
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "이미지"
+
+#: includes/Core/Util/Entity_Factory.php:284
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "갤러리"
+
+#: includes/Core/Util/Entity_Factory.php:281
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "측면"
+
+#: includes/Core/Util/Entity_Factory.php:275
+msgctxt "tag archive title prefix"
+msgid "Tag:"
+msgstr "태그:"
+
+#: includes/Core/Util/Entity_Factory.php:271
+msgctxt "category archive title prefix"
+msgid "Category:"
+msgstr "카테고리:"
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:305
+msgid "Looks like the verification token for your site is missing."
+msgstr "사이트에 대한 확인 토큰이 없는 것으로 보입니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:303
+msgid "Looks like there is no Search Console property for your site."
+msgstr "사이트에 대한 Search Console 속성이 없는 것으로 보입니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:301
+msgid "Looks like your site is not allowed access to Google account data and can’t display stats in the dashboard."
+msgstr "사이트가 Google 계정 데이터에 접근할 수 없고 대시보드에 통계를 보일 수 없는 것으로 보입니다."
+
+#: includes/Core/Util/Entity_Factory.php:251
+msgid "Home"
+msgstr "홈"
+
+#: includes/Core/Modules/Module.php:383
+msgid "Invalid datapoint request."
+msgstr "유효하지 않은 데이터포인트 요청입니다."
+
+#: includes/Modules/Tag_Manager.php:283
+msgid "Additional permissions are required to create a new Tag Manager container on your behalf."
+msgstr "대신하여 새 Tag Manager를 만들기 위한 추가 권한이 필요합니다."
+
+#: includes/Modules/Analytics_4.php:728
+msgid "You’ll need to grant Site Kit permission to create a new Analytics property on your behalf."
+msgstr "대신하여 새 Analytics 속성을 만들기 위해서는 Site Kit 권한을 승인할 필요가 있습니다."
+
+#: includes/Modules/Analytics_4.php:712
+msgid "You’ll need to grant Site Kit permission to create a new Analytics account on your behalf."
+msgstr "대신하여 새 Analytics 계정을 만들기 위해서는 Site Kit 권한을 승인할 필요가 있습니다."
+
+#: includes/Core/Authentication/Authentication.php:745
+#: includes/Core/Authentication/Authentication.php:765
+#: includes/Core/Authentication/Authentication.php:799
+msgid "You don’t have permissions to authenticate with Site Kit."
+msgstr "Site Kit으로 인증할 수 있는 권한이 없습니다."
+
+#: includes/Core/Authentication/Setup.php:236
+#: includes/Core/Authentication/Setup.php:293 includes/Core/Util/Reset.php:370
+msgid "You don’t have permissions to set up Site Kit."
+msgstr "Site Kit을 설정할 수 있는 권한이 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:287
+msgid "Setup was interrupted because you did not grant the necessary permissions."
+msgstr "필요한 권한을 부여하지 않아 설정이 중단되었습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:484
+msgid "Settings to set."
+msgstr "설정 대상 설정입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:437
+#: includes/Core/Modules/REST_Modules_Controller.php:470
+msgid "Module does not support settings."
+msgstr "모듈이 설정을 지원하지 않습니다."
+
+#: includes/Core/Util/Requires_Javascript_Trait.php:36
+msgid "The Site Kit by Google plugin requires JavaScript to be enabled in your browser."
+msgstr "Google이 만든 Site Kit 플러그인은 브라우저에서 자바스크립트를 활성화해야 합니다."
+
+#: includes/Core/Site_Health/Debug_Data.php:524
+msgid "Required scopes"
+msgstr "필수 범위"
+
+#. translators: used between list items, there is a space after the comma.
+#. translators: used between list items, there is a space after the comma
+#: includes/Core/Site_Health/Debug_Data.php:384
+#: includes/Core/Site_Health/Debug_Data.php:405
+#: includes/Core/Site_Health/Debug_Data.php:475
+#: includes/Modules/AdSense.php:1044 includes/Modules/AdSense.php:1088
+#: includes/Modules/Analytics_4.php:604 includes/Modules/Analytics_4.php:647
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:177
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:247
+#: includes/Modules/Analytics_4/Report/RequestHelpers.php:314
+#: dist/assets/js/googlesitekit-activation-2b581b3c77c6c3601892.js:24
+#: dist/assets/js/googlesitekit-ad-blocking-recovery-4464ef45f8c34471ee3f.js:41
+#: dist/assets/js/googlesitekit-adminbar-8d712dcb290a2efa6f0d.js:39
+#: dist/assets/js/googlesitekit-api-15cac6500fd5d984fb95.js:23
+#: dist/assets/js/googlesitekit-block-tracking-6efb8ed8e9e4db8da249.js:23
+#: dist/assets/js/googlesitekit-datastore-forms-1174d7377bfc9977ef9a.js:23
+#: dist/assets/js/googlesitekit-datastore-site-84807d9cf6ef5776b730.js:23
+#: dist/assets/js/googlesitekit-datastore-ui-abca0d9c62793c5dec3e.js:23
+#: dist/assets/js/googlesitekit-datastore-user-6afcf4831575891d4620.js:23
+#: dist/assets/js/googlesitekit-entity-dashboard-446e6cd4802f6bb746df.js:44
+#: dist/assets/js/googlesitekit-key-metrics-setup-7155d7d87c08d0f347db.js:32
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:54
+#: dist/assets/js/googlesitekit-metric-selection-eac03cd59f5737142e49.js:37
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:30
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:55
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:82
+#: dist/assets/js/googlesitekit-modules-dce334184f43e93590f0.js:26
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights-31bab748fa72671d2060.js:30
+#: dist/assets/js/googlesitekit-modules-reader-revenue-manager-607d96f98f5402c25944.js:32
+#: dist/assets/js/googlesitekit-modules-search-console-27a4f67f2b1a12d2ac83.js:42
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:40
+#: dist/assets/js/googlesitekit-modules-tagmanager-b4d14f8336e2d04a117d.js:28
+#: dist/assets/js/googlesitekit-notifications-2367a0e39a4641cf0a86.js:40
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:51
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:42
+#: dist/assets/js/googlesitekit-user-input-52ccecb53d5ce5ff13d2.js:32
+#: dist/assets/js/googlesitekit-widgets-1de0c76dabc56b27df59.js:47
+#: dist/assets/js/googlesitekit-wp-dashboard-a28ad41333bd838dc673.js:43
+msgid ", "
+msgstr ", "
+
+#: includes/Core/Site_Health/Debug_Data.php:381
+msgid "Active Modules"
+msgstr "활성 모듈"
+
+#: includes/Core/Site_Health/Debug_Data.php:297
+msgid "Not authenticated"
+msgstr "인증하지 않음"
+
+#: includes/Core/Site_Health/Debug_Data.php:296
+msgid "Authenticated"
+msgstr "인증함"
+
+#: includes/Core/Site_Health/Debug_Data.php:294
+msgid "User Status"
+msgstr "사용자 상태"
+
+#: includes/Core/Site_Health/Debug_Data.php:277
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:18
+msgid "Site Status"
+msgstr "사이트 상태"
+
+#: includes/Core/Site_Health/Debug_Data.php:265
+#: includes/Modules/Analytics_4.php:613 includes/Modules/Analytics_4.php:626
+msgid "Not connected"
+msgstr "연결하지 않음"
+
+#: includes/Core/Site_Health/Debug_Data.php:264
+msgid "Connected through OAuth client credentials"
+msgstr "OAuth 클라이언트 자격 증명을 통해 연결하였습니다"
+
+#: includes/Core/Site_Health/Debug_Data.php:263
+msgid "Connected through site credentials"
+msgstr "사이트 자격증명을 통해 연결하였습니다"
+
+#: includes/Core/Site_Health/Debug_Data.php:246
+msgid "AMP Mode"
+msgstr "AMP 모드"
+
+#: includes/Core/Site_Health/Debug_Data.php:242
+msgid "Secondary"
+msgstr "보조"
+
+#: includes/Core/Site_Health/Debug_Data.php:241
+msgid "Primary"
+msgstr "기본"
+
+#: includes/Core/Site_Health/Debug_Data.php:216
+#: includes/Core/Site_Health/Debug_Data.php:458
+#: includes/Modules/Analytics_4.php:601 includes/Modules/Analytics_4.php:644
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:118
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:141
+#: includes/Modules/Reader_Revenue_Manager/Admin_Post_List.php:159
+#: dist/assets/blocks/reader-revenue-manager/block-editor-plugin/index.js:2
+#: dist/assets/js/googlesitekit-modules-ads-666c5903affd119a99b5.js:30
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:18
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:31
+msgid "None"
+msgstr "없음"
+
+#: includes/Core/Site_Health/Debug_Data.php:185
+msgid "Reference Site URL"
+msgstr "참조 사이트 URL"
+
+#: includes/Core/Site_Health/Debug_Data.php:181
+msgid "WordPress Version"
+msgstr "워드프레스 버전"
+
+#: includes/Core/Site_Health/Debug_Data.php:177
+msgid "PHP Version"
+msgstr "PHP 버전"
+
+#: includes/Core/Site_Health/Debug_Data.php:173
+msgid "Version"
+msgstr "버전"
+
+#: includes/Modules/AdSense.php:256
+msgid "AdSense: Snippet placed"
+msgstr "AdSense: 스니펫 삽입됨"
+
+#: includes/Modules/AdSense.php:248
+msgid "AdSense: Account status"
+msgstr "AdSense: 계정 상태"
+
+#: includes/Modules/AdSense.php:243
+msgid "AdSense: Client ID"
+msgstr "AdSense: 클라이언트 ID"
+
+#: includes/Modules/AdSense.php:238
+msgid "AdSense: Account ID"
+msgstr "AdSense: 계정 ID"
+
+#: includes/Modules/Tag_Manager.php:235
+msgid "Tag Manager: Snippet placed"
+msgstr "Tag Manager: 스니펫 삽입됨"
+
+#: includes/Modules/Tag_Manager.php:230
+msgid "Tag Manager: AMP Container ID"
+msgstr "Tag Manager: AMP 컨테이너 ID"
+
+#: includes/Modules/Tag_Manager.php:225
+msgid "Tag Manager: Container ID"
+msgstr "Tag Manager: 컨테이너 ID"
+
+#: includes/Modules/Tag_Manager.php:220
+msgid "Tag Manager: Account ID"
+msgstr "Tag Manager: 계정 ID"
+
+#: includes/Modules/Analytics_4.php:594
+msgid "Analytics: Snippet placed"
+msgstr "Analytics: 스니펫 삽입됨"
+
+#: includes/Modules/Analytics_4.php:579
+msgid "Analytics: Property ID"
+msgstr "Analytics: 속성 ID"
+
+#: includes/Modules/Analytics_4.php:574
+msgid "Analytics: Account ID"
+msgstr "Analytics: 계정 ID"
+
+#: includes/Modules/Search_Console.php:168
+msgid "Search Console: Property"
+msgstr "Search Console: 속성"
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:307
+msgid "Unable to authenticate Site Kit, as no client credentials exist."
+msgstr "클라이언트 자격 증명이 없으므로 Site Kit을 인증 할 수 없습니다."
+
+#: includes/Core/Admin/Dashboard.php:116
+msgid "Site Kit Summary"
+msgstr "Site Kit 요약"
+
+#: includes/Core/Notifications/Notification.php:69
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:54
+#: dist/assets/js/googlesitekit-modules-sign-in-with-google-62652ee70455d9500620.js:14
+#: dist/assets/js/googlesitekit-notifications-2367a0e39a4641cf0a86.js:5
+msgid "Dismiss"
+msgstr "무시"
+
+#: includes/Modules/Analytics_4.php:613 includes/Modules/Analytics_4.php:626
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:52
+msgid "Connected"
+msgstr "연결됨"
+
+#: includes/Core/Admin/Available_Tools.php:47
+#: includes/Core/Admin/Available_Tools.php:61
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:17
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:7
+msgid "Reset Site Kit"
+msgstr "Site Kit 초기화"
+
+#: includes/Modules/AdSense.php:755
+#: dist/assets/js/googlesitekit-ad-blocking-recovery-4464ef45f8c34471ee3f.js:15
+#: dist/assets/js/googlesitekit-ad-blocking-recovery-4464ef45f8c34471ee3f.js:41
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:19
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:28
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:55
+msgctxt "Service name"
+msgid "AdSense"
+msgstr "AdSense"
+
+#: includes/Modules/PageSpeed_Insights.php:182
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights-31bab748fa72671d2060.js:4
+msgctxt "Service name"
+msgid "PageSpeed Insights"
+msgstr "PageSpeed Insights"
+
+#: includes/Modules/Tag_Manager.php:511
+#: dist/assets/js/googlesitekit-modules-tagmanager-b4d14f8336e2d04a117d.js:31
+msgctxt "Service name"
+msgid "Tag Manager"
+msgstr "Tag Manager"
+
+#: includes/Modules/Search_Console.php:506
+#: dist/assets/js/googlesitekit-modules-search-console-27a4f67f2b1a12d2ac83.js:7
+#: dist/assets/js/googlesitekit-modules-search-console-27a4f67f2b1a12d2ac83.js:8
+#: dist/assets/js/googlesitekit-splash-3f8ea39c312610f0b4af.js:21
+msgctxt "Service name"
+msgid "Search Console"
+msgstr "Search Console"
+
+#: includes/Modules/Analytics_4.php:1938
+#: dist/assets/js/googlesitekit-main-dashboard-e0be854ee45bd990b30d.js:30
+#: dist/assets/js/googlesitekit-modules-adsense-e7757e9cf619f6e1adae.js:18
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:37
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:42
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:44
+#: dist/assets/js/googlesitekit-modules-analytics-4-ebb3b6f75580255a8bba.js:58
+#: dist/assets/js/googlesitekit-modules-search-console-27a4f67f2b1a12d2ac83.js:8
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:27
+#: dist/assets/js/googlesitekit-widgets-1de0c76dabc56b27df59.js:23
+msgctxt "Service name"
+msgid "Analytics"
+msgstr "Analytics"
+
+#: includes/Core/Dashboard_Sharing/View_Only_Pointer.php:78
+#: includes/Core/Email_Reporting/Email_Reporting_Pointer.php:101
+msgid "Dismiss this notice."
+msgstr "이 알림을 해제합니다."
+
+#: includes/Core/Authentication/Authentication.php:1148
+msgid "Click here"
+msgstr "여기 누르기"
+
+#: includes/Core/Authentication/Authentication.php:1141
+msgid "You need to reauthenticate your Google account."
+msgstr "Google 계정으로 다시 인증할 필요가 있습니다."
+
+#. translators: %s: error code from API
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:316
+msgid "Unknown Error (code: %s)."
+msgstr "알 수 없는 오류입니다 (코드: %s)."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:313
+msgid "Unable to receive access token because of an unsupported grant type."
+msgstr "지원하지 않은 승인 유형이므로 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:311
+msgid "Unable to receive access token because of an unauthorized client."
+msgstr "인증하지 않은 클라이언트이므로 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:297
+msgid "Unable to receive access token because of an invalid authorization code or refresh token."
+msgstr "유효하지 않은 인증 코드이거나 새로고침 토큰이므로 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:293
+msgid "Unable to receive access token because of an invalid client."
+msgstr "유효하지 않은 클라이언트이므로 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:299
+msgid "Unable to receive access token because of an invalid OAuth request."
+msgstr "유효하지 않은 OAuth 요청이므로 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:289
+msgid "Unable to receive access token because of an unknown error."
+msgstr "알 수 없는 오류가 있기에 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:295
+msgid "Unable to receive access token because of an empty authorization code."
+msgstr "인증코드가 비어있기에 접근 토큰을 받을 수 없습니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:291
+msgid "Internal error that the Google login redirect failed."
+msgstr "Google 로그인 전환이 실패했다는 내부 오류입니다."
+
+#: includes/Core/Authentication/Clients/OAuth_Client_Base.php:309
+msgid "Unable to refresh access token, as no refresh token exists."
+msgstr "새로고침 토큰이 없어서 접근 토큰을 새로고칠 수 없습니다."
+
+#: includes/Core/Site_Health/Debug_Data.php:247
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:152
+#: includes/Modules/AdSense.php:257 includes/Modules/AdSense.php:278
+#: includes/Modules/AdSense.php:286 includes/Modules/Analytics_4.php:595
+#: includes/Modules/Sign_In_With_Google.php:670
+#: includes/Modules/Sign_In_With_Google.php:676
+#: includes/Modules/Tag_Manager.php:236
+msgid "No"
+msgstr "아니오"
+
+#: includes/Core/Tags/Google_Tag_Gateway/Google_Tag_Gateway.php:150
+#: includes/Modules/AdSense.php:257 includes/Modules/AdSense.php:278
+#: includes/Modules/AdSense.php:286 includes/Modules/Analytics_4.php:595
+#: includes/Modules/Sign_In_With_Google.php:670
+#: includes/Modules/Sign_In_With_Google.php:676
+#: includes/Modules/Tag_Manager.php:236
+msgid "Yes"
+msgstr "예"
+
+#: includes/Core/Modules/REST_Modules_Controller.php:149
+msgid "List of slugs of other modules depending on the module."
+msgstr "모듈에 의존하고 있는 다른 모듈의 슬러그 목록입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:141
+msgid "List of slugs of other modules that the module depends on."
+msgstr "모듈이 의존하고 있는 다른 모듈의 슬러그 목록입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:136
+msgid "Whether the module setup has been completed."
+msgstr "모듈 설정 완료 여부입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:132
+msgid "Whether the module is active."
+msgstr "모듈 활성 여부입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:127
+msgid "Whether the module is internal, thus without any UI."
+msgstr "모듈 내부 여부, 따라서 어떤 UI도 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:121
+msgid "The module homepage."
+msgstr "모듈 홈페이지입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:116
+msgid "Description of the module."
+msgstr "모듈의 설명입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:111
+msgid "Name of the module."
+msgstr "모듈의 이름입니다."
+
+#: includes/Core/Util/REST_Entity_Search_Controller.php:133
+msgid "Text content to search for."
+msgstr "검색할 텍스트 콘텐츠입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:605
+msgid "Module data point to address."
+msgstr "등록할 모듈 데이터 포인트입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:588
+msgid "Data to set."
+msgstr "설정할 데이터입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:106
+#: includes/Core/Modules/REST_Modules_Controller.php:322
+#: includes/Core/Modules/REST_Modules_Controller.php:379
+#: includes/Core/Modules/REST_Modules_Controller.php:417
+#: includes/Core/Modules/REST_Modules_Controller.php:496
+#: includes/Core/Modules/REST_Modules_Controller.php:532
+#: includes/Core/Modules/REST_Modules_Controller.php:600
+msgid "Identifier for the module."
+msgstr "모듈용 식별자입니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:285
+msgid "An internal error occurred while trying to deactivate the module."
+msgstr "모듈 활성 해제를 시도하는 중에 내부 오류가 일어났습니다."
+
+#. translators: %s: module name
+#: includes/Core/Modules/REST_Modules_Controller.php:280
+msgid "Module cannot be deactivated because deactivation of dependant %s failed."
+msgstr "종속성 %s의 활성 해제 실패로 인해 모듈을 활성 해제할 수 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:271
+msgid "An internal error occurred while trying to activate the module."
+msgstr "모듈 활성화를 시도하는 중에 내부 오류가 일어났습니다."
+
+#. translators: %s: module name
+#: includes/Core/Modules/REST_Modules_Controller.php:267
+msgid "Module cannot be activated because of inactive dependency %s."
+msgstr "비활성 종속성 %s(으)로 인해 모듈을 활성화할 수 없습니다."
+
+#: includes/Core/Modules/REST_Modules_Controller.php:344
+#: includes/Core/Modules/REST_Modules_Controller.php:395
+#: includes/Core/Modules/REST_Modules_Controller.php:433
+#: includes/Core/Modules/REST_Modules_Controller.php:466
+#: includes/Core/Modules/REST_Modules_Controller.php:512
+#: includes/Core/Modules/REST_Modules_Controller.php:548
+#: includes/Core/Modules/REST_Modules_Controller.php:570
+msgid "Invalid module slug."
+msgstr "유효하지 않은 모듈 슬러그입니다."
+
+#. translators: %s: service identifier
+#: includes/Core/Modules/Module.php:554
+msgid "Google service identified by %s does not exist."
+msgstr "%s(으)로 식별한 Google 서비스가 없습니다."
+
+#: includes/Core/Modules/Module.php:542 includes/Core/Modules/Module.php:546
+msgid "Google services not set up correctly."
+msgstr "Google 서비스를 바르게 설정하지 않았습니다."
+
+#: includes/Core/Modules/Module.php:488
+msgid "Google client not set up correctly."
+msgstr "Google 클라이언트를 바르게 설정하지 않았습니다."
+
+#. translators: %s: module slug
+#: includes/Core/Modules/Modules.php:532 includes/Core/Modules/Modules.php:570
+#: includes/Core/Modules/Modules.php:591
+msgid "Invalid module slug %s."
+msgstr "유효하지 않은 모듈 슬러그 %s입니다."
+
+#: includes/Core/Admin/Screen.php:129
+#: includes/Core/Site_Health/Tag_Placement.php:106
+msgid "Site Kit"
+msgstr "Site Kit"
+
+#: includes/Core/Admin/Plugin_Action_Links.php:61
+#: includes/Core/Admin/Screens.php:523
+#: dist/assets/js/googlesitekit-settings-3a2e2212924935e84f6f.js:59
+msgid "Settings"
+msgstr "설정"
+
+#: includes/Core/Admin/Screens.php:375 includes/Core/Admin/Screens.php:471
+msgid "Dashboard"
+msgstr "대시보드"
+
+#: includes/Modules/Analytics_4.php:1940
+msgid "https://analytics.google.com/analytics/web"
+msgstr "https://analytics.google.com/analytics/web"
+
+#: includes/Modules/Analytics_4.php:1939
+msgid "Get a deeper understanding of your customers. Google Analytics gives you the free tools you need to analyze data for your business in one place."
+msgstr "고객에 대한 더 깊이 있는 이해를 얻으세요. Google Analytics는 한 장소에서 사업에 대한 데이터를 분석할 필요가 있는 무료 도구를 제공합니다."
+
+#: includes/Modules/Site_Verification.php:359
+msgid "https://www.google.com/webmasters/verification/home"
+msgstr "https://www.google.com/webmasters/verification/home"
+
+#: includes/Modules/Site_Verification.php:357
+msgid "Google Site Verification allows you to manage ownership of your site."
+msgstr "Google Site Verification은 사이트의 소유권을 관리하도록 합니다."
+
+#: includes/Modules/Site_Verification.php:180
+msgid "Unknown user."
+msgstr "알 수 없는 사용자입니다."
+
+#: includes/Modules/AdSense.php:756
+msgid "Earn money by placing ads on your website. It’s free and easy."
+msgstr "웹사이트에 광고를 삽입하여 수익을 창출합니다. 무료이고 쉽습니다."
+
+#: includes/Modules/AdSense.php:648
+msgid "Invalid date range."
+msgstr "잘못된 날짜 범위입니다."
+
+#: includes/Modules/AdSense.php:407
+msgid "Go to AdSense"
+msgstr "AdSense로 가기"
+
+#: includes/Modules/AdSense.php:683
+msgid "AdSense account ID not set."
+msgstr "AdSense 계정 ID를 설정하지 않았습니다."
+
+#: includes/Modules/Tag_Manager.php:513
+msgid "https://tagmanager.google.com/"
+msgstr "https://tagmanager.google.com/"
+
+#: includes/Modules/Tag_Manager.php:512
+msgid "Tag Manager creates an easy to manage way to create tags on your site without updating code"
+msgstr "Tag Manager는 코드를 업데이트하지 않고 사이트에 태그를 만들수 있도록 쉽게 관리하는법을 만듭니다"
+
+#: includes/Modules/PageSpeed_Insights.php:183
+msgid "Google PageSpeed Insights gives you metrics about performance, accessibility, SEO and PWA"
+msgstr "Google PageSpeed Insights는 성능, 접근성, SEO와 PWA에 대한 지표를 제공합니다."
+
+#. translators: 1: Invalid parameter name, 2: list of valid values
+#: includes/Modules/PageSpeed_Insights.php:114
+#: includes/Modules/Tag_Manager.php:328
+msgid "Request parameter %1$s is not one of %2$s"
+msgstr "요청 매개변수 %1$s은(는) %2$s 중의 하나가 아닙니다"
+
+#: includes/Modules/Search_Console.php:509
+msgid "https://search.google.com/search-console"
+msgstr "https://search.google.com/search-console"
+
+#: includes/Modules/Search_Console.php:507
+msgid "Google Search Console and helps you understand how Google views your site and optimize its performance in search results."
+msgstr "Google Search Console은 Google이 사이트를 어떻게 보고 검색 결과에서 사이트의 성능을 어떻게 최적화하는지에 대해 이해하도록 돕습니다."
+
+#: includes/Core/REST_API/Exception/Invalid_Datapoint_Exception.php:38
+msgid "Invalid datapoint."
+msgstr "유효하지 않은 데이터포인트입니다."
+
+#: includes/Modules/Search_Console.php:266
+msgid "Error adding the site to Search Console."
+msgstr "사이트를 Search Console에 추가하는 중에 오류가 있습니다."
+
+#. translators: %s: Missing parameter name
+#: includes/Core/Dismissals/REST_Dismissals_Controller.php:148
+#: includes/Core/Expirables/REST_Expirable_Items_Controller.php:110
+#: includes/Core/Expirables/REST_Expirable_Items_Controller.php:120
+#: includes/Core/Feature_Tours/REST_Feature_Tours_Controller.php:108
+#: includes/Core/Notifications/Notifications.php:286
+#: includes/Core/Prompts/REST_Prompts_Controller.php:109
+#: includes/Core/REST_API/Exception/Missing_Required_Param_Exception.php:46
+#: includes/Modules/AdSense.php:346 includes/Modules/AdSense.php:351
+#: includes/Modules/AdSense.php:359 includes/Modules/AdSense.php:368
+#: includes/Modules/AdSense.php:480 includes/Modules/Analytics_4.php:1247
+#: includes/Modules/Analytics_4.php:1263 includes/Modules/Analytics_4.php:1297
+#: includes/Modules/Analytics_4.php:1327 includes/Modules/Analytics_4.php:1379
+#: includes/Modules/Analytics_4.php:1388 includes/Modules/Analytics_4.php:1407
+#: includes/Modules/Analytics_4.php:1416 includes/Modules/Analytics_4.php:1425
+#: includes/Modules/Analytics_4.php:1479 includes/Modules/Analytics_4.php:1488
+#: includes/Modules/Analytics_4.php:1632 includes/Modules/Analytics_4.php:1682
+#: includes/Modules/Analytics_4.php:1699 includes/Modules/Analytics_4.php:1734
+#: includes/Modules/Analytics_4.php:1745 includes/Modules/Analytics_4.php:1753
+#: includes/Modules/Analytics_4.php:1766
+#: includes/Modules/PageSpeed_Insights.php:100
+#: includes/Modules/Search_Console.php:238
+#: includes/Modules/Site_Verification.php:173
+#: includes/Modules/Tag_Manager.php:308 includes/Modules/Tag_Manager.php:316
+#: includes/Modules/Tag_Manager.php:359 includes/Modules/Tag_Manager.php:367
+msgid "Request parameter is empty: %s."
+msgstr "요청 매개변수가 비었습니다: %s."
+
+#: google-site-kit.php:51 google-site-kit.php:59
+msgid "Error Activating"
+msgstr "활성화 오류 발생"
+
+#. Author URI of the plugin
+#: google-site-kit.php
+msgid "https://opensource.google.com"
+msgstr "https://opensource.google.com"
+
+#. Author of the plugin
+#: google-site-kit.php
+msgid "Google"
+msgstr "Google"
+
+#. Description of the plugin
+#: google-site-kit.php
+msgid "Site Kit is a one-stop solution for WordPress users to use everything Google has to offer to make them successful on the web."
+msgstr "Site Kit은 Google이 웹을 성공적으로 만들어 주는 모든 것을 이용하는 워드프레스 사용자용 종합 해법입니다."
+
+#. Plugin URI of the plugin
+#: google-site-kit.php
+msgid "https://sitekit.withgoogle.com"
+msgstr "https://sitekit.withgoogle.com"
+
+#. Plugin Name of the plugin
+#. translators: %1$s: Sign in with Google service name, %2$s: Plugin name
+#: google-site-kit.php includes/Core/Admin/Screen.php:87
+#: includes/Core/Authentication/Authentication.php:1083
+#: includes/Core/Authentication/Authentication.php:1140
+#: includes/Core/Site_Health/Debug_Data.php:126
+#: includes/Modules/Sign_In_With_Google.php:850
+msgid "Site Kit by Google"
+msgstr "Site Kit by Google"

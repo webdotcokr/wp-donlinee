@@ -19,12 +19,21 @@ function donlinee_setup() {
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'automatic-feed-links' );
 
+    // WooCommerce 테마 지원
+    add_theme_support( 'woocommerce' );
+
     // Register navigation menus
     register_nav_menus( array(
         'primary' => esc_html__( 'Primary Menu', 'donlinee' ),
     ) );
 }
 add_action( 'after_setup_theme', 'donlinee_setup' );
+
+/**
+ * WooCommerce 기본 래퍼 제거 및 커스텀 래퍼 사용
+ */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
 /**
  * Enqueue styles
